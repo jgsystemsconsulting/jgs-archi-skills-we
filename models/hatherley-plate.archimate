@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Hatherley Plate Ltd" id="id-5d68c822a1104247a8cf825c07e9f9b3" version="5.0.0">
+  <documentation>Seed for sequenced SOAM jobs. Architecture is written by the prompt pack, not by hand.</documentation>
+  <folder name="Strategy" id="id-b5319f0d6fef41c2bd944a1d5c0508be" type="strategy"/>
+  <folder name="Business" id="id-231a6d672e0e48869c8e7e5569437ca3" type="business"/>
+  <folder name="Application" id="id-24e9250033c040bc9953e8b03a615d1d" type="application"/>
+  <folder name="Technology &amp; Physical" id="id-d1f4e4be365f48ab814821d6c4ffe570" type="technology"/>
+  <folder name="Motivation" id="id-aefd3f54daa04bb7aac3c92b6c85b0ad" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-b2bf97391ef44fa2a9b65ed2ad668af8" type="implementation_migration"/>
+  <folder name="Other" id="id-bdb2d94366cd4ea985694908cd7a4f90" type="other"/>
+  <folder name="Relations" id="id-27baeacc25b047938d8491e68d197b6e" type="relations"/>
+  <folder name="Views" id="id-f0a8970196724c2593e4f922eb69d0ec" type="diagrams"/>
+</archimate:model>
