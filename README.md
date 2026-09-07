@@ -10,6 +10,13 @@ seed model, and (after live jobs) the working model.
 
 This is not a finished architecture. v1 does not run the jobs.
 
+A second sequenced example, Moorfield Range (Hawker Range Systems Ltd,
+tactical training UAS), lives in the same repository:
+[docs/moorfield-brief.md](docs/moorfield-brief.md),
+[prompts/moorfield/](prompts/moorfield/),
+`models/moorfield-range.archimate`. ArchiMate only. Do not model the air
+vehicle as product structure.
+
 ## Prerequisites
 
 - Archi 5.7+
@@ -26,5 +33,9 @@ Open `models/hatherley-plate.archimate` in Archi. Start the Bridge at
 Full operator notes: [docs/how-to-run.md](docs/how-to-run.md). Frozen
 facts: [docs/plant-brief.md](docs/plant-brief.md). Job order:
 [prompts/README.md](prompts/README.md).
+
+Moorfield: open `models/moorfield-range.archimate`, confirm the model name
+**Hawker Range Systems Ltd**, paste [prompts/moorfield/01-motivation.md](prompts/moorfield/01-motivation.md).
+Confirm MCP is not still on Hatherley Plate Ltd.
 
 Do not invoke layer specialists. Do not paste element-create commands.

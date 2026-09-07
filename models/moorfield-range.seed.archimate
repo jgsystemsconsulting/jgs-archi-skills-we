@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Hawker Range Systems Ltd" id="id-372bb0b5443c4ad68a1630904c51e539" version="5.0.0">
+  <documentation>Seed for sequenced SOAM jobs. Architecture is written by the prompt pack, not by hand. Moorfield Range. Do not model the air vehicle as product structure.</documentation>
+  <folder name="Strategy" id="id-0b3f7ca277cb49de952365dd03f88529" type="strategy"/>
+  <folder name="Business" id="id-5643e0ababcc4ce28c2991ac5d7a7a4d" type="business"/>
+  <folder name="Application" id="id-79e77e92bf7243d18858bb5ae6760621" type="application"/>
+  <folder name="Technology &amp; Physical" id="id-4cea9c75a1d84ac9b636f84e77887d70" type="technology"/>
+  <folder name="Motivation" id="id-1b22b99f46804205b5746e19133735f3" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-c916e6d1624a45ff8a40fd46fe75e353" type="implementation_migration"/>
+  <folder name="Other" id="id-9d5c381e0c2846bc892ea266673fd102" type="other"/>
+  <folder name="Relations" id="id-1716ed897b644dd684110ac40caf534b" type="relations"/>
+  <folder name="Views" id="id-439e5a9f1a71430bbaaabe6e39e4866b" type="diagrams"/>
+</archimate:model>

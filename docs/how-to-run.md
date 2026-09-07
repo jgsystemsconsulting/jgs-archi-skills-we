@@ -3,9 +3,14 @@
 
 # How to run the Hatherley Plate jobs
 
-v1 of this repository is the script and a seed model. It is not a finished
-architecture. Do not paste job 2 until job 1 has an approved View Plan and
-the pass checks hold.
+Two sequenced examples share this repository. Hatherley Plate is the mill
+run. Moorfield Range is the aerospace and defence run
+([docs/moorfield-brief.md](moorfield-brief.md),
+[prompts/moorfield/](../prompts/moorfield/)).
+
+Do not paste job 2 until job 1 has an approved View Plan and the pass
+checks hold. Do not mutate Hatherley while Moorfield is the job, or the
+reverse. Confirm `get-model-info` name before the first write.
 
 ## Prerequisites
 
@@ -28,6 +33,15 @@ the pass checks hold.
    model. Then paste the next job.
 
 MCP down or the wrong model open: stop. Do not invent architecture.
+
+Lessons from the first live mill run:
+
+- Open a diagram editor (even an empty view) before the first mutate.
+  Otherwise the Bridge returns `MUTATION_FAILED` on the UI thread.
+- If that error still appears, MCP Server → Stop, then Start.
+- After every passed job: File → Save in Archi, then commit the working
+  `.archimate`. The Bridge has no save tool. Closing Archi without Save
+  loses the run.
 
 ## Refuse
 
