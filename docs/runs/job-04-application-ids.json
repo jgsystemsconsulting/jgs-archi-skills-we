@@ -1,0 +1,364 @@
+{
+  "view_id": "id-90bb9ec6131b44f9966ac494bd89a90c",
+  "view_name": "Application Support",
+  "applications": {
+    "MillOS": {
+      "id": "id-e74300558c24411c9ca9cf76c2d9ecd6",
+      "type": "ApplicationComponent",
+      "action": "created_new"
+    },
+    "WorksERP": {
+      "id": "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+      "type": "ApplicationComponent",
+      "action": "created_new"
+    },
+    "PromiseSheet": {
+      "id": "id-d5dab10f11a04eedb0ba9532bd2940b1",
+      "type": "ApplicationComponent",
+      "action": "created_new"
+    },
+    "OrderSight": {
+      "id": "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+      "type": "ApplicationComponent",
+      "action": "created_new"
+    },
+    "PlantGate": {
+      "id": "id-d0698a626afc460d8de1493b05a421e6",
+      "type": "ApplicationComponent",
+      "action": "created_new"
+    }
+  },
+  "processes_reused": {
+    "Promise": {
+      "id": "id-c338aa0260a345ed9be332a6b9e26be9",
+      "type": "BusinessProcess",
+      "action": "reused_job03"
+    },
+    "Works order": {
+      "id": "id-69e033ce9ca242d499799db7a6b42272",
+      "type": "BusinessProcess",
+      "action": "reused_job03"
+    },
+    "Mill schedule": {
+      "id": "id-d6a875984a84411d958d73759e2ffe1a",
+      "type": "BusinessProcess",
+      "action": "reused_job03"
+    },
+    "Plate rolling": {
+      "id": "id-ed0201833e864e08ab2950d70d2994aa",
+      "type": "BusinessProcess",
+      "action": "reused_job03"
+    }
+  },
+  "relationships": [
+    {
+      "id": "id-5abf0b65ccaf4d16ae90aafa800b5032",
+      "type": "ServingRelationship",
+      "source": "PromiseSheet",
+      "target": "Promise",
+      "action": "created"
+    },
+    {
+      "id": "id-9212de6280604f5e9c6507431cab0bf2",
+      "type": "ServingRelationship",
+      "source": "OrderSight",
+      "target": "Promise",
+      "action": "created"
+    },
+    {
+      "id": "id-be1b3be3034c42c28733cba2796fd526",
+      "type": "ServingRelationship",
+      "source": "PlantGate",
+      "target": "Promise",
+      "action": "created"
+    },
+    {
+      "id": "id-070c651ce29e4e69be6f0d91242bce0a",
+      "type": "ServingRelationship",
+      "source": "PlantGate",
+      "target": "Works order",
+      "action": "created"
+    },
+    {
+      "id": "id-e3e73197b6834536b2e7468769cc70ad",
+      "type": "ServingRelationship",
+      "source": "WorksERP",
+      "target": "Works order",
+      "action": "created"
+    },
+    {
+      "id": "id-86a670b0e85949cca5d9663599568f3e",
+      "type": "ServingRelationship",
+      "source": "MillOS",
+      "target": "Mill schedule",
+      "action": "created"
+    },
+    {
+      "id": "id-0e6ba889393144d58873fe2cab91b803",
+      "type": "ServingRelationship",
+      "source": "MillOS",
+      "target": "Plate rolling",
+      "action": "created"
+    },
+    {
+      "id": "id-77977799d7f2461ba5e81fbce42b3581",
+      "type": "ServingRelationship",
+      "source": "WorksERP",
+      "target": "Mill schedule",
+      "action": "created"
+    }
+  ],
+  "note_id": "id-81102748ec9f45bf8d9a8d4ed1eb5a5e",
+  "registry": {
+    "stakeholder:plant manager": {
+      "element_id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "decision": "found_existing",
+      "notes": "job-01"
+    },
+    "stakeholder:head of sales": {
+      "element_id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:mes owner": {
+      "element_id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:crm programme manager": {
+      "element_id": "id-92664a6b007b411d979d63c25480a38c",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:operations planner": {
+      "element_id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:integration lead": {
+      "element_id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "driver:promised plate dates do not match mill reality": {
+      "element_id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "goal:sales and mill share one order identity from promise to schedule": {
+      "element_id": "id-77f9fed68144498386bf15c188fc2d21",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "outcome:plant manager and head of sales answer on-mill-this-week without promisesheet": {
+      "element_id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "requirement:ordersight must not swallow millos": {
+      "element_id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "capability:promise": {
+      "element_id": "id-9c2c1a6a78f0475681b48889b2664099",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:order": {
+      "element_id": "id-f6c7c6a74874412ba24c60d318292ad2",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:mill schedule": {
+      "element_id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:collect": {
+      "element_id": "id-50f22633aea34b3b8536e05a14fda533",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "businessrole:plant manager": {
+      "element_id": "id-c2d53b4de0d44d7c92f5e4ea51332ccf",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:head of sales": {
+      "element_id": "id-a10b3ee5bc3c49088e973710f1b8397e",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:operations planner": {
+      "element_id": "id-7a3f4a278904406cbb3c52f2fa45825a",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:mes owner": {
+      "element_id": "id-8c313bffb8d3411c8fe9dec39a89624b",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessprocess:promise": {
+      "element_id": "id-c338aa0260a345ed9be332a6b9e26be9",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:works order": {
+      "element_id": "id-69e033ce9ca242d499799db7a6b42272",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:mill schedule": {
+      "element_id": "id-d6a875984a84411d958d73759e2ffe1a",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:plate rolling": {
+      "element_id": "id-ed0201833e864e08ab2950d70d2994aa",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "applicationcomponent:millos": {
+      "element_id": "id-e74300558c24411c9ca9cf76c2d9ecd6",
+      "decision": "created_new",
+      "notes": "job-04"
+    },
+    "applicationcomponent:workserp": {
+      "element_id": "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+      "decision": "created_new",
+      "notes": "job-04"
+    },
+    "applicationcomponent:promisesheet": {
+      "element_id": "id-d5dab10f11a04eedb0ba9532bd2940b1",
+      "decision": "created_new",
+      "notes": "job-04"
+    },
+    "applicationcomponent:ordersight": {
+      "element_id": "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+      "decision": "created_new",
+      "notes": "job-04"
+    },
+    "applicationcomponent:plantgate": {
+      "element_id": "id-d0698a626afc460d8de1493b05a421e6",
+      "decision": "created_new",
+      "notes": "job-04"
+    }
+  },
+  "model_info": {
+    "name": "Hatherley Plate Ltd",
+    "elementCount": 27,
+    "relationshipCount": 31,
+    "viewCount": 4,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessRole": 4,
+      "BusinessProcess": 4,
+      "ApplicationComponent": 5,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 12,
+      "InfluenceRelationship": 1,
+      "RealizationRelationship": 2,
+      "AssignmentRelationship": 5,
+      "TriggeringRelationship": 3,
+      "ServingRelationship": 8
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Application": 5,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "qa": {
+    "type_counts": {
+      "Capability": 4,
+      "BusinessRole": 4,
+      "BusinessProcess": 4,
+      "ApplicationComponent": 5,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "application_component_count": 5,
+    "application_layer_count": 5,
+    "node_count": 0,
+    "process_count": 4,
+    "forbidden_systems": [],
+    "ordersight_millos_separate": true,
+    "ordersight_id": "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+    "millos_id": "id-e74300558c24411c9ca9cf76c2d9ecd6",
+    "app_names": [
+      "MillOS",
+      "OrderSight",
+      "PlantGate",
+      "PromiseSheet",
+      "WorksERP"
+    ],
+    "view_names": [
+      "Motivation Overview",
+      "Capability Map",
+      "Production Operations",
+      "Application Support"
+    ],
+    "view_element_names": [
+      "Promise",
+      "Works order",
+      "Mill schedule",
+      "Plate rolling",
+      "PromiseSheet",
+      "OrderSight",
+      "PlantGate",
+      "WorksERP",
+      "MillOS"
+    ],
+    "evidence_first_line_ok": true,
+    "assess_layout": {
+      "overallRating": "good",
+      "ratingBreakdown": {
+        "overlaps": "pass",
+        "edgeCrossings": "pass",
+        "spacing": "pass",
+        "alignment": "good",
+        "labelOverlaps": "pass",
+        "passThroughs": "pass",
+        "coincidentSegments": "pass",
+        "nonOrthogonalTerminals": "pass",
+        "nonOrthogonalInteriorSegments": "pass",
+        "connectionThroughNote": "pass",
+        "boundaryViolations": "pass",
+        "parentLabelObscured": "pass",
+        "offCanvas": "pass",
+        "labelTruncations": "pass",
+        "interiorTerminations": "pass",
+        "zigzags": "pass",
+        "connectionEdgeCoincidence": "pass",
+        "hubPortQuality": "pass",
+        "hubNeighbourCrowding": "pass",
+        "overall": "good",
+        "overallExcludingAcceptedCosmetics": "good"
+      }
+    },
+    "pass_checks": {
+      "view_named_application_support": true,
+      "five_apps": true,
+      "ordersight_ne_millos": true,
+      "no_wms_tms_lake": true,
+      "no_nodes_equipment": true,
+      "process_count_4": true,
+      "evidence_ok": true
+    },
+    "flow_relationships_removed": true
+  }
+}

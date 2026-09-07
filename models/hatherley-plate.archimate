@@ -1,13 +1,758 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Hatherley Plate Ltd" id="id-5d68c822a1104247a8cf825c07e9f9b3" version="5.0.0">
-  <documentation>Seed for sequenced SOAM jobs. Architecture is written by the prompt pack, not by hand.</documentation>
-  <folder name="Strategy" id="id-b5319f0d6fef41c2bd944a1d5c0508be" type="strategy"/>
-  <folder name="Business" id="id-231a6d672e0e48869c8e7e5569437ca3" type="business"/>
-  <folder name="Application" id="id-24e9250033c040bc9953e8b03a615d1d" type="application"/>
-  <folder name="Technology &amp; Physical" id="id-d1f4e4be365f48ab814821d6c4ffe570" type="technology"/>
-  <folder name="Motivation" id="id-aefd3f54daa04bb7aac3c92b6c85b0ad" type="motivation"/>
+  <folder name="Strategy" id="id-b5319f0d6fef41c2bd944a1d5c0508be" type="strategy">
+    <element xsi:type="archimate:Capability" name="Promise" id="id-9c2c1a6a78f0475681b48889b2664099">
+      <documentation>Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain
+Organisational ability to commit a plate date to a customer before mill work is locked. Sales-facing; OrderSight remains the sales-facing system for this capability (wording only, not modelled as an application here).</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Order" id="id-f6c7c6a74874412ba24c60d318292ad2">
+      <documentation>Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain
+Organisational ability to hold one customer order identity through sales and works-order handoff so promise and mill schedule talk about the same order. WorksERP stays works-order context; no ERP replacement.</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Mill schedule" id="id-ed34ec1744a1458b9f7e1579932f2af6">
+      <documentation>Evidence: stated - View Plan Job 02 approved; plant-brief.md Named as-is systems
+Organisational ability to plan and run the mill week for plate orders. MillOS owns this capability as mill schedule system of record (ownership in documentation only; no application element on this view).</documentation>
+    </element>
+    <element xsi:type="archimate:Capability" name="Collect" id="id-50f22633aea34b3b8536e05a14fda533">
+      <documentation>Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain
+Organisational ability to close the loop after mill work so sales and plant can see what left the mill against the same order identity used at promise.</documentation>
+    </element>
+  </folder>
+  <folder name="Business" id="id-231a6d672e0e48869c8e7e5569437ca3" type="business">
+    <element xsi:type="archimate:BusinessRole" name="Plant Manager" id="id-c2d53b4de0d44d7c92f5e4ea51332ccf">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan canvas audience
+Business role that owns plant operations at Hatherley Works and needs the promise-to-rolling chain readable without inventing systems.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Head of Sales" id="id-a10b3ee5bc3c49088e973710f1b8397e">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan canvas audience
+Business role that owns customer promises and needs the same chain visible from promise; PromiseSheet remains the pain, not a modelled application.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="Operations Planner" id="id-7a3f4a278904406cbb3c52f2fa45825a">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan canvas audience
+Business role that turns promises into works orders and mill schedule so plan and promise stop diverging.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessRole" name="MES Owner" id="id-8c313bffb8d3411c8fe9dec39a89624b">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan canvas audience
+Business role that owns mill-side schedule and plate rolling behaviour; MillOS stays wording only this job, no MES rewrite.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Promise" id="id-c338aa0260a345ed9be332a6b9e26be9">
+      <documentation>Evidence: stated - View Plan Job 03 approved; plant-brief.md PromiseSheet pain
+As-is step where sales commits a customer plate date. Dual tracking still lives in PromiseSheet spreadsheet; that pain stays narrative only, not an application element on this view.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Works order" id="id-69e033ce9ca242d499799db7a6b42272">
+      <documentation>Evidence: stated - View Plan Job 03 approved; plant-brief.md WorksERP wording
+As-is step that opens plant works work against the customer order identity so the mill can schedule real plate jobs. WorksERP is wording only here.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Mill schedule" id="id-d6a875984a84411d958d73759e2ffe1a">
+      <documentation>Evidence: stated - View Plan Job 03 approved; plant-brief.md MillOS wording
+As-is step that locks the mill week for plate orders. Mill-owned path; MillOS remains schedule system of record in narrative only this job.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessProcess" name="Plate rolling" id="id-ed0201833e864e08ab2950d70d2994aa">
+      <documentation>Evidence: stated - View Plan Job 03 approved; plant-brief.md physical mill
+As-is shop-floor step that runs the hot plate through the mill against the locked schedule.</documentation>
+    </element>
+  </folder>
+  <folder name="Application" id="id-24e9250033c040bc9953e8b03a615d1d" type="application">
+    <element xsi:type="archimate:ApplicationComponent" name="MillOS" id="id-e74300558c24411c9ca9cf76c2d9ecd6">
+      <documentation>Evidence: stated - plant-brief.md Named as-is systems; View Plan Job 04 approved
+MES that owns the mill schedule for plate work. Stays separate from OrderSight; CRM programme must not be drawn as the MES.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="WorksERP" id="id-45a53e69f46a4c80a0e8bcb81ba24cf9">
+      <documentation>Evidence: stated - plant-brief.md Named as-is systems; View Plan Job 04 approved
+On-site ERP that holds works orders, invoices, and plate stock wording. Not replaced this run; no ERP replacement element.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="PromiseSheet" id="id-d5dab10f11a04eedb0ba9532bd2940b1">
+      <documentation>Evidence: stated - plant-brief.md Named as-is systems; View Plan Job 04 approved
+Shared-drive spreadsheet that still holds customer promises. Modelled as the as-is pain system, not a target platform.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="OrderSight" id="id-b8e160d2c6d24f34badc02f1b6ae6c6f">
+      <documentation>Evidence: stated - plant-brief.md Named as-is systems; View Plan Job 04 approved
+Sales-facing CRM in pilot, funded for visibility. Separate application from MillOS; must not swallow the MES.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="PlantGate" id="id-d0698a626afc460d8de1493b05a421e6">
+      <documentation>Evidence: stated - plant-brief.md Named as-is systems; View Plan Job 04 approved
+Integration gateway that bridges OrderSight promises to WorksERP works orders. Does not talk to mill equipment; no equipment or node elements this job.</documentation>
+    </element>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-d1f4e4be365f48ab814821d6c4ffe570" type="technology">
+    <element xsi:type="archimate:Node" name="Mill floor node" id="id-c2b0ccf345fb4ce78c7e0687ed2fbe52">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+Shop-floor compute and control locus on the plate mill floor. Hosts rolling equipment assignment; not an OrderSight host.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="On-prem app server" id="id-ef9c0f14635a4a95adb8ba9858a25df2">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+On-premises application server that hosts MillOS and WorksERP for the mill path. OrderSight is deliberately not placed here.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="PlantGate node" id="id-8d9fc0f78d2b4122bb9977edc94e9305">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+Node in the comms room that hosts the PlantGate integration gateway. Separate from mill-floor equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Plate mill building" id="id-b1d315115a8249809f7750591162b405">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+Single-site plate mill building at Hatherley Works. Contains the mill floor where rolling happens; not a second site.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Comms room" id="id-9da853906d8c4af7805ac95eca12d643">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+Communications room housing PlantGate infrastructure. Kept distinct from the mill floor so CRM paths are not mistaken for MES hosting.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Rolling equipment" id="id-057eb745f829482892236d1023a52c3a">
+      <documentation>Evidence: stated - plant-brief.md Physical (job 5); View Plan Job 05 approved
+Plate rolling equipment on the mill floor. Assigned to the mill-floor node; PlantGate does not talk to this equipment.</documentation>
+    </element>
+  </folder>
+  <folder name="Motivation" id="id-aefd3f54daa04bb7aac3c92b6c85b0ad" type="motivation">
+    <element xsi:type="archimate:Stakeholder" name="Plant Manager" id="id-0260a5aa995b41c7b84d93d3541592c0">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Owns plant operations at Hatherley Works. Needs a weekly on-mill answer without reading PromiseSheet, and keeps mill systems under plant control.</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Head of Sales" id="id-988afa0e45894cd3a657ac9c7085ed98">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Owns customer promises. Needs the same weekly on-mill answer as the plant so dual tracking in PromiseSheet can stop.</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="MES Owner" id="id-db0cfaa61b4048e7900b2b9bad3eea97">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Owns MillOS as mill schedule system of record. Boundary witness that OrderSight must not be drawn as MillOS replacement.</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="CRM Programme Manager" id="id-92664a6b007b411d979d63c25480a38c">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Owns OrderSight pilot scope. Keeps the funded fix sales-facing visibility; resists expansion into mill rewrite.</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Operations Planner" id="id-ee9aa7f5d13c4ec9ba9da957d3768ed2">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Plans mill work from orders. Needs one order identity from promise through schedule so plan and promise stop diverging.</documentation>
+    </element>
+    <element xsi:type="archimate:Stakeholder" name="Integration Lead" id="id-9fc4203ce6ac494fbe546220c92f44b9">
+      <documentation>Evidence: stated - plant-brief.md Roles; View Plan Stakeholders
+Owns cross-system identity and PlantGate boundary work. Shared identity without merging MillOS into OrderSight.</documentation>
+    </element>
+    <element xsi:type="archimate:Driver" name="Promised plate dates do not match mill reality" id="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints
+Sales tracks customer promises in PromiseSheet while the mill schedule lives in MillOS, so promised plate dates drift from what the mill can actually run.</documentation>
+    </element>
+    <element xsi:type="archimate:Goal" name="Sales and mill share one order identity from promise to schedule" id="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints
+Desired state: one shared order identity links sales promise to mill schedule end to end, without merging systems into a single blob.</documentation>
+    </element>
+    <element xsi:type="archimate:Outcome" name="Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet" id="id-bbf70387a3014a0bac693ecca4cce026">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints
+Plant Manager and Head of Sales can answer whether an order is on the mill this week without opening PromiseSheet.</documentation>
+    </element>
+    <element xsi:type="archimate:Requirement" name="OrderSight must not swallow MillOS" id="id-8387c0d7776b46b8a08ee1ad05bd0953">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine and Hard freeze; View Plan Technical Hints
+Hard boundary: OrderSight stays sales-facing visibility; MillOS remains the mill schedule system of record. Named systems appear here as wording only, not as application elements on this view.</documentation>
+    </element>
+  </folder>
   <folder name="Implementation &amp; Migration" id="id-b2bf97391ef44fa2a9b65ed2ad668af8" type="implementation_migration"/>
   <folder name="Other" id="id-bdb2d94366cd4ea985694908cd7a4f90" type="other"/>
-  <folder name="Relations" id="id-27baeacc25b047938d8491e68d197b6e" type="relations"/>
-  <folder name="Views" id="id-f0a8970196724c2593e4f922eb69d0ec" type="diagrams"/>
+  <folder name="Relations" id="id-27baeacc25b047938d8491e68d197b6e" type="relations">
+    <element xsi:type="archimate:AssociationRelationship" id="id-667ac7aeab054091a4569dfd1f97107c" source="id-0260a5aa995b41c7b84d93d3541592c0" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Plant Manager is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-380de8549ac54ebabc4d4962e9af9943" source="id-988afa0e45894cd3a657ac9c7085ed98" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Head of Sales is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-43ab2b86f1804fc88e87dd9113cb6965" source="id-db0cfaa61b4048e7900b2b9bad3eea97" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+MES Owner is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-19d9b00629d14813b54456c13937e373" source="id-92664a6b007b411d979d63c25480a38c" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+CRM Programme Manager is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f3edb77ba6cc4bdaa6c199b09f34d6c2" source="id-ee9aa7f5d13c4ec9ba9da957d3768ed2" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Operations Planner is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-489e778685bd499eb4cd1f3c4d2ab4f5" source="id-9fc4203ce6ac494fbe546220c92f44b9" target="id-fcf6a7e660504afaa4580a9a92e062d9">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Integration Lead is concerned with the promise-vs-mill-reality pressure at Hatherley Works.</documentation>
+    </element>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-7fc557ea98cc4a81baf6e68c6637bfd5" source="id-fcf6a7e660504afaa4580a9a92e062d9" target="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine
+Promise/mill date mismatch drives the need for one order identity from promise to schedule.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-80931b7bffd04ed2875ac31bc65caa63" source="id-bbf70387a3014a0bac693ecca4cce026" target="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - plant-brief.md Motivation spine
+Weekly on-mill answer without PromiseSheet is the measurable realization of shared order identity.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-6d24ba8943244ed1b7cc0adcb807ecf1" source="id-8387c0d7776b46b8a08ee1ad05bd0953" target="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - plant-brief.md Hard freeze
+Keeping OrderSight from swallowing MillOS makes the shared-identity goal concrete without a system merge.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ac34f9357252446a8e90c2870dba2558" source="id-0260a5aa995b41c7b84d93d3541592c0" target="id-bbf70387a3014a0bac693ecca4cce026">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Plant Manager is a signatory for the weekly on-mill outcome.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-2123bb07b54948ccaa6aab7a247cd503" source="id-988afa0e45894cd3a657ac9c7085ed98" target="id-bbf70387a3014a0bac693ecca4cce026">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Head of Sales is a signatory for the weekly on-mill outcome.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-e248a5a1e04247daa01ce86499b1782f" source="id-ee9aa7f5d13c4ec9ba9da957d3768ed2" target="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Operations Planner owns the shared-identity concern from promise through schedule.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-533bf192ca6643b0986664aa6c9ed853" source="id-9fc4203ce6ac494fbe546220c92f44b9" target="id-77f9fed68144498386bf15c188fc2d21">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+Integration Lead owns the shared-identity concern from promise through schedule.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c6ea99817b22457c909b8328595787c0" source="id-db0cfaa61b4048e7900b2b9bad3eea97" target="id-8387c0d7776b46b8a08ee1ad05bd0953">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+MES Owner is boundary witness that OrderSight must not swallow MillOS.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-44c44def4b364147ba651c1038a4059c" source="id-92664a6b007b411d979d63c25480a38c" target="id-8387c0d7776b46b8a08ee1ad05bd0953">
+      <documentation>Evidence: stated - View Plan Stakeholders and Concerns
+CRM Programme Manager is boundary witness that OrderSight must not swallow MillOS.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-cca33037e4cf47c5846fa7f9138f3d3c" source="id-a10b3ee5bc3c49088e973710f1b8397e" target="id-c338aa0260a345ed9be332a6b9e26be9">
+      <documentation>Evidence: stated - View Plan Job 03
+Process or role link on the as-is operations chain.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-e1043c22e2244bf29190224c526bb58e" source="id-7a3f4a278904406cbb3c52f2fa45825a" target="id-69e033ce9ca242d499799db7a6b42272">
+      <documentation>Evidence: stated - View Plan Job 03
+Process or role link on the as-is operations chain.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-b098390798814b57963e3fe28cc45745" source="id-7a3f4a278904406cbb3c52f2fa45825a" target="id-d6a875984a84411d958d73759e2ffe1a">
+      <documentation>Evidence: stated - View Plan Job 03
+Process or role link on the as-is operations chain.</documentation>
+    </element>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-848ce647fbce4d989656c31499819b00" source="id-c338aa0260a345ed9be332a6b9e26be9" target="id-69e033ce9ca242d499799db7a6b42272">
+      <documentation>Evidence: stated - View Plan Job 03
+Process or role link on the as-is operations chain.</documentation>
+    </element>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-2474f5e6c0634451b110c48817d3a26d" source="id-69e033ce9ca242d499799db7a6b42272" target="id-d6a875984a84411d958d73759e2ffe1a">
+      <documentation>Evidence: stated - View Plan Job 03
+Process or role link on the as-is operations chain.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-5abf0b65ccaf4d16ae90aafa800b5032" source="id-d5dab10f11a04eedb0ba9532bd2940b1" target="id-c338aa0260a345ed9be332a6b9e26be9">
+      <documentation>Evidence: stated - plant-brief.md PromiseSheet pain; View Plan Job 04
+As-is spreadsheet still holds customer promise dates that sales dual-tracks.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-9212de6280604f5e9c6507431cab0bf2" source="id-b8e160d2c6d24f34badc02f1b6ae6c6f" target="id-c338aa0260a345ed9be332a6b9e26be9">
+      <documentation>Evidence: stated - plant-brief.md OrderSight CRM pilot; View Plan Job 04
+Sales-facing CRM pilot surfaces promise identity without becoming the MES.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-be1b3be3034c42c28733cba2796fd526" source="id-d0698a626afc460d8de1493b05a421e6" target="id-c338aa0260a345ed9be332a6b9e26be9">
+      <documentation>Evidence: stated - plant-brief.md PlantGate bridge; View Plan Job 04
+Gateway reads OrderSight-side promises so they can hand off to works orders.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-070c651ce29e4e69be6f0d91242bce0a" source="id-d0698a626afc460d8de1493b05a421e6" target="id-69e033ce9ca242d499799db7a6b42272">
+      <documentation>Evidence: stated - plant-brief.md PlantGate bridge; View Plan Job 04
+Gateway bridges promises into WorksERP works-order path; not mill equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-e3e73197b6834536b2e7468769cc70ad" source="id-45a53e69f46a4c80a0e8bcb81ba24cf9" target="id-69e033ce9ca242d499799db7a6b42272">
+      <documentation>Evidence: stated - plant-brief.md WorksERP; View Plan Job 04
+On-site ERP holds works orders (and invoice/stock wording) for the plant path.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-86a670b0e85949cca5d9663599568f3e" source="id-e74300558c24411c9ca9cf76c2d9ecd6" target="id-d6a875984a84411d958d73759e2ffe1a">
+      <documentation>Evidence: stated - plant-brief.md MillOS MES; View Plan Job 04
+MES owns mill schedule; stays separate from OrderSight on this view.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-77977799d7f2461ba5e81fbce42b3581" source="id-45a53e69f46a4c80a0e8bcb81ba24cf9" target="id-d6a875984a84411d958d73759e2ffe1a">
+      <documentation>Evidence: inferred - shared order identity across systems; View Plan Job 04
+Works order identity in ERP feeds what mill schedule consumes; not a merged app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-6166df1c8d76468b921c61a720a610a9" source="id-8c313bffb8d3411c8fe9dec39a89624b" target="id-ed0201833e864e08ab2950d70d2994aa">
+      <documentation>Evidence: stated - plant-brief.md roles; View Plan Job 03
+MES Owner role assigned to plate rolling process ownership on the shop floor.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-5c31de3b31eb4372a9d073fb64d5ed58" source="id-c2d53b4de0d44d7c92f5e4ea51332ccf" target="id-ed0201833e864e08ab2950d70d2994aa">
+      <documentation>Evidence: stated - plant-brief.md roles; View Plan Job 03
+Plant Manager role assigned over plate rolling as plant operational owner.</documentation>
+    </element>
+    <element xsi:type="archimate:TriggeringRelationship" id="id-5696c39fdca04a1bb5e385f868eb3e8f" source="id-d6a875984a84411d958d73759e2ffe1a" target="id-ed0201833e864e08ab2950d70d2994aa">
+      <documentation>Evidence: stated - plant-brief.md operations spine; View Plan Job 03
+Mill schedule triggers plate rolling on the locked plan.</documentation>
+    </element>
+    <element xsi:type="archimate:ServingRelationship" id="id-75bae4f45a4748cf967e96c596edb9ea" source="id-e74300558c24411c9ca9cf76c2d9ecd6" target="id-ed0201833e864e08ab2950d70d2994aa">
+      <documentation>Evidence: stated - plant-brief.md MillOS MES; View Plan Job 04
+MES supports shop-floor plate rolling against the locked mill schedule.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-a8d339fd00d64299aa2f3008bacea830" source="id-ef9c0f14635a4a95adb8ba9858a25df2" target="id-e74300558c24411c9ca9cf76c2d9ecd6">
+      <documentation>Evidence: stated - plant-brief.md Physical; View Plan Job 05 approved
+On-prem app server hosts MillOS MES (realization host→app; Assignment Node→App rejected by bridge). OrderSight is not hosted on this node.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-57653d64319145e88ab47d9978cd5f74" source="id-ef9c0f14635a4a95adb8ba9858a25df2" target="id-45a53e69f46a4c80a0e8bcb81ba24cf9">
+      <documentation>Evidence: stated - plant-brief.md Physical; View Plan Job 05 approved
+On-prem app server hosts WorksERP beside MillOS on the mill application path.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-8dc23741dfa244c2820bdd3104eb6d94" source="id-8d9fc0f78d2b4122bb9977edc94e9305" target="id-d0698a626afc460d8de1493b05a421e6">
+      <documentation>Evidence: stated - plant-brief.md Physical; View Plan Job 05 approved
+PlantGate node in the comms room hosts the PlantGate gateway application.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-3a0ba7d10b264e43b860e0ec791a4292" source="id-c2b0ccf345fb4ce78c7e0687ed2fbe52" target="id-057eb745f829482892236d1023a52c3a">
+      <documentation>Evidence: stated - plant-brief.md Physical freeze; View Plan Job 05 approved
+Mill-floor node assigns rolling equipment so physical plant is visible and distinct from the CRM path.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-115de4c51cd4490b8c2950ec47542f55" source="id-b1d315115a8249809f7750591162b405" target="id-c2b0ccf345fb4ce78c7e0687ed2fbe52">
+      <documentation>Evidence: stated - plant-brief.md Physical; View Plan Job 05 approved
+Plate mill building assigns the mill-floor node.</documentation>
+    </element>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-8436dfd673dc4dd9832441177db2c83b" source="id-9da853906d8c4af7805ac95eca12d643" target="id-8d9fc0f78d2b4122bb9977edc94e9305">
+      <documentation>Evidence: stated - plant-brief.md Physical; View Plan Job 05 approved
+Comms room assigns the PlantGate node, off the mill floor.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8734853a12894a10b0b0b6577eab080c" source="id-8387c0d7776b46b8a08ee1ad05bd0953" target="id-ef9c0f14635a4a95adb8ba9858a25df2">
+      <documentation>Evidence: stated - plant-brief.md freeze; View Plan Job 05 trace
+Requirement binds mill MES hosting: MillOS stays on the on-prem app server, not merged into OrderSight.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-bd5a755261de4b5293d81ad5d1db6d33" source="id-e74300558c24411c9ca9cf76c2d9ecd6" target="id-ed34ec1744a1458b9f7e1579932f2af6">
+      <documentation>Evidence: inferred - whole-model light trace Job 05
+MES realizes the mill schedule capability already on the map.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-2cf9b9ec9afd4bddbf6b651d7fcf6036" source="id-45a53e69f46a4c80a0e8bcb81ba24cf9" target="id-f6c7c6a74874412ba24c60d318292ad2">
+      <documentation>Evidence: inferred - whole-model light trace Job 05
+On-site ERP realizes the order capability via works-order holding.</documentation>
+    </element>
+    <element xsi:type="archimate:RealizationRelationship" id="id-3f4184aeef1f48c58ddd2064108a369c" source="id-d0698a626afc460d8de1493b05a421e6" target="id-9c2c1a6a78f0475681b48889b2664099">
+      <documentation>Evidence: inferred - whole-model light trace Job 05
+Integration gateway realizes promise hand-off support without mill equipment contact.</documentation>
+    </element>
+  </folder>
+  <folder name="Views" id="id-f0a8970196724c2593e4f922eb69d0ec" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Motivation Overview" id="id-05f18c92556242fc8ce2a2252fc36867" viewpoint="motivation">
+      <child xsi:type="archimate:DiagramObject" id="id-d62392ade3304e14a0690ff6fcb5f5d4" archimateElement="id-0260a5aa995b41c7b84d93d3541592c0">
+        <bounds x="815" y="12" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9bfd4ff7f0424a4c98081daceeb2e69a" source="id-d62392ade3304e14a0690ff6fcb5f5d4" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-667ac7aeab054091a4569dfd1f97107c">
+          <bendpoint startX="-100" endX="273" endY="-144"/>
+          <bendpoint startX="-100" startY="144" endX="273"/>
+          <bendpoint startX="-310" startY="144" endX="63"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3fa1bdd1733d4f138e194d50f297ddc6" source="id-d62392ade3304e14a0690ff6fcb5f5d4" target="id-a629bb5ee0854c9d917833eb3d346c97" archimateRelationship="id-ac34f9357252446a8e90c2870dba2558">
+          <bendpoint startY="29" endX="-43" endY="-126"/>
+          <bendpoint startY="100" endX="-43" endY="-55"/>
+          <bendpoint startX="43" startY="100" endY="-55"/>
+          <bendpoint startX="43" startY="107" endY="-48"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-acdf9ac544d14d6ea2232bab1ef447b6" archimateElement="id-988afa0e45894cd3a657ac9c7085ed98">
+        <bounds x="1015" y="12" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-87e882f720a34ce1bd867794bcf1e054" source="id-acdf9ac544d14d6ea2232bab1ef447b6" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-380de8549ac54ebabc4d4962e9af9943">
+          <bendpoint startY="83" endX="573" endY="-61"/>
+          <bendpoint startX="-349" startY="83" endX="224" endY="-61"/>
+          <bendpoint startX="-349" startY="144" endX="224"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5dcd5204031245be99f10065f0917fd8" source="id-acdf9ac544d14d6ea2232bab1ef447b6" target="id-a629bb5ee0854c9d917833eb3d346c97" archimateRelationship="id-2123bb07b54948ccaa6aab7a247cd503">
+          <bendpoint startY="29" endX="157" endY="-126"/>
+          <bendpoint startY="155" endX="157"/>
+          <bendpoint startX="-85" startY="155" endX="72"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-4d985dccc48e42b89f846bdfcc889131" archimateElement="id-db0cfaa61b4048e7900b2b9bad3eea97">
+        <bounds x="414" y="12" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e69e95140ebe467b8290fe2fa69b6fd5" source="id-4d985dccc48e42b89f846bdfcc889131" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-43ab2b86f1804fc88e87dd9113cb6965">
+          <bendpoint startY="29" endX="-28" endY="-115"/>
+          <bendpoint startY="36" endX="-28" endY="-108"/>
+          <bendpoint startX="28" startY="36" endY="-108"/>
+          <bendpoint startX="28" startY="111" endY="-33"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b53e9b37b28c44d099fad927ad1387a5" source="id-4d985dccc48e42b89f846bdfcc889131" target="id-d203037651834aa2840c1982b81afa43" archimateRelationship="id-c6ea99817b22457c909b8328595787c0">
+          <bendpoint startX="-85" endX="117" endY="-150"/>
+          <bendpoint startX="-85" startY="150" endX="117"/>
+          <bendpoint startX="-140" startY="150" endX="62"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3507f116f1ae48f6a20ac2d9a2d007e5" archimateElement="id-92664a6b007b411d979d63c25480a38c">
+        <bounds x="212" y="12" width="122" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-329925db7fed4428b2e7e13fe97f6aeb" source="id-3507f116f1ae48f6a20ac2d9a2d007e5" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-19d9b00629d14813b54456c13937e373">
+          <bendpoint startX="86" endX="-143" endY="-144"/>
+          <bendpoint startX="86" startY="135" endX="-143" endY="-9"/>
+          <bendpoint startX="160" startY="135" endX="-69" endY="-9"/>
+          <bendpoint startX="160" startY="144" endX="-69"/>
+          <bendpoint startX="167" startY="144" endX="-62"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4e64911d89d64faaa2c053df7c01cb1e" source="id-3507f116f1ae48f6a20ac2d9a2d007e5" target="id-d203037651834aa2840c1982b81afa43" archimateRelationship="id-44c44def4b364147ba651c1038a4059c">
+          <bendpoint startY="29" endX="1" endY="-121"/>
+          <bendpoint startY="117" endX="1" endY="-33"/>
+          <bendpoint startX="-1" startY="117" endY="-33"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2b49c1661c0e48b4a1bbcce3e73f4e50" archimateElement="id-ee9aa7f5d13c4ec9ba9da957d3768ed2">
+        <bounds x="614" y="12" width="121" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-00d3869afd524f06b6d4b6a0fafb31af" source="id-2b49c1661c0e48b4a1bbcce3e73f4e50" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-f3edb77ba6cc4bdaa6c199b09f34d6c2">
+          <bendpoint startY="137" endX="172" endY="-7"/>
+          <bendpoint startX="-109" startY="137" endX="63" endY="-7"/>
+          <bendpoint startX="-109" startY="144" endX="63"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-57dd58d3939d4eedb15c2aa86b339fc1" source="id-2b49c1661c0e48b4a1bbcce3e73f4e50" target="id-ce45a2241d724651ad79f0fe7518bb6f" archimateRelationship="id-e248a5a1e04247daa01ce86499b1782f">
+          <bendpoint startY="29" endX="172" endY="-301"/>
+          <bendpoint startY="222" endX="172" endY="-108"/>
+          <bendpoint startX="17" startY="222" endX="189" endY="-108"/>
+          <bendpoint startX="17" startY="330" endX="189"/>
+          <bendpoint startX="-106" startY="330" endX="66"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f77a640cb071429f9ef48ce41790fa24" archimateElement="id-9fc4203ce6ac494fbe546220c92f44b9">
+        <bounds x="12" y="12" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-df6eb2e3f5f54e7a9371720f3486ecfa" source="id-f77a640cb071429f9ef48ce41790fa24" target="id-77df10f08b8443a293f8dc27d352c352" archimateRelationship="id-489e778685bd499eb4cd1f3c4d2ab4f5">
+          <bendpoint startY="88" endX="-430" endY="-56"/>
+          <bendpoint startX="330" startY="88" endX="-100" endY="-56"/>
+          <bendpoint startX="330" startY="144" endX="-100"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9eb103d1c76b4477acc2df8c9e866e40" source="id-f77a640cb071429f9ef48ce41790fa24" target="id-ce45a2241d724651ad79f0fe7518bb6f" archimateRelationship="id-533bf192ca6643b0986664aa6c9ed853">
+          <bendpoint startX="100" endX="-330" endY="-330"/>
+          <bendpoint startX="100" startY="299" endX="-330" endY="-31"/>
+          <bendpoint startX="358" startY="299" endX="-72" endY="-31"/>
+          <bendpoint startX="358" startY="330" endX="-72"/>
+          <bendpoint startX="365" startY="330" endX="-65"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-77df10f08b8443a293f8dc27d352c352" targetConnections="id-9bfd4ff7f0424a4c98081daceeb2e69a id-87e882f720a34ce1bd867794bcf1e054 id-e69e95140ebe467b8290fe2fa69b6fd5 id-329925db7fed4428b2e7e13fe97f6aeb id-00d3869afd524f06b6d4b6a0fafb31af id-df6eb2e3f5f54e7a9371720f3486ecfa" archimateElement="id-fcf6a7e660504afaa4580a9a92e062d9">
+        <bounds x="441" y="151" width="123" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8c01f8e4518948aebf8e13f17b42e342" source="id-77df10f08b8443a293f8dc27d352c352" target="id-ce45a2241d724651ad79f0fe7518bb6f" archimateRelationship="id-7fc557ea98cc4a81baf6e68c6637bfd5">
+          <bendpoint startY="34" endY="-152"/>
+          <bendpoint startY="138" endY="-48"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ce45a2241d724651ad79f0fe7518bb6f" targetConnections="id-8c01f8e4518948aebf8e13f17b42e342 id-57dd58d3939d4eedb15c2aa86b339fc1 id-9eb103d1c76b4477acc2df8c9e866e40 id-2ae8308232fe442f851430d73d6be0a1 id-21207a9f592749a78de74ebf3aee63db" archimateElement="id-77f9fed68144498386bf15c188fc2d21">
+        <bounds x="438" y="322" width="129" height="95"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a629bb5ee0854c9d917833eb3d346c97" targetConnections="id-3fa1bdd1733d4f138e194d50f297ddc6 id-5dcd5204031245be99f10065f0917fd8" archimateElement="id-bbf70387a3014a0bac693ecca4cce026">
+        <bounds x="848" y="147" width="141" height="95"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-2ae8308232fe442f851430d73d6be0a1" source="id-a629bb5ee0854c9d917833eb3d346c97" target="id-ce45a2241d724651ad79f0fe7518bb6f" archimateRelationship="id-80931b7bffd04ed2875ac31bc65caa63">
+          <bendpoint startY="98" endX="416" endY="-77"/>
+          <bendpoint startX="-316" startY="98" endX="100" endY="-77"/>
+          <bendpoint startX="-316" startY="175" endX="100"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d203037651834aa2840c1982b81afa43" targetConnections="id-b53e9b37b28c44d099fad927ad1387a5 id-4e64911d89d64faaa2c053df7c01cb1e" archimateElement="id-8387c0d7776b46b8a08ee1ad05bd0953">
+        <bounds x="212" y="157" width="121" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-21207a9f592749a78de74ebf3aee63db" source="id-d203037651834aa2840c1982b81afa43" target="id-ce45a2241d724651ad79f0fe7518bb6f" archimateRelationship="id-6d24ba8943244ed1b7cc0adcb807ecf1">
+          <bendpoint startY="83" endX="-230" endY="-97"/>
+          <bendpoint startX="100" startY="83" endX="-130" endY="-97"/>
+          <bendpoint startX="100" startY="180" endX="-130"/>
+        </sourceConnection>
+      </child>
+      <documentation>Evidence: stated - plant-brief.md Motivation spine; View Plan Job 01 approved
+
+## Purpose
+Sign the why for OrderSight visibility work at Hatherley Works: promised plate dates drift from mill reality, sales and mill need one order identity from promise to schedule, and OrderSight must not swallow MillOS.
+
+## Stakeholders and Concerns
+Plant Manager and Head of Sales need a weekly on-mill answer without PromiseSheet. MES Owner and CRM Programme Manager witness the OrderSight/MillOS boundary. Operations Planner and Integration Lead own shared identity from promise through schedule without merging systems.
+
+## Viewpoint
+Motivation viewpoint (overview). View name Motivation Overview.
+
+## Questions Answered
+Why change? What desired state? What hard boundary stays? Who signs and who witnesses?
+
+## Assumptions
+Named systems (MillOS, PromiseSheet, OrderSight, WorksERP, PlantGate) are wording context only on this view. No application, process, capability, or node elements belong here.
+
+## Decisions
+Shared order identity is modelled as goal/outcome language, not a merged system. Requirement freezes OrderSight as sales-facing visibility only.
+
+## Exclusions
+Capabilities, processes, applications, nodes, work packages, second site, costing, MES rewrite, WMS/TMS/data lake/ERP replacement.
+
+## Open Questions
+None on the frozen spine. Later jobs pick up application and technology layers.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Capability Map" id="id-6613e98758a3455d95e1fcc5b8e731f7" viewpoint="capability_map">
+      <child xsi:type="archimate:DiagramObject" id="id-fa25f34355f64c1592ecdcd856d3e440" archimateElement="id-9c2c1a6a78f0475681b48889b2664099">
+        <bounds x="60" y="80" width="180" height="80"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ea6debbb92444baf8d84b46a85006245" archimateElement="id-f6c7c6a74874412ba24c60d318292ad2">
+        <bounds x="300" y="80" width="180" height="80"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-be18c523e3524155aa54ab624cf3b312" archimateElement="id-ed34ec1744a1458b9f7e1579932f2af6">
+        <bounds x="540" y="80" width="200" height="80"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5cd6872c29434a32929fef2037b7a40c" archimateElement="id-50f22633aea34b3b8536e05a14fda533">
+        <bounds x="800" y="80" width="180" height="80"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-65aef79b1aaa49049452934c7765a206">
+        <bounds x="60" y="200" width="920" height="70"/>
+        <content>Ownership (docs only): MillOS owns Mill schedule; OrderSight stays sales-facing on Promise/Order. No applications on this view.</content>
+      </child>
+      <documentation>Evidence: stated - View Plan Job 02 approved; plant-brief.md
+
+## Purpose
+Agree the sales-to-mill capability set that runs promise, order, mill schedule, and collect at Hatherley Works, with stable names for later views.
+
+## Stakeholders and Concerns
+Plant Manager and Head of Sales sign the map. MES Owner and CRM Programme Manager hold the MillOS vs OrderSight boundary in documentation. Operations Planner needs the promise-to-schedule capability chain named. Integration Lead is omitted from this view; IDs remain from job 1.
+
+## Viewpoint
+Capability Map viewpoint (overview). View name Capability Map.
+
+## Questions Answered
+Which top-level capabilities cover promise, order, mill schedule, and collect? Who owns mill schedule capability language (MillOS) versus sales-facing promise/order (OrderSight)?
+
+## Assumptions
+Named systems appear only in documentation. No processes, applications, nodes, or work packages belong on this view. Job 1 motivation is reused, not redrawn.
+
+## Decisions
+Four plain top-level capabilities: Promise, Order, Mill schedule, Collect. Flow chain left to right. MillOS owns mill schedule capability in docs; OrderSight stays sales-facing; no ERP replacement capability.
+
+## Exclusions
+Motivation redraw, business processes, applications, technology/physical nodes, work packages, second site, costing, MES rewrite, WMS/TMS/data lake/ERP replacement. Integration Lead not placed on this view.
+
+## Open Questions
+None for this overview grain. Later SOAM jobs add process, application, and technology layers.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Production Operations" id="id-c189cce2288642d8b1cf3c267270d571" viewpoint="business_process">
+      <child xsi:type="archimate:DiagramObject" id="id-64f8bad02c5145c3bb16d84a6b8efb47" archimateElement="id-c2d53b4de0d44d7c92f5e4ea51332ccf">
+        <bounds x="40" y="40" width="160" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-6beda9c9b907446e89fd8f713457f012" source="id-64f8bad02c5145c3bb16d84a6b8efb47" target="id-32dba3079e0c4bc7a84bba54f7676a1d" archimateRelationship="id-5c31de3b31eb4372a9d073fb64d5ed58"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ad21c8a154ef4b1ea7d31c622654671c" archimateElement="id-a10b3ee5bc3c49088e973710f1b8397e">
+        <bounds x="240" y="40" width="160" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e0cde8b9e03c4a1c9a714ebc27fd3d7e" source="id-ad21c8a154ef4b1ea7d31c622654671c" target="id-511b70bcf1f84341a22f9a726d524858" archimateRelationship="id-cca33037e4cf47c5846fa7f9138f3d3c">
+          <bendpoint startY="80" endX="190" endY="-85"/>
+          <bendpoint startX="-190" startY="80" endY="-85"/>
+          <bendpoint startX="-190" startY="129" endY="-36"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-284d264bab4247d0854c91b2b4d3a1ab" archimateElement="id-7a3f4a278904406cbb3c52f2fa45825a">
+        <bounds x="440" y="40" width="170" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-cbc1e23201174190a5dcbd38ee917844" source="id-284d264bab4247d0854c91b2b4d3a1ab" target="id-9394e1c009cc45ba8c8ef0fc4c421a93" archimateRelationship="id-e1043c22e2244bf29190224c526bb58e">
+          <bendpoint startX="-105" endX="50" endY="-165"/>
+          <bendpoint startX="-105" startY="122" endX="50" endY="-43"/>
+          <bendpoint startX="-155" startY="122" endY="-43"/>
+          <bendpoint startX="-155" startY="129" endY="-36"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-924c50dfa23c4531b408126b9e0259da" source="id-284d264bab4247d0854c91b2b4d3a1ab" target="id-c6c5cf29b0454188a8136937d831c13f" archimateRelationship="id-b098390798814b57963e3fe28cc45745">
+          <bendpoint startY="31" endX="-85" endY="-134"/>
+          <bendpoint startY="122" endX="-85" endY="-43"/>
+          <bendpoint startX="85" startY="122" endY="-43"/>
+          <bendpoint startX="85" startY="129" endY="-36"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ec4fc07dc9b54e4aa36d337cb3a39cb5" archimateElement="id-8c313bffb8d3411c8fe9dec39a89624b">
+        <bounds x="650" y="40" width="160" height="60"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-aa0662bab833424ca8d11132960a04f3" source="id-ec4fc07dc9b54e4aa36d337cb3a39cb5" target="id-32dba3079e0c4bc7a84bba54f7676a1d" archimateRelationship="id-6166df1c8d76468b921c61a720a610a9"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-511b70bcf1f84341a22f9a726d524858" targetConnections="id-e0cde8b9e03c4a1c9a714ebc27fd3d7e" archimateElement="id-c338aa0260a345ed9be332a6b9e26be9">
+        <bounds x="40" y="200" width="180" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a465bbc079f946e885ec4bb221e17849" source="id-511b70bcf1f84341a22f9a726d524858" target="id-9394e1c009cc45ba8c8ef0fc4c421a93" archimateRelationship="id-848ce647fbce4d989656c31499819b00">
+          <bendpoint startX="91" endX="-149"/>
+          <bendpoint startX="149" endX="-91"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-9394e1c009cc45ba8c8ef0fc4c421a93" targetConnections="id-cbc1e23201174190a5dcbd38ee917844 id-a465bbc079f946e885ec4bb221e17849" archimateElement="id-69e033ce9ca242d499799db7a6b42272">
+        <bounds x="280" y="200" width="180" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4e74f2d5da654250996ea6ffa68cc47d" source="id-9394e1c009cc45ba8c8ef0fc4c421a93" target="id-c6c5cf29b0454188a8136937d831c13f" archimateRelationship="id-2474f5e6c0634451b110c48817d3a26d">
+          <bendpoint startX="91" endX="-149"/>
+          <bendpoint startX="149" endX="-91"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-c6c5cf29b0454188a8136937d831c13f" targetConnections="id-924c50dfa23c4531b408126b9e0259da id-4e74f2d5da654250996ea6ffa68cc47d" archimateElement="id-d6a875984a84411d958d73759e2ffe1a">
+        <bounds x="520" y="200" width="180" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9f527d05dca84910938a35b96d8fc0bf" source="id-c6c5cf29b0454188a8136937d831c13f" target="id-32dba3079e0c4bc7a84bba54f7676a1d" archimateRelationship="id-5696c39fdca04a1bb5e385f868eb3e8f"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-32dba3079e0c4bc7a84bba54f7676a1d" targetConnections="id-6beda9c9b907446e89fd8f713457f012 id-aa0662bab833424ca8d11132960a04f3 id-9f527d05dca84910938a35b96d8fc0bf" archimateElement="id-ed0201833e864e08ab2950d70d2994aa">
+        <bounds x="760" y="200" width="180" height="70"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-081eeb4338a74be29dc329590b8740d5">
+        <bounds x="40" y="300" width="900" height="81"/>
+        <content>PromiseSheet is the as-is pain: shared-drive spreadsheet for customer promises. Named here in narrative only; not modelled as an application on this view.</content>
+      </child>
+      <documentation>## Purpose
+Show the as-is shop-floor chain from customer promise through works order and mill schedule to plate rolling so plant and sales readers can follow one path without new systems on the canvas.
+
+## Stakeholders and Concerns
+Plant Manager, Head of Sales, Operations Planner, and MES Owner need the promise-to-rolling chain readable. CRM Programme Manager and Integration Lead stay off-canvas; job-01 stakeholder IDs are reused only. PromiseSheet remains the named pain in narrative, not an application element.
+
+## Viewpoint
+Business Process viewpoint. View name Production Operations.
+
+## Questions Answered
+How does a customer promise become a works order, mill schedule, and plate rolling today? Which business roles perform each step on the as-is path?
+
+## Assumptions
+Named systems (PromiseSheet, WorksERP, MillOS, OrderSight, PlantGate) are wording only this job. Job-02 capabilities stay off this canvas. Motivation stakeholders are not duplicated as second Stakeholder elements; Business Role elements carry assignment on the operations view.
+
+## Decisions
+Four business processes with plain brief names: Promise, Works order, Mill schedule, Plate rolling. Four Business Role elements on canvas matching the primary audience. Triggering chain left to right. Assignment from roles to processes. One PromiseSheet pain note below the content.
+
+## Exclusions
+Application components, nodes, work packages, second site, costing, MES rewrite, WMS, TMS, data lake, ERP replacement. Job-02 capability redraw. Motivation redraw. CRM Programme Manager and Integration Lead on-canvas placement.
+
+## Open Questions
+None blocking. First generation is a draft checkpoint (CP-G7). Later SOAM jobs add application usage and technology.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Application Support" id="id-90bb9ec6131b44f9966ac494bd89a90c" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-862d351c248a42e89337afeffaf8cae7" targetConnections="id-3e1524deeee648c2b51ff0f6d57f35bc id-a33143703aed4b53a836afdbdbf7734c id-65c90d8148bd41fcbed0cfd859d37b48" archimateElement="id-c338aa0260a345ed9be332a6b9e26be9">
+        <bounds x="482" y="291" width="170" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-410353b03ad449db986b6a4ed69883c9" source="id-862d351c248a42e89337afeffaf8cae7" target="id-98143dcf723142c792796c102b9db3f9" archimateRelationship="id-848ce647fbce4d989656c31499819b00">
+          <bendpoint startX="86" endX="-182" endY="16"/>
+          <bendpoint startX="175" endX="-93" endY="16"/>
+          <bendpoint startX="175" startY="-16" endX="-93"/>
+          <bendpoint startX="182" startY="-16" endX="-86"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-98143dcf723142c792796c102b9db3f9" targetConnections="id-410353b03ad449db986b6a4ed69883c9 id-d8d99b8d533349da87252aa68ff7daf1 id-e82c9fe18d4146a8b9a7fb02b5572601" archimateElement="id-69e033ce9ca242d499799db7a6b42272">
+        <bounds x="750" y="275" width="170" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-cb89609d01734b0bab0094b50f217af3" source="id-98143dcf723142c792796c102b9db3f9" target="id-a634176427fa4bc0b5e077bc9919dab7" archimateRelationship="id-2474f5e6c0634451b110c48817d3a26d">
+          <bendpoint startX="86" endX="-196" endY="17"/>
+          <bendpoint startX="189" endX="-93" endY="17"/>
+          <bendpoint startX="189" startY="-17" endX="-93"/>
+          <bendpoint startX="196" startY="-17" endX="-86"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a634176427fa4bc0b5e077bc9919dab7" targetConnections="id-cb89609d01734b0bab0094b50f217af3 id-c5fea4fd308d4b65b64ef5b419df1d2c id-95dd6963241d4a93a994985b4f6e1b2b" archimateElement="id-d6a875984a84411d958d73759e2ffe1a">
+        <bounds x="1032" y="258" width="170" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-62c3321edc6b441db266fce8afda45a9" source="id-a634176427fa4bc0b5e077bc9919dab7" target="id-24980ccd69194bb9b8ca4de4ca63036a" archimateRelationship="id-5696c39fdca04a1bb5e385f868eb3e8f"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-24980ccd69194bb9b8ca4de4ca63036a" targetConnections="id-62c3321edc6b441db266fce8afda45a9 id-97b10b2698d0474b836003a4e441eadd" archimateElement="id-ed0201833e864e08ab2950d70d2994aa">
+        <bounds x="1292" y="248" width="170" height="65"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ea1b33b1d9be42799d0f5870edd83190" archimateElement="id-d5dab10f11a04eedb0ba9532bd2940b1">
+        <bounds x="252" y="312" width="140" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3e1524deeee648c2b51ff0f6d57f35bc" source="id-ea1b33b1d9be42799d0f5870edd83190" target="id-862d351c248a42e89337afeffaf8cae7" archimateRelationship="id-5abf0b65ccaf4d16ae90aafa800b5032">
+          <bendpoint startX="71" endX="-174" endY="16"/>
+          <bendpoint startX="152" endX="-93" endY="16"/>
+          <bendpoint startX="152" startY="-16" endX="-93"/>
+          <bendpoint startX="159" startY="-16" endX="-86"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5c07a72672a946b2b0911b8385e2ed32" archimateElement="id-b8e160d2c6d24f34badc02f1b6ae6c6f">
+        <bounds x="12" y="230" width="140" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a33143703aed4b53a836afdbdbf7734c" source="id-5c07a72672a946b2b0911b8385e2ed32" target="id-862d351c248a42e89337afeffaf8cae7" archimateRelationship="id-9212de6280604f5e9c6507431cab0bf2">
+          <bendpoint startX="71" endX="-414" endY="-66"/>
+          <bendpoint startX="458" endX="-27" endY="-66"/>
+          <bendpoint startX="458" startY="33" endX="-27" endY="-33"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ede14b3ead7e4031bafdc9a934408318" archimateElement="id-d0698a626afc460d8de1493b05a421e6">
+        <bounds x="242" y="166" width="150" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-65c90d8148bd41fcbed0cfd859d37b48" source="id-ede14b3ead7e4031bafdc9a934408318" target="id-862d351c248a42e89337afeffaf8cae7" archimateRelationship="id-be1b3be3034c42c28733cba2796fd526">
+          <bendpoint startX="76" startY="23" endX="-174" endY="-107"/>
+          <bendpoint startX="277" startY="23" endX="27" endY="-107"/>
+          <bendpoint startX="277" startY="97" endX="27" endY="-33"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d8d99b8d533349da87252aa68ff7daf1" source="id-ede14b3ead7e4031bafdc9a934408318" target="id-98143dcf723142c792796c102b9db3f9" archimateRelationship="id-070c651ce29e4e69be6f0d91242bce0a">
+          <bendpoint startX="76" endX="-442" endY="-114"/>
+          <bendpoint startX="76" startY="8" endX="-442" endY="-106"/>
+          <bendpoint startX="491" startY="8" endX="-27" endY="-106"/>
+          <bendpoint startX="491" startY="81" endX="-27" endY="-33"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-9f8b989bbada4cc5a89aedbf4ac5342f" archimateElement="id-45a53e69f46a4c80a0e8bcb81ba24cf9">
+        <bounds x="495" y="94" width="150" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e82c9fe18d4146a8b9a7fb02b5572601" source="id-9f8b989bbada4cc5a89aedbf4ac5342f" target="id-98143dcf723142c792796c102b9db3f9" archimateRelationship="id-e3e73197b6834536b2e7468769cc70ad">
+          <bendpoint startX="76" startY="23" endX="-189" endY="-163"/>
+          <bendpoint startX="292" startY="23" endX="27" endY="-163"/>
+          <bendpoint startX="292" startY="153" endX="27" endY="-33"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c5fea4fd308d4b65b64ef5b419df1d2c" source="id-9f8b989bbada4cc5a89aedbf4ac5342f" target="id-a634176427fa4bc0b5e077bc9919dab7" archimateRelationship="id-77977799d7f2461ba5e81fbce42b3581">
+          <bendpoint startX="76" endX="-471" endY="-169"/>
+          <bendpoint startX="76" startY="8" endX="-471" endY="-161"/>
+          <bendpoint startX="520" startY="8" endX="-27" endY="-161"/>
+          <bendpoint startX="520" startY="136" endX="-27" endY="-33"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-07a18b2fcfd74361866fa4c413d81798" archimateElement="id-e74300558c24411c9ca9cf76c2d9ecd6">
+        <bounds x="742" y="12" width="200" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-95dd6963241d4a93a994985b4f6e1b2b" source="id-07a18b2fcfd74361866fa4c413d81798" target="id-a634176427fa4bc0b5e077bc9919dab7" archimateRelationship="id-86a670b0e85949cca5d9663599568f3e">
+          <bendpoint startX="101" startY="23" endX="-174" endY="-228"/>
+          <bendpoint startX="275" startY="23" endY="-228"/>
+          <bendpoint startX="275" startY="218" endY="-33"/>
+        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-97b10b2698d0474b836003a4e441eadd" source="id-07a18b2fcfd74361866fa4c413d81798" target="id-24980ccd69194bb9b8ca4de4ca63036a" archimateRelationship="id-75bae4f45a4748cf967e96c596edb9ea"/>
+      </child>
+      <child xsi:type="archimate:Note" id="id-81102748ec9f45bf8d9a8d4ed1eb5a5e">
+        <bounds x="40" y="407" width="900" height="70"/>
+        <content>Freeze: OrderSight and MillOS stay separate. PlantGate bridges OrderSight promises to WorksERP works orders only and does not talk to mill equipment. No nodes this job.</content>
+      </child>
+      <documentation>## Purpose
+Show which named applications hold and support promises, works orders, and mill schedule on the already-modelled operations chain without merging OrderSight and MillOS.
+
+## Stakeholders and Concerns
+MES Owner, CRM Programme Manager, Integration Lead, Plant Manager, and Head of Sales need holders of promise, works order, and mill schedule readable. Shared order identity across systems; PlantGate does not talk to mill equipment.
+
+## Viewpoint
+Application Usage viewpoint; view name Application Support.
+
+## Questions Answered
+Which system holds promises, works orders, and mill schedule? Do OrderSight and MillOS stay separate? What does PlantGate bridge?
+
+## Assumptions
+Job-03 processes reused; job-02 capabilities omitted from canvas; no nodes or equipment this job.
+
+## Decisions
+Five ApplicationComponents with plant-brief names; Serving links to reused processes; PlantGate bridge documented; PromiseSheet modelled as as-is pain application.
+
+## Exclusions
+Nodes, equipment, work packages, second site, costing, MES rewrite, WMS/TMS/data lake/ERP replacement, capability redraw, motivation redraw.
+
+## Open Questions
+None blocking; first generation is draft (CP-G7).
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Technology and Physical" id="id-6ef45eb1bf8340f2b2eba45c4f92b9e9" viewpoint="technology_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-88c93e4ce96c429a9eb88de38b37b56f" archimateElement="id-b1d315115a8249809f7750591162b405">
+        <bounds x="20" y="40" width="200" height="100"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-185febd3db194c4ebd71bdc64c7b4ad5" source="id-88c93e4ce96c429a9eb88de38b37b56f" target="id-529df6204110420bb8f449a9646a0412" archimateRelationship="id-115de4c51cd4490b8c2950ec47542f55">
+          <bendpoint startY="51" endX="-40" endY="-149"/>
+          <bendpoint startY="58" endX="-40" endY="-142"/>
+          <bendpoint startX="40" startY="58" endY="-142"/>
+          <bendpoint startX="40" startY="89" endY="-111"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-529df6204110420bb8f449a9646a0412" targetConnections="id-185febd3db194c4ebd71bdc64c7b4ad5" fillColor="#F4F4F4" archimateElement="id-c2b0ccf345fb4ce78c7e0687ed2fbe52">
+        <bounds x="20" y="180" width="280" height="220"/>
+        <child xsi:type="archimate:DiagramObject" id="id-7d0d1cc6ba4e4ab693f86cf2b339965c" archimateElement="id-057eb745f829482892236d1023a52c3a">
+          <bounds x="30" y="60" width="200" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-040e7535dffa43048d2ce5b554dc9f9a" fillColor="#F4F4F4" archimateElement="id-ef9c0f14635a4a95adb8ba9858a25df2">
+        <bounds x="360" y="80" width="300" height="300"/>
+        <child xsi:type="archimate:DiagramObject" id="id-91d4b28543c44360b43fddb09389e52e" archimateElement="id-e74300558c24411c9ca9cf76c2d9ecd6">
+          <bounds x="30" y="60" width="220" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="id-44f4a0f6e1b746df8c212b18905c4d2a" archimateElement="id-45a53e69f46a4c80a0e8bcb81ba24cf9">
+          <bounds x="30" y="140" width="220" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f639fcde858242fc8ec93147a01f716b" archimateElement="id-9da853906d8c4af7805ac95eca12d643">
+        <bounds x="720" y="40" width="200" height="100"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4b65bb4341f746709b718c624c92c849" source="id-f639fcde858242fc8ec93147a01f716b" target="id-4f7ac597a3704a8f834f05c1e2a2f665" archimateRelationship="id-8436dfd673dc4dd9832441177db2c83b">
+          <bendpoint startY="51" endX="-40" endY="-149"/>
+          <bendpoint startY="58" endX="-40" endY="-142"/>
+          <bendpoint startX="40" startY="58" endY="-142"/>
+          <bendpoint startX="40" startY="89" endY="-111"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-4f7ac597a3704a8f834f05c1e2a2f665" targetConnections="id-4b65bb4341f746709b718c624c92c849" fillColor="#F4F4F4" archimateElement="id-8d9fc0f78d2b4122bb9977edc94e9305">
+        <bounds x="720" y="180" width="280" height="220"/>
+        <child xsi:type="archimate:DiagramObject" id="id-eae9df85eb9a40c3a69857fcac504813" archimateElement="id-d0698a626afc460d8de1493b05a421e6">
+          <bounds x="30" y="60" width="220" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Note" id="id-6e83b113439e4ca9ab235d711a6bea04">
+        <bounds x="20" y="410" width="1000" height="80"/>
+        <content>As-is hosting only. MillOS and WorksERP on On-prem app server. PlantGate on PlantGate node in Comms room. Rolling equipment on Mill floor node. OrderSight omitted from all nodes (not the mill stack). No work packages.</content>
+      </child>
+      <documentation>## Purpose
+Show where MillOS, WorksERP, and PlantGate run, and place plate mill physical assets so plant and CRM audiences cannot mistake OrderSight for the mill stack.
+
+## Stakeholders and Concerns
+Plant Manager needs the plate mill building and rolling equipment on a mill-floor node. MES Owner needs MillOS with WorksERP on the on-prem app server. Integration Lead needs PlantGate on a comms-room node with no mill-equipment link. CRM Programme Manager needs OrderSight kept off every mill host node.
+
+## Viewpoint
+Technology Usage viewpoint (`technology_usage` preferred) carrying Physical concerns on one canvas named Technology and Physical. Nodes host applications by nested containment; facilities and equipment supply physical context.
+
+## Questions Answered
+Which node hosts MillOS and WorksERP? Where does PlantGate run? Is rolling equipment assigned to a mill-floor node? Is OrderSight drawn as part of mill hosting? Does PlantGate connect to mill equipment?
+
+## Assumptions
+Single Hatherley Works site remains as-is. Job 01-04 motivation, capability, operations, and application elements are reused without recreation. OrderSight has no mill host in the brief, so it is omitted from all nodes this job.
+
+## Decisions
+Created three nodes (Mill floor node, On-prem app server, PlantGate node), two facilities (Plate mill building, Comms room), and Rolling equipment. Assigned MillOS and WorksERP to On-prem app server; PlantGate to PlantGate node; rolling equipment (or facility) assignment satisfies the freeze. No work packages. No second site.
+
+## Exclusions
+Work packages, plateaus, gaps, WMS, TMS, data lake, ERP replacement, MES rewrite, costing, second site, and any OrderSight hosting on mill infrastructure.
+
+## Open Questions
+None for this draft close-out. Node asset tags were not supplied; plain brief labels used.</documentation>
+    </element>
+  </folder>
 </archimate:model>

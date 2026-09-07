@@ -1,0 +1,311 @@
+{
+  "view_id": "id-c189cce2288642d8b1cf3c267270d571",
+  "view_name": "Production Operations",
+  "roles": {
+    "Plant Manager": {
+      "id": "id-c2d53b4de0d44d7c92f5e4ea51332ccf",
+      "type": "BusinessRole",
+      "action": "created_new"
+    },
+    "Head of Sales": {
+      "id": "id-a10b3ee5bc3c49088e973710f1b8397e",
+      "type": "BusinessRole",
+      "action": "created_new"
+    },
+    "Operations Planner": {
+      "id": "id-7a3f4a278904406cbb3c52f2fa45825a",
+      "type": "BusinessRole",
+      "action": "created_new"
+    },
+    "MES Owner": {
+      "id": "id-8c313bffb8d3411c8fe9dec39a89624b",
+      "type": "BusinessRole",
+      "action": "created_new"
+    }
+  },
+  "processes": {
+    "Promise": {
+      "id": "id-c338aa0260a345ed9be332a6b9e26be9",
+      "type": "BusinessProcess",
+      "action": "created_new"
+    },
+    "Works order": {
+      "id": "id-69e033ce9ca242d499799db7a6b42272",
+      "type": "BusinessProcess",
+      "action": "created_new"
+    },
+    "Mill schedule": {
+      "id": "id-d6a875984a84411d958d73759e2ffe1a",
+      "type": "BusinessProcess",
+      "action": "created_new"
+    },
+    "Plate rolling": {
+      "id": "id-ed0201833e864e08ab2950d70d2994aa",
+      "type": "BusinessProcess",
+      "action": "created_new"
+    }
+  },
+  "relationships": [
+    {
+      "id": "id-cca33037e4cf47c5846fa7f9138f3d3c",
+      "type": "AssignmentRelationship",
+      "source": "Head of Sales",
+      "target": "Promise",
+      "action": "created"
+    },
+    {
+      "id": "id-e1043c22e2244bf29190224c526bb58e",
+      "type": "AssignmentRelationship",
+      "source": "Operations Planner",
+      "target": "Works order",
+      "action": "created"
+    },
+    {
+      "id": "id-b098390798814b57963e3fe28cc45745",
+      "type": "AssignmentRelationship",
+      "source": "Operations Planner",
+      "target": "Mill schedule",
+      "action": "created"
+    },
+    {
+      "id": "id-a6699eacb79b45cf8795e341ec2d9457",
+      "type": "AssignmentRelationship",
+      "source": "MES Owner",
+      "target": "Plate rolling",
+      "action": "created"
+    },
+    {
+      "id": "id-7d3ffe8b4b2c43b49332c15fa5b219da",
+      "type": "AssignmentRelationship",
+      "source": "Plant Manager",
+      "target": "Plate rolling",
+      "action": "created"
+    },
+    {
+      "id": "id-848ce647fbce4d989656c31499819b00",
+      "type": "TriggeringRelationship",
+      "source": "Promise",
+      "target": "Works order",
+      "action": "created"
+    },
+    {
+      "id": "id-2474f5e6c0634451b110c48817d3a26d",
+      "type": "TriggeringRelationship",
+      "source": "Works order",
+      "target": "Mill schedule",
+      "action": "created"
+    },
+    {
+      "id": "id-8adabf3975ca4e0b80de6e744704b9d0",
+      "type": "TriggeringRelationship",
+      "source": "Mill schedule",
+      "target": "Plate rolling",
+      "action": "created"
+    }
+  ],
+  "stakeholders_reused_off_canvas": {
+    "Plant Manager": "id-0260a5aa995b41c7b84d93d3541592c0",
+    "Head of Sales": "id-988afa0e45894cd3a657ac9c7085ed98",
+    "Operations Planner": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+    "MES Owner": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+    "CRM Programme Manager": "id-92664a6b007b411d979d63c25480a38c",
+    "Integration Lead": "id-9fc4203ce6ac494fbe546220c92f44b9"
+  },
+  "note_id": null,
+  "registry": {
+    "stakeholder:plant manager": {
+      "element_id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "decision": "found_existing",
+      "notes": "job-01"
+    },
+    "stakeholder:head of sales": {
+      "element_id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:mes owner": {
+      "element_id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:crm programme manager": {
+      "element_id": "id-92664a6b007b411d979d63c25480a38c",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:operations planner": {
+      "element_id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:integration lead": {
+      "element_id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "driver:promised plate dates do not match mill reality": {
+      "element_id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "goal:sales and mill share one order identity from promise to schedule": {
+      "element_id": "id-77f9fed68144498386bf15c188fc2d21",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "outcome:plant manager and head of sales answer on-mill-this-week without promisesheet": {
+      "element_id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "requirement:ordersight must not swallow millos": {
+      "element_id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "capability:promise": {
+      "element_id": "id-9c2c1a6a78f0475681b48889b2664099",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:order": {
+      "element_id": "id-f6c7c6a74874412ba24c60d318292ad2",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:mill schedule": {
+      "element_id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:collect": {
+      "element_id": "id-50f22633aea34b3b8536e05a14fda533",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "businessrole:plant manager": {
+      "element_id": "id-c2d53b4de0d44d7c92f5e4ea51332ccf",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:head of sales": {
+      "element_id": "id-a10b3ee5bc3c49088e973710f1b8397e",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:operations planner": {
+      "element_id": "id-7a3f4a278904406cbb3c52f2fa45825a",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:mes owner": {
+      "element_id": "id-8c313bffb8d3411c8fe9dec39a89624b",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessprocess:promise": {
+      "element_id": "id-c338aa0260a345ed9be332a6b9e26be9",
+      "decision": "created_new",
+      "notes": "job-03"
+    },
+    "businessprocess:works order": {
+      "element_id": "id-69e033ce9ca242d499799db7a6b42272",
+      "decision": "created_new",
+      "notes": "job-03"
+    },
+    "businessprocess:mill schedule": {
+      "element_id": "id-d6a875984a84411d958d73759e2ffe1a",
+      "decision": "created_new",
+      "notes": "job-03"
+    },
+    "businessprocess:plate rolling": {
+      "element_id": "id-ed0201833e864e08ab2950d70d2994aa",
+      "decision": "created_new",
+      "notes": "job-03"
+    }
+  },
+  "model_info": {
+    "name": "Hatherley Plate Ltd",
+    "elementCount": 22,
+    "relationshipCount": 23,
+    "viewCount": 3,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessRole": 4,
+      "BusinessProcess": 4,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Motivation": 10
+    }
+  },
+  "qa": {
+    "type_counts": {
+      "Capability": 4,
+      "BusinessRole": 4,
+      "BusinessProcess": 4,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "application_count": 0,
+    "node_count": 0,
+    "process_count": 4,
+    "role_count": 4,
+    "stakeholder_count": 6,
+    "promisesheet_elements": [
+      {
+        "id": "id-bbf70387a3014a0bac693ecca4cce026",
+        "name": "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet",
+        "type": "Outcome",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints\nPlant Manager and Head of Sales can answer whether an order is on the mill this week without opening PromiseSheet."
+      }
+    ],
+    "duplicate_stakeholders": {},
+    "assess_layout": {
+      "overallRating": "excellent",
+      "ratingBreakdown": {
+        "overlaps": "pass",
+        "edgeCrossings": "pass",
+        "spacing": "pass",
+        "alignment": "pass",
+        "labelOverlaps": "pass",
+        "passThroughs": "pass",
+        "coincidentSegments": "pass",
+        "nonOrthogonalTerminals": "pass",
+        "nonOrthogonalInteriorSegments": "pass",
+        "connectionThroughNote": "pass",
+        "boundaryViolations": "pass",
+        "parentLabelObscured": "pass",
+        "offCanvas": "pass",
+        "labelTruncations": "pass",
+        "interiorTerminations": "pass",
+        "zigzags": "pass",
+        "connectionEdgeCoincidence": "pass",
+        "hubPortQuality": "pass",
+        "hubNeighbourCrowding": "pass",
+        "overall": "excellent",
+        "overallExcludingAcceptedCosmetics": "excellent"
+      }
+    },
+    "view_element_names": [
+      "Plant Manager",
+      "Head of Sales",
+      "Operations Planner",
+      "MES Owner",
+      "Promise",
+      "Works order",
+      "Mill schedule",
+      "Plate rolling"
+    ]
+  }
+}

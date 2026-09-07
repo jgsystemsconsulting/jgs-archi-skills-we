@@ -1,0 +1,243 @@
+{
+  "view_id": "id-6613e98758a3455d95e1fcc5b8e731f7",
+  "view_name": "Capability Map",
+  "elements": {
+    "Promise": {
+      "id": "id-9c2c1a6a78f0475681b48889b2664099",
+      "type": "Capability",
+      "action": "created_new"
+    },
+    "Order": {
+      "id": "id-f6c7c6a74874412ba24c60d318292ad2",
+      "type": "Capability",
+      "action": "created_new"
+    },
+    "Mill schedule": {
+      "id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+      "type": "Capability",
+      "action": "created_new"
+    },
+    "Collect": {
+      "id": "id-50f22633aea34b3b8536e05a14fda533",
+      "type": "Capability",
+      "action": "created_new"
+    }
+  },
+  "relationships": [],
+  "relationship_note": "Peer capability map uses spatial order only; no Cap-Cap edges (offline compliance + overview grain).",
+  "model_info": {
+    "name": "Hatherley Plate Ltd",
+    "elementCount": 14,
+    "relationshipCount": 15,
+    "viewCount": 2,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 12,
+      "InfluenceRelationship": 1,
+      "RealizationRelationship": 2
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "qa": {
+    "driver_count": 1,
+    "goal_count": 1,
+    "capability_count": 4,
+    "application_count": 0,
+    "process_count": 0,
+    "node_count": 0,
+    "job1_driver_duplicated": false,
+    "assess_layout": {
+      "overallRating": "excellent",
+      "ratingBreakdown": {
+        "overlaps": "pass",
+        "edgeCrossings": "pass",
+        "spacing": "pass",
+        "alignment": "pass",
+        "labelOverlaps": "pass",
+        "passThroughs": "pass",
+        "coincidentSegments": "pass",
+        "nonOrthogonalTerminals": "pass",
+        "nonOrthogonalInteriorSegments": "pass",
+        "connectionThroughNote": "pass",
+        "boundaryViolations": "pass",
+        "parentLabelObscured": "pass",
+        "offCanvas": "pass",
+        "labelTruncations": "pass",
+        "interiorTerminations": "pass",
+        "zigzags": "pass",
+        "connectionEdgeCoincidence": "pass",
+        "hubPortQuality": "pass",
+        "hubNeighbourCrowding": "pass",
+        "overall": "excellent",
+        "overallExcludingAcceptedCosmetics": "excellent"
+      }
+    },
+    "compliance_validate": "pass (no Cap-Cap edges)",
+    "docs_coverage": "pass require-evidence on elements"
+  },
+  "view_contents": {
+    "viewId": "id-6613e98758a3455d95e1fcc5b8e731f7",
+    "viewName": "Capability Map",
+    "viewpoint": "capability_map",
+    "elements": [
+      {
+        "id": "id-9c2c1a6a78f0475681b48889b2664099",
+        "name": "Promise",
+        "type": "Capability",
+        "layer": "Strategy",
+        "documentation": "Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain\nOrganisational ability to commit a plate date to a customer before mill work is locked. Sales-facing; OrderSight remains the sales-facing system for this capability (wording only, not modelled as an application here)."
+      },
+      {
+        "id": "id-f6c7c6a74874412ba24c60d318292ad2",
+        "name": "Order",
+        "type": "Capability",
+        "layer": "Strategy",
+        "documentation": "Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain\nOrganisational ability to hold one customer order identity through sales and works-order handoff so promise and mill schedule talk about the same order. WorksERP stays works-order context; no ERP replacement."
+      },
+      {
+        "id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+        "name": "Mill schedule",
+        "type": "Capability",
+        "layer": "Strategy",
+        "documentation": "Evidence: stated - View Plan Job 02 approved; plant-brief.md Named as-is systems\nOrganisational ability to plan and run the mill week for plate orders. MillOS owns this capability as mill schedule system of record (ownership in documentation only; no application element on this view)."
+      },
+      {
+        "id": "id-50f22633aea34b3b8536e05a14fda533",
+        "name": "Collect",
+        "type": "Capability",
+        "layer": "Strategy",
+        "documentation": "Evidence: stated - View Plan Job 02 approved; plant-brief.md sales-to-mill chain\nOrganisational ability to close the loop after mill work so sales and plant can see what left the mill against the same order identity used at promise."
+      }
+    ],
+    "relationships": [],
+    "visualMetadata": [
+      {
+        "viewObjectId": "id-fa25f34355f64c1592ecdcd856d3e440",
+        "elementId": "id-9c2c1a6a78f0475681b48889b2664099",
+        "x": 60,
+        "y": 80,
+        "width": 180,
+        "height": 80
+      },
+      {
+        "viewObjectId": "id-ea6debbb92444baf8d84b46a85006245",
+        "elementId": "id-f6c7c6a74874412ba24c60d318292ad2",
+        "x": 300,
+        "y": 80,
+        "width": 180,
+        "height": 80
+      },
+      {
+        "viewObjectId": "id-be18c523e3524155aa54ab624cf3b312",
+        "elementId": "id-ed34ec1744a1458b9f7e1579932f2af6",
+        "x": 540,
+        "y": 80,
+        "width": 200,
+        "height": 80
+      },
+      {
+        "viewObjectId": "id-5cd6872c29434a32929fef2037b7a40c",
+        "elementId": "id-50f22633aea34b3b8536e05a14fda533",
+        "x": 800,
+        "y": 80,
+        "width": 180,
+        "height": 80
+      }
+    ],
+    "connections": [],
+    "notes": [
+      {
+        "viewObjectId": "id-65aef79b1aaa49049452934c7765a206",
+        "content": "Ownership (docs only): MillOS owns Mill schedule; OrderSight stays sales-facing on Promise/Order. No applications on this view.",
+        "x": 60,
+        "y": 200,
+        "width": 920,
+        "height": 70
+      }
+    ]
+  },
+  "registry": {
+    "stakeholder:plant manager": {
+      "element_id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "decision": "found_existing",
+      "notes": "job-01"
+    },
+    "stakeholder:head of sales": {
+      "element_id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:mes owner": {
+      "element_id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:crm programme manager": {
+      "element_id": "id-92664a6b007b411d979d63c25480a38c",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:operations planner": {
+      "element_id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:integration lead": {
+      "element_id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "driver:promised plate dates do not match mill reality": {
+      "element_id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "goal:sales and mill share one order identity from promise to schedule": {
+      "element_id": "id-77f9fed68144498386bf15c188fc2d21",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "outcome:plant manager and head of sales answer on-mill-this-week without promisesheet": {
+      "element_id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "requirement:ordersight must not swallow millos": {
+      "element_id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "capability:promise": {
+      "element_id": "id-9c2c1a6a78f0475681b48889b2664099",
+      "decision": "created_new",
+      "notes": "job-02"
+    },
+    "capability:order": {
+      "element_id": "id-f6c7c6a74874412ba24c60d318292ad2",
+      "decision": "created_new",
+      "notes": "job-02"
+    },
+    "capability:mill schedule": {
+      "element_id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+      "decision": "created_new",
+      "notes": "job-02"
+    },
+    "capability:collect": {
+      "element_id": "id-50f22633aea34b3b8536e05a14fda533",
+      "decision": "created_new",
+      "notes": "job-02"
+    }
+  }
+}

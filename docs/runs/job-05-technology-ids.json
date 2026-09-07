@@ -1,0 +1,679 @@
+{
+  "view_id": "id-6ef45eb1bf8340f2b2eba45c4f92b9e9",
+  "view_name": "Technology and Physical",
+  "viewpoint_used": "technology_usage",
+  "nodes": {
+    "Mill floor node": {
+      "id": "id-c2b0ccf345fb4ce78c7e0687ed2fbe52",
+      "type": "Node",
+      "action": "reused_existing"
+    },
+    "On-prem app server": {
+      "id": "id-ef9c0f14635a4a95adb8ba9858a25df2",
+      "type": "Node",
+      "action": "reused_existing"
+    },
+    "PlantGate node": {
+      "id": "id-8d9fc0f78d2b4122bb9977edc94e9305",
+      "type": "Node",
+      "action": "reused_existing"
+    }
+  },
+  "facilities": {
+    "Plate mill building": {
+      "id": "id-b1d315115a8249809f7750591162b405",
+      "type": "Facility",
+      "action": "reused_existing"
+    },
+    "Comms room": {
+      "id": "id-9da853906d8c4af7805ac95eca12d643",
+      "type": "Facility",
+      "action": "reused_existing"
+    }
+  },
+  "equipment": {
+    "Rolling equipment": {
+      "id": "id-057eb745f829482892236d1023a52c3a",
+      "type": "Equipment",
+      "action": "reused_existing"
+    }
+  },
+  "applications_reused": {
+    "MillOS": {
+      "id": "id-e74300558c24411c9ca9cf76c2d9ecd6",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "WorksERP": {
+      "id": "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "PromiseSheet": {
+      "id": "id-d5dab10f11a04eedb0ba9532bd2940b1",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "OrderSight": {
+      "id": "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "PlantGate": {
+      "id": "id-d0698a626afc460d8de1493b05a421e6",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    }
+  },
+  "relationships": [
+    {
+      "id": "id-a8d339fd00d64299aa2f3008bacea830",
+      "type": "RealizationRelationship",
+      "source": "On-prem app server",
+      "target": "MillOS",
+      "action": "created"
+    },
+    {
+      "id": "id-57653d64319145e88ab47d9978cd5f74",
+      "type": "RealizationRelationship",
+      "source": "On-prem app server",
+      "target": "WorksERP",
+      "action": "created"
+    },
+    {
+      "id": "id-8dc23741dfa244c2820bdd3104eb6d94",
+      "type": "RealizationRelationship",
+      "source": "PlantGate node",
+      "target": "PlantGate",
+      "action": "created"
+    },
+    {
+      "id": "id-3a0ba7d10b264e43b860e0ec791a4292",
+      "type": "AssignmentRelationship",
+      "source": "Mill floor node",
+      "target": "Rolling equipment",
+      "action": "created"
+    },
+    {
+      "id": "id-115de4c51cd4490b8c2950ec47542f55",
+      "type": "AssignmentRelationship",
+      "source": "Plate mill building",
+      "target": "Mill floor node",
+      "action": "created"
+    },
+    {
+      "id": "id-8436dfd673dc4dd9832441177db2c83b",
+      "type": "AssignmentRelationship",
+      "source": "Comms room",
+      "target": "PlantGate node",
+      "action": "created"
+    },
+    {
+      "id": "id-8734853a12894a10b0b0b6577eab080c",
+      "type": "AssociationRelationship",
+      "source": "OrderSight must not swallow MillOS",
+      "target": "On-prem app server",
+      "action": "created"
+    }
+  ],
+  "note_id": "id-6e83b113439e4ca9ab235d711a6bea04",
+  "registry": {
+    "stakeholder:plant manager": {
+      "element_id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "decision": "found_existing",
+      "notes": "job-01"
+    },
+    "stakeholder:head of sales": {
+      "element_id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:mes owner": {
+      "element_id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:crm programme manager": {
+      "element_id": "id-92664a6b007b411d979d63c25480a38c",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:operations planner": {
+      "element_id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:integration lead": {
+      "element_id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "driver:promised plate dates do not match mill reality": {
+      "element_id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "goal:sales and mill share one order identity from promise to schedule": {
+      "element_id": "id-77f9fed68144498386bf15c188fc2d21",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "outcome:plant manager and head of sales answer on-mill-this-week without promisesheet": {
+      "element_id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "requirement:ordersight must not swallow millos": {
+      "element_id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "capability:promise": {
+      "element_id": "id-9c2c1a6a78f0475681b48889b2664099",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:order": {
+      "element_id": "id-f6c7c6a74874412ba24c60d318292ad2",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:mill schedule": {
+      "element_id": "id-ed34ec1744a1458b9f7e1579932f2af6",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "capability:collect": {
+      "element_id": "id-50f22633aea34b3b8536e05a14fda533",
+      "decision": "reuse_job02",
+      "notes": "job-02 capability off-canvas this job"
+    },
+    "businessrole:plant manager": {
+      "element_id": "id-c2d53b4de0d44d7c92f5e4ea51332ccf",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:head of sales": {
+      "element_id": "id-a10b3ee5bc3c49088e973710f1b8397e",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:operations planner": {
+      "element_id": "id-7a3f4a278904406cbb3c52f2fa45825a",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessrole:mes owner": {
+      "element_id": "id-8c313bffb8d3411c8fe9dec39a89624b",
+      "decision": "created_new",
+      "notes": "job-03; distinct from motivation stakeholder"
+    },
+    "businessprocess:promise": {
+      "element_id": "id-c338aa0260a345ed9be332a6b9e26be9",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:works order": {
+      "element_id": "id-69e033ce9ca242d499799db7a6b42272",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:mill schedule": {
+      "element_id": "id-d6a875984a84411d958d73759e2ffe1a",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "businessprocess:plate rolling": {
+      "element_id": "id-ed0201833e864e08ab2950d70d2994aa",
+      "decision": "reused_job03",
+      "notes": "job-03 process on Application Support canvas"
+    },
+    "applicationcomponent:millos": {
+      "element_id": "id-e74300558c24411c9ca9cf76c2d9ecd6",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:workserp": {
+      "element_id": "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:promisesheet": {
+      "element_id": "id-d5dab10f11a04eedb0ba9532bd2940b1",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:ordersight": {
+      "element_id": "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:plantgate": {
+      "element_id": "id-d0698a626afc460d8de1493b05a421e6",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "node:mill floor node": {
+      "element_id": "id-c2b0ccf345fb4ce78c7e0687ed2fbe52",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    },
+    "node:on-prem app server": {
+      "element_id": "id-ef9c0f14635a4a95adb8ba9858a25df2",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    },
+    "node:plantgate node": {
+      "element_id": "id-8d9fc0f78d2b4122bb9977edc94e9305",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    },
+    "facility:plate mill building": {
+      "element_id": "id-b1d315115a8249809f7750591162b405",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    },
+    "facility:comms room": {
+      "element_id": "id-9da853906d8c4af7805ac95eca12d643",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    },
+    "equipment:rolling equipment": {
+      "element_id": "id-057eb745f829482892236d1023a52c3a",
+      "decision": "reused_existing",
+      "notes": "job-05"
+    }
+  },
+  "model_info": {
+    "name": "Hatherley Plate Ltd",
+    "elementCount": 33,
+    "relationshipCount": 41,
+    "viewCount": 5,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessRole": 4,
+      "BusinessProcess": 4,
+      "ApplicationComponent": 5,
+      "Node": 3,
+      "Facility": 2,
+      "Equipment": 1,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 13,
+      "InfluenceRelationship": 1,
+      "RealizationRelationship": 8,
+      "AssignmentRelationship": 8,
+      "TriggeringRelationship": 3,
+      "ServingRelationship": 8
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Application": 5,
+      "Technology": 3,
+      "Physical": 3,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "qa": {
+    "work_package_count": 0,
+    "node_count": 3,
+    "facility_count": 2,
+    "equipment_count": 1,
+    "application_component_count": 5,
+    "assign_freeze_count": 3,
+    "ordersight_on_onprem": false,
+    "ordersight_ne_millos": true,
+    "plantgate_to_equipment": false,
+    "forbidden_names": [],
+    "evidence_first_line_ok": true,
+    "view_name": "Technology and Physical",
+    "viewpoint_used": "technology_usage",
+    "node_names": [
+      "Mill floor node",
+      "On-prem app server",
+      "PlantGate node"
+    ],
+    "facility_names": [
+      "Comms room",
+      "Plate mill building"
+    ],
+    "equipment_names": [
+      "Rolling equipment"
+    ],
+    "app_names": [
+      "MillOS",
+      "OrderSight",
+      "PlantGate",
+      "PromiseSheet",
+      "WorksERP"
+    ]
+  },
+  "pass_checks": {
+    "view_named_technology_and_physical": true,
+    "facility_or_equipment_assigned_to_node": true,
+    "ordersight_millos_separate": true,
+    "ordersight_not_on_mill_appserver": true,
+    "millos_workserp_on_onprem": true,
+    "plantgate_on_plantgate_node": true,
+    "plantgate_no_equipment_link": true,
+    "work_package_count_0": true,
+    "no_forbidden_systems": true,
+    "evidence_ok": true,
+    "model_as_is": true,
+    "layout_excellent": true
+  },
+  "assess_layout": {
+    "viewId": "id-6ef45eb1bf8340f2b2eba45c4f92b9e9",
+    "elementCount": 10,
+    "connectionCount": 2,
+    "overlapCount": 0,
+    "containmentOverlaps": 4,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 51.1,
+    "alignmentScore": 88,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+      "overlaps": "pass",
+      "edgeCrossings": "pass",
+      "spacing": "pass",
+      "alignment": "pass",
+      "labelOverlaps": "pass",
+      "passThroughs": "pass",
+      "coincidentSegments": "pass",
+      "nonOrthogonalTerminals": "pass",
+      "nonOrthogonalInteriorSegments": "pass",
+      "connectionThroughNote": "pass",
+      "boundaryViolations": "pass",
+      "parentLabelObscured": "pass",
+      "offCanvas": "pass",
+      "labelTruncations": "pass",
+      "interiorTerminations": "pass",
+      "zigzags": "pass",
+      "connectionEdgeCoincidence": "pass",
+      "hubPortQuality": "pass",
+      "hubNeighbourCrowding": "pass",
+      "overall": "excellent",
+      "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+      "x": 20.0,
+      "y": 40.0,
+      "width": 1000.0,
+      "height": 450.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+      "4 containment overlaps detected (expected \u2014 ancestor-descendant overlaps from elements inside groups, not layout problems). No action needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapP10": 700.0,
+    "vAxisParallelGapNarrow25Count": 0,
+    "parallelConnectionGapDetail": {
+      "vAxis": {
+        "qualifyingSegmentCount": 8,
+        "mean": 700.0,
+        "min": 700.0,
+        "p10": 700.0,
+        "narrowGapCount15": 0,
+        "narrowGapCount25": 0,
+        "narrowGapCount40": 0
+      },
+      "hAxis": {
+        "qualifyingSegmentCount": 0,
+        "narrowGapCount15": 0,
+        "narrowGapCount25": 0,
+        "narrowGapCount40": 0
+      }
+    },
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+      "overlaps": "checked",
+      "containmentOverlaps": "checked",
+      "edgeCrossings": "checked",
+      "spacing": "checked",
+      "alignment": "checked",
+      "labelOverlaps": "checked",
+      "labelOnNote": "checked",
+      "labelOnGroup": "checked",
+      "labelTruncations": "checked",
+      "parentLabelObscured": "checked",
+      "boundaryViolations": "checked",
+      "offCanvas": "checked",
+      "connectionPassThroughs": "checked",
+      "coincidentSegments": "checked",
+      "nonOrthogonalTerminals": "checked",
+      "interiorTerminations": "checked",
+      "zigzags": "checked",
+      "edgeCoincidence": "checked",
+      "hubPortQuality": "checked",
+      "corridorUtilisation": "checked",
+      "corridorCentering": "not-checked",
+      "hubNeighbourCrowding": "checked",
+      "parallelConnectionGap": "checked",
+      "noteOverlap": "checked",
+      "noteClip": "checked",
+      "imageSiblingOverlap": "checked",
+      "connectionThroughNote": "checked",
+      "connectionGrazesVisual": "checked",
+      "redundantBendpoints": "checked",
+      "nonOrthogonalInteriorSegments": "checked",
+      "containerFillRecession": "checked",
+      "offFaceParallelTerminals": "checked",
+      "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+  },
+  "compliance": {
+    "findings": [
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-5abf0b65ccaf4d16ae90aafa800b5032",
+          "id-d5dab10f11a04eedb0ba9532bd2940b1",
+          "id-c338aa0260a345ed9be332a6b9e26be9"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-c338aa0260a345ed9be332a6b9e26be9').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-9212de6280604f5e9c6507431cab0bf2",
+          "id-b8e160d2c6d24f34badc02f1b6ae6c6f",
+          "id-c338aa0260a345ed9be332a6b9e26be9"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-c338aa0260a345ed9be332a6b9e26be9').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-be1b3be3034c42c28733cba2796fd526",
+          "id-d0698a626afc460d8de1493b05a421e6",
+          "id-c338aa0260a345ed9be332a6b9e26be9"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-c338aa0260a345ed9be332a6b9e26be9').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-070c651ce29e4e69be6f0d91242bce0a",
+          "id-d0698a626afc460d8de1493b05a421e6",
+          "id-69e033ce9ca242d499799db7a6b42272"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-69e033ce9ca242d499799db7a6b42272').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-e3e73197b6834536b2e7468769cc70ad",
+          "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+          "id-69e033ce9ca242d499799db7a6b42272"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-69e033ce9ca242d499799db7a6b42272').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-86a670b0e85949cca5d9663599568f3e",
+          "id-e74300558c24411c9ca9cf76c2d9ecd6",
+          "id-d6a875984a84411d958d73759e2ffe1a"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-d6a875984a84411d958d73759e2ffe1a').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-77977799d7f2461ba5e81fbce42b3581",
+          "id-45a53e69f46a4c80a0e8bcb81ba24cf9",
+          "id-d6a875984a84411d958d73759e2ffe1a"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-d6a875984a84411d958d73759e2ffe1a').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-75bae4f45a4748cf967e96c596edb9ea",
+          "id-e74300558c24411c9ca9cf76c2d9ecd6",
+          "id-ed0201833e864e08ab2950d70d2994aa"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-ed0201833e864e08ab2950d70d2994aa').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-a8d339fd00d64299aa2f3008bacea830",
+          "id-ef9c0f14635a4a95adb8ba9858a25df2",
+          "id-e74300558c24411c9ca9cf76c2d9ecd6"
+        ],
+        "problem": "Relationship endpoints Node -Realization-> ApplicationComponent are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Realization-> ApplicationComponent. Prefer a permitted pattern such as: Artifact -Realization-> ApplicationComponent; Grouping -Aggregation-> ApplicationComponent; Capability -Realization-> ApplicationComponent. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "ApplicationComponent",
+        "relationship_type": "Realization"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-57653d64319145e88ab47d9978cd5f74",
+          "id-ef9c0f14635a4a95adb8ba9858a25df2",
+          "id-45a53e69f46a4c80a0e8bcb81ba24cf9"
+        ],
+        "problem": "Relationship endpoints Node -Realization-> ApplicationComponent are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Realization-> ApplicationComponent. Prefer a permitted pattern such as: Artifact -Realization-> ApplicationComponent; Grouping -Aggregation-> ApplicationComponent; Capability -Realization-> ApplicationComponent. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "ApplicationComponent",
+        "relationship_type": "Realization"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-8dc23741dfa244c2820bdd3104eb6d94",
+          "id-8d9fc0f78d2b4122bb9977edc94e9305",
+          "id-d0698a626afc460d8de1493b05a421e6"
+        ],
+        "problem": "Relationship endpoints Node -Realization-> ApplicationComponent are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Realization-> ApplicationComponent. Prefer a permitted pattern such as: Artifact -Realization-> ApplicationComponent; Grouping -Aggregation-> ApplicationComponent; Capability -Realization-> ApplicationComponent. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "ApplicationComponent",
+        "relationship_type": "Realization"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-3a0ba7d10b264e43b860e0ec791a4292",
+          "id-c2b0ccf345fb4ce78c7e0687ed2fbe52",
+          "id-057eb745f829482892236d1023a52c3a"
+        ],
+        "problem": "Relationship endpoints Node -Assignment-> Equipment are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Assignment-> Equipment. Prefer a permitted pattern such as: Node -Assignment-> Artifact; Node -Assignment-> SystemSoftware; Node -Assignment-> Device. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "Equipment",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-115de4c51cd4490b8c2950ec47542f55",
+          "id-b1d315115a8249809f7750591162b405",
+          "id-c2b0ccf345fb4ce78c7e0687ed2fbe52"
+        ],
+        "problem": "Relationship endpoints Facility -Assignment-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Facility -Assignment-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Facility",
+        "target_type": "Node",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-8436dfd673dc4dd9832441177db2c83b",
+          "id-9da853906d8c4af7805ac95eca12d643",
+          "id-8d9fc0f78d2b4122bb9977edc94e9305"
+        ],
+        "problem": "Relationship endpoints Facility -Assignment-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Facility -Assignment-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Facility",
+        "target_type": "Node",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-8734853a12894a10b0b0b6577eab080c",
+          "id-8387c0d7776b46b8a08ee1ad05bd0953",
+          "id-ef9c0f14635a4a95adb8ba9858a25df2"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (source='id-8387c0d7776b46b8a08ee1ad05bd0953').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      }
+    ],
+    "ok": false
+  },
+  "trace_rel_ids": [
+    "id-8734853a12894a10b0b0b6577eab080c",
+    "id-bd5a755261de4b5293d81ad5d1db6d33",
+    "id-2cf9b9ec9afd4bddbf6b651d7fcf6036",
+    "id-3f4184aeef1f48c58ddd2064108a369c"
+  ],
+  "hosting_relationship_note": "Bridge rejects AssignmentRelationship Node\u2194ApplicationComponent. Hosting recorded as RealizationRelationship Node\u2192ApplicationComponent plus nested containment on the view."
+}

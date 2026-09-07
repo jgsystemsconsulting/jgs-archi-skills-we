@@ -1,0 +1,743 @@
+{
+  "view_id": "id-05f18c92556242fc8ce2a2252fc36867",
+  "view_name": "Motivation Overview",
+  "elements": {
+    "Plant Manager": {
+      "id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "type": "Stakeholder",
+      "action": "found_existing"
+    },
+    "Head of Sales": {
+      "id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "type": "Stakeholder",
+      "action": "created_new"
+    },
+    "MES Owner": {
+      "id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "type": "Stakeholder",
+      "action": "created_new"
+    },
+    "CRM Programme Manager": {
+      "id": "id-92664a6b007b411d979d63c25480a38c",
+      "type": "Stakeholder",
+      "action": "created_new"
+    },
+    "Operations Planner": {
+      "id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "type": "Stakeholder",
+      "action": "created_new"
+    },
+    "Integration Lead": {
+      "id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "type": "Stakeholder",
+      "action": "created_new"
+    },
+    "Promised plate dates do not match mill reality": {
+      "id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "type": "Driver",
+      "action": "created_new"
+    },
+    "Sales and mill share one order identity from promise to schedule": {
+      "id": "id-77f9fed68144498386bf15c188fc2d21",
+      "type": "Goal",
+      "action": "created_new"
+    },
+    "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet": {
+      "id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "type": "Outcome",
+      "action": "created_new"
+    },
+    "OrderSight must not swallow MillOS": {
+      "id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "type": "Requirement",
+      "action": "created_new"
+    }
+  },
+  "relationships": [
+    {
+      "id": "id-667ac7aeab054091a4569dfd1f97107c",
+      "type": "AssociationRelationship",
+      "source": "Plant Manager",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-380de8549ac54ebabc4d4962e9af9943",
+      "type": "AssociationRelationship",
+      "source": "Head of Sales",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-43ab2b86f1804fc88e87dd9113cb6965",
+      "type": "AssociationRelationship",
+      "source": "MES Owner",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-19d9b00629d14813b54456c13937e373",
+      "type": "AssociationRelationship",
+      "source": "CRM Programme Manager",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-f3edb77ba6cc4bdaa6c199b09f34d6c2",
+      "type": "AssociationRelationship",
+      "source": "Operations Planner",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-489e778685bd499eb4cd1f3c4d2ab4f5",
+      "type": "AssociationRelationship",
+      "source": "Integration Lead",
+      "target": "Promised plate dates do not match mill reality"
+    },
+    {
+      "id": "id-7fc557ea98cc4a81baf6e68c6637bfd5",
+      "type": "InfluenceRelationship",
+      "source": "Promised plate dates do not match mill reality",
+      "target": "Sales and mill share one order identity from promise to schedule"
+    },
+    {
+      "id": "id-80931b7bffd04ed2875ac31bc65caa63",
+      "type": "RealizationRelationship",
+      "source": "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet",
+      "target": "Sales and mill share one order identity from promise to schedule"
+    },
+    {
+      "id": "id-6d24ba8943244ed1b7cc0adcb807ecf1",
+      "type": "RealizationRelationship",
+      "source": "OrderSight must not swallow MillOS",
+      "target": "Sales and mill share one order identity from promise to schedule"
+    },
+    {
+      "id": "id-ac34f9357252446a8e90c2870dba2558",
+      "type": "AssociationRelationship",
+      "source": "Plant Manager",
+      "target": "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet"
+    },
+    {
+      "id": "id-2123bb07b54948ccaa6aab7a247cd503",
+      "type": "AssociationRelationship",
+      "source": "Head of Sales",
+      "target": "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet"
+    },
+    {
+      "id": "id-e248a5a1e04247daa01ce86499b1782f",
+      "type": "AssociationRelationship",
+      "source": "Operations Planner",
+      "target": "Sales and mill share one order identity from promise to schedule"
+    },
+    {
+      "id": "id-533bf192ca6643b0986664aa6c9ed853",
+      "type": "AssociationRelationship",
+      "source": "Integration Lead",
+      "target": "Sales and mill share one order identity from promise to schedule"
+    },
+    {
+      "id": "id-c6ea99817b22457c909b8328595787c0",
+      "type": "AssociationRelationship",
+      "source": "MES Owner",
+      "target": "OrderSight must not swallow MillOS"
+    },
+    {
+      "id": "id-44c44def4b364147ba651c1038a4059c",
+      "type": "AssociationRelationship",
+      "source": "CRM Programme Manager",
+      "target": "OrderSight must not swallow MillOS"
+    }
+  ],
+  "registry": {
+    "stakeholder:plant manager": {
+      "element_id": "id-0260a5aa995b41c7b84d93d3541592c0",
+      "decision": "found_existing",
+      "notes": "job-01"
+    },
+    "stakeholder:head of sales": {
+      "element_id": "id-988afa0e45894cd3a657ac9c7085ed98",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:mes owner": {
+      "element_id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:crm programme manager": {
+      "element_id": "id-92664a6b007b411d979d63c25480a38c",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:operations planner": {
+      "element_id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "stakeholder:integration lead": {
+      "element_id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "driver:promised plate dates do not match mill reality": {
+      "element_id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "goal:sales and mill share one order identity from promise to schedule": {
+      "element_id": "id-77f9fed68144498386bf15c188fc2d21",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "outcome:plant manager and head of sales answer on-mill-this-week without promisesheet": {
+      "element_id": "id-bbf70387a3014a0bac693ecca4cce026",
+      "decision": "created_new",
+      "notes": "job-01"
+    },
+    "requirement:ordersight must not swallow millos": {
+      "element_id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+      "decision": "created_new",
+      "notes": "job-01"
+    }
+  },
+  "model_info": {
+    "name": "Hatherley Plate Ltd",
+    "elementCount": 10,
+    "relationshipCount": 15,
+    "viewCount": 1,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 12,
+      "InfluenceRelationship": 1,
+      "RealizationRelationship": 2
+    },
+    "layerDistribution": {
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "view_contents": {
+    "viewId": "id-05f18c92556242fc8ce2a2252fc36867",
+    "viewName": "Motivation Overview",
+    "viewpoint": "motivation",
+    "elements": [
+      {
+        "id": "id-0260a5aa995b41c7b84d93d3541592c0",
+        "name": "Plant Manager",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nOwns plant operations at Hatherley Works. Needs a weekly on-mill answer without reading PromiseSheet, and keeps mill systems under plant control."
+      },
+      {
+        "id": "id-988afa0e45894cd3a657ac9c7085ed98",
+        "name": "Head of Sales",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nOwns customer promises. Needs the same weekly on-mill answer as the plant so dual tracking in PromiseSheet can stop."
+      },
+      {
+        "id": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+        "name": "MES Owner",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nOwns MillOS as mill schedule system of record. Boundary witness that OrderSight must not be drawn as MillOS replacement."
+      },
+      {
+        "id": "id-92664a6b007b411d979d63c25480a38c",
+        "name": "CRM Programme Manager",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nOwns OrderSight pilot scope. Keeps the funded fix sales-facing visibility; resists expansion into mill rewrite."
+      },
+      {
+        "id": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+        "name": "Operations Planner",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nPlans mill work from orders. Needs one order identity from promise through schedule so plan and promise stop diverging."
+      },
+      {
+        "id": "id-9fc4203ce6ac494fbe546220c92f44b9",
+        "name": "Integration Lead",
+        "type": "Stakeholder",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Roles; View Plan Stakeholders\nOwns cross-system identity and PlantGate boundary work. Shared identity without merging MillOS into OrderSight."
+      },
+      {
+        "id": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "name": "Promised plate dates do not match mill reality",
+        "type": "Driver",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints\nSales tracks customer promises in PromiseSheet while the mill schedule lives in MillOS, so promised plate dates drift from what the mill can actually run."
+      },
+      {
+        "id": "id-77f9fed68144498386bf15c188fc2d21",
+        "name": "Sales and mill share one order identity from promise to schedule",
+        "type": "Goal",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints\nDesired state: one shared order identity links sales promise to mill schedule end to end, without merging systems into a single blob."
+      },
+      {
+        "id": "id-bbf70387a3014a0bac693ecca4cce026",
+        "name": "Plant Manager and Head of Sales answer on-mill-this-week without PromiseSheet",
+        "type": "Outcome",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Motivation spine; View Plan Technical Hints\nPlant Manager and Head of Sales can answer whether an order is on the mill this week without opening PromiseSheet."
+      },
+      {
+        "id": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+        "name": "OrderSight must not swallow MillOS",
+        "type": "Requirement",
+        "layer": "Motivation",
+        "documentation": "Evidence: stated - plant-brief.md Motivation spine and Hard freeze; View Plan Technical Hints\nHard boundary: OrderSight stays sales-facing visibility; MillOS remains the mill schedule system of record. Named systems appear here as wording only, not as application elements on this view."
+      }
+    ],
+    "relationships": [
+      {
+        "id": "id-667ac7aeab054091a4569dfd1f97107c",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-0260a5aa995b41c7b84d93d3541592c0",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-ac34f9357252446a8e90c2870dba2558",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-0260a5aa995b41c7b84d93d3541592c0",
+        "targetId": "id-bbf70387a3014a0bac693ecca4cce026",
+        "associationDirected": false
+      },
+      {
+        "id": "id-380de8549ac54ebabc4d4962e9af9943",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-988afa0e45894cd3a657ac9c7085ed98",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-2123bb07b54948ccaa6aab7a247cd503",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-988afa0e45894cd3a657ac9c7085ed98",
+        "targetId": "id-bbf70387a3014a0bac693ecca4cce026",
+        "associationDirected": false
+      },
+      {
+        "id": "id-43ab2b86f1804fc88e87dd9113cb6965",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-c6ea99817b22457c909b8328595787c0",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+        "targetId": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+        "associationDirected": false
+      },
+      {
+        "id": "id-19d9b00629d14813b54456c13937e373",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-92664a6b007b411d979d63c25480a38c",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-44c44def4b364147ba651c1038a4059c",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-92664a6b007b411d979d63c25480a38c",
+        "targetId": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+        "associationDirected": false
+      },
+      {
+        "id": "id-f3edb77ba6cc4bdaa6c199b09f34d6c2",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-e248a5a1e04247daa01ce86499b1782f",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+        "targetId": "id-77f9fed68144498386bf15c188fc2d21",
+        "associationDirected": false
+      },
+      {
+        "id": "id-489e778685bd499eb4cd1f3c4d2ab4f5",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-9fc4203ce6ac494fbe546220c92f44b9",
+        "targetId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "associationDirected": false
+      },
+      {
+        "id": "id-533bf192ca6643b0986664aa6c9ed853",
+        "name": "",
+        "type": "AssociationRelationship",
+        "sourceId": "id-9fc4203ce6ac494fbe546220c92f44b9",
+        "targetId": "id-77f9fed68144498386bf15c188fc2d21",
+        "associationDirected": false
+      },
+      {
+        "id": "id-7fc557ea98cc4a81baf6e68c6637bfd5",
+        "name": "",
+        "type": "InfluenceRelationship",
+        "sourceId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "targetId": "id-77f9fed68144498386bf15c188fc2d21"
+      },
+      {
+        "id": "id-80931b7bffd04ed2875ac31bc65caa63",
+        "name": "",
+        "type": "RealizationRelationship",
+        "sourceId": "id-bbf70387a3014a0bac693ecca4cce026",
+        "targetId": "id-77f9fed68144498386bf15c188fc2d21"
+      },
+      {
+        "id": "id-6d24ba8943244ed1b7cc0adcb807ecf1",
+        "name": "",
+        "type": "RealizationRelationship",
+        "sourceId": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+        "targetId": "id-77f9fed68144498386bf15c188fc2d21"
+      }
+    ],
+    "visualMetadata": [
+      {
+        "viewObjectId": "id-d62392ade3304e14a0690ff6fcb5f5d4",
+        "elementId": "id-0260a5aa995b41c7b84d93d3541592c0",
+        "x": 40,
+        "y": 40,
+        "width": 140,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-acdf9ac544d14d6ea2232bab1ef447b6",
+        "elementId": "id-988afa0e45894cd3a657ac9c7085ed98",
+        "x": 200,
+        "y": 40,
+        "width": 140,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-4d985dccc48e42b89f846bdfcc889131",
+        "elementId": "id-db0cfaa61b4048e7900b2b9bad3eea97",
+        "x": 360,
+        "y": 40,
+        "width": 140,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-3507f116f1ae48f6a20ac2d9a2d007e5",
+        "elementId": "id-92664a6b007b411d979d63c25480a38c",
+        "x": 520,
+        "y": 40,
+        "width": 160,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-2b49c1661c0e48b4a1bbcce3e73f4e50",
+        "elementId": "id-ee9aa7f5d13c4ec9ba9da957d3768ed2",
+        "x": 700,
+        "y": 40,
+        "width": 150,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-f77a640cb071429f9ef48ce41790fa24",
+        "elementId": "id-9fc4203ce6ac494fbe546220c92f44b9",
+        "x": 870,
+        "y": 40,
+        "width": 140,
+        "height": 60
+      },
+      {
+        "viewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "elementId": "id-fcf6a7e660504afaa4580a9a92e062d9",
+        "x": 280,
+        "y": 200,
+        "width": 420,
+        "height": 80
+      },
+      {
+        "viewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "elementId": "id-77f9fed68144498386bf15c188fc2d21",
+        "x": 200,
+        "y": 360,
+        "width": 460,
+        "height": 80
+      },
+      {
+        "viewObjectId": "id-a629bb5ee0854c9d917833eb3d346c97",
+        "elementId": "id-bbf70387a3014a0bac693ecca4cce026",
+        "x": 700,
+        "y": 360,
+        "width": 360,
+        "height": 90
+      },
+      {
+        "viewObjectId": "id-d203037651834aa2840c1982b81afa43",
+        "elementId": "id-8387c0d7776b46b8a08ee1ad05bd0953",
+        "x": 320,
+        "y": 520,
+        "width": 400,
+        "height": 80
+      }
+    ],
+    "connections": [
+      {
+        "viewConnectionId": "id-9bfd4ff7f0424a4c98081daceeb2e69a",
+        "relationshipId": "id-667ac7aeab054091a4569dfd1f97107c",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-d62392ade3304e14a0690ff6fcb5f5d4",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 110,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-3fa1bdd1733d4f138e194d50f297ddc6",
+        "relationshipId": "id-ac34f9357252446a8e90c2870dba2558",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-d62392ade3304e14a0690ff6fcb5f5d4",
+        "targetViewObjectId": "id-a629bb5ee0854c9d917833eb3d346c97",
+        "sourceAnchor": {
+          "x": 110,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 880,
+          "y": 405
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-87e882f720a34ce1bd867794bcf1e054",
+        "relationshipId": "id-380de8549ac54ebabc4d4962e9af9943",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-acdf9ac544d14d6ea2232bab1ef447b6",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 270,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-5dcd5204031245be99f10065f0917fd8",
+        "relationshipId": "id-2123bb07b54948ccaa6aab7a247cd503",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-acdf9ac544d14d6ea2232bab1ef447b6",
+        "targetViewObjectId": "id-a629bb5ee0854c9d917833eb3d346c97",
+        "sourceAnchor": {
+          "x": 270,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 880,
+          "y": 405
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-e69e95140ebe467b8290fe2fa69b6fd5",
+        "relationshipId": "id-43ab2b86f1804fc88e87dd9113cb6965",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-4d985dccc48e42b89f846bdfcc889131",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 430,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-b53e9b37b28c44d099fad927ad1387a5",
+        "relationshipId": "id-c6ea99817b22457c909b8328595787c0",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-4d985dccc48e42b89f846bdfcc889131",
+        "targetViewObjectId": "id-d203037651834aa2840c1982b81afa43",
+        "sourceAnchor": {
+          "x": 430,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 520,
+          "y": 560
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-329925db7fed4428b2e7e13fe97f6aeb",
+        "relationshipId": "id-19d9b00629d14813b54456c13937e373",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-3507f116f1ae48f6a20ac2d9a2d007e5",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 600,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-4e64911d89d64faaa2c053df7c01cb1e",
+        "relationshipId": "id-44c44def4b364147ba651c1038a4059c",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-3507f116f1ae48f6a20ac2d9a2d007e5",
+        "targetViewObjectId": "id-d203037651834aa2840c1982b81afa43",
+        "sourceAnchor": {
+          "x": 600,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 520,
+          "y": 560
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-00d3869afd524f06b6d4b6a0fafb31af",
+        "relationshipId": "id-f3edb77ba6cc4bdaa6c199b09f34d6c2",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-2b49c1661c0e48b4a1bbcce3e73f4e50",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 775,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-57dd58d3939d4eedb15c2aa86b339fc1",
+        "relationshipId": "id-e248a5a1e04247daa01ce86499b1782f",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-2b49c1661c0e48b4a1bbcce3e73f4e50",
+        "targetViewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "sourceAnchor": {
+          "x": 775,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 430,
+          "y": 400
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-df6eb2e3f5f54e7a9371720f3486ecfa",
+        "relationshipId": "id-489e778685bd499eb4cd1f3c4d2ab4f5",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-f77a640cb071429f9ef48ce41790fa24",
+        "targetViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "sourceAnchor": {
+          "x": 940,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-9eb103d1c76b4477acc2df8c9e866e40",
+        "relationshipId": "id-533bf192ca6643b0986664aa6c9ed853",
+        "relationshipType": "AssociationRelationship",
+        "sourceViewObjectId": "id-f77a640cb071429f9ef48ce41790fa24",
+        "targetViewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "sourceAnchor": {
+          "x": 940,
+          "y": 70
+        },
+        "targetAnchor": {
+          "x": 430,
+          "y": 400
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-8c01f8e4518948aebf8e13f17b42e342",
+        "relationshipId": "id-7fc557ea98cc4a81baf6e68c6637bfd5",
+        "relationshipType": "InfluenceRelationship",
+        "sourceViewObjectId": "id-77df10f08b8443a293f8dc27d352c352",
+        "targetViewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "sourceAnchor": {
+          "x": 490,
+          "y": 240
+        },
+        "targetAnchor": {
+          "x": 430,
+          "y": 400
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-2ae8308232fe442f851430d73d6be0a1",
+        "relationshipId": "id-80931b7bffd04ed2875ac31bc65caa63",
+        "relationshipType": "RealizationRelationship",
+        "sourceViewObjectId": "id-a629bb5ee0854c9d917833eb3d346c97",
+        "targetViewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "sourceAnchor": {
+          "x": 880,
+          "y": 405
+        },
+        "targetAnchor": {
+          "x": 430,
+          "y": 400
+        },
+        "textPosition": 1
+      },
+      {
+        "viewConnectionId": "id-21207a9f592749a78de74ebf3aee63db",
+        "relationshipId": "id-6d24ba8943244ed1b7cc0adcb807ecf1",
+        "relationshipType": "RealizationRelationship",
+        "sourceViewObjectId": "id-d203037651834aa2840c1982b81afa43",
+        "targetViewObjectId": "id-ce45a2241d724651ad79f0fe7518bb6f",
+        "sourceAnchor": {
+          "x": 520,
+          "y": 560
+        },
+        "targetAnchor": {
+          "x": 430,
+          "y": 400
+        },
+        "textPosition": 1
+      }
+    ]
+  }
+}
