@@ -22,11 +22,11 @@
 
 ## Specialists run (post-approve)
 
-1. archi-technology-physical — view **Technology and Physical** `id-6ef45eb1bf8340f2b2eba45c4f92b9e9` viewpoint `technology_usage`
-2. archi-traceability — light whole-model traces (req↔host; app→capability Realization)
-3. archi-model-qa — freeze and structural checks recorded
-4. archi-layout — assess **excellent**; PNG exported
-5. archi-documentation — rationale + completion summary (schema pass)
+1. archi-technology-physical,  view **Technology and Physical** `id-6ef45eb1bf8340f2b2eba45c4f92b9e9` viewpoint `technology_usage`
+2. archi-traceability,  light whole-model traces (req↔host; app→capability Realization)
+3. archi-model-qa,  freeze and structural checks recorded
+4. archi-layout,  assess **excellent**; PNG exported
+5. archi-documentation,  rationale + completion summary (schema pass)
 
 Skipped: motivation, capability-strategy, business, application (reuse), implementation-migration.
 

@@ -1,5 +1,5 @@
 ## Views Touched
-- Technology and Physical (id-6ef45eb1bf8340f2b2eba45c4f92b9e9) — created/updated this job
+- Technology and Physical (id-6ef45eb1bf8340f2b2eba45c4f92b9e9),  created/updated this job
 - Prior views left intact: Motivation Overview, Capability Map, Production Operations, Application Support
 
 ## Decisions

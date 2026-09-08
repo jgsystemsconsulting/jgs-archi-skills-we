@@ -33,7 +33,7 @@
 | MillOS | On-prem app server | Realization Node→App + nested on view | id-e74300558c24411c9ca9cf76c2d9ecd6 |
 | WorksERP | On-prem app server | Realization Node→App + nested on view | id-45a53e69f46a4c80a0e8bcb81ba24cf9 |
 | PlantGate | PlantGate node | Realization Node→App + nested on view | id-d0698a626afc460d8de1493b05a421e6 |
-| OrderSight | **none this job** (omitted from all nodes) | — | id-b8e160d2c6d24f34badc02f1b6ae6c6f |
+| OrderSight | **none this job** (omitted from all nodes) |,  | id-b8e160d2c6d24f34badc02f1b6ae6c6f |
 
 Hosting note: JGS Archi Bridge rejects `AssignmentRelationship` between Node and ApplicationComponent. Compliant alternative applied: `RealizationRelationship` Node→ApplicationComponent plus nested containment on the Technology and Physical view.
 

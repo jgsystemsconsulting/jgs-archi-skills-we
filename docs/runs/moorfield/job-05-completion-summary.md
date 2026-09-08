@@ -1,5 +1,5 @@
 ## Views Touched
-- Technology and Physical (id-7585e12756874cd1855d73253da55504) — created/updated this job
+- Technology and Physical (id-7585e12756874cd1855d73253da55504),  created/updated this job
 - Prior views left intact: Motivation Overview, Capability Map, Range Operations, Application Support
 
 ## Decisions

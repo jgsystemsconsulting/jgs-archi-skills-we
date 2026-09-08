@@ -34,9 +34,9 @@
 |-----|-----------|--------------|--------|
 | GroundOS | On-prem app server | Realization Node→App + nested on view | id-a3eaf0c0d5b74284a190ac0c70c4830d |
 | LinkGate | LinkGate node | Realization Node→App + nested on view | id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9 |
-| RangePlan | **none this job** (omitted from host nodes) | — | id-1f24a5f8fd8846df99eccfc2157a1663 |
-| AirStack | **none this job** (off canvas; no air-vehicle node) | — | id-4c7eefcd80b44e7586295bded35cddb5 |
-| SortieBoard | **none this job** | — | id-e163a120914643a5904ce0d5bcdc1fa6 |
+| RangePlan | **none this job** (omitted from host nodes) |,  | id-1f24a5f8fd8846df99eccfc2157a1663 |
+| AirStack | **none this job** (off canvas; no air-vehicle node) |,  | id-4c7eefcd80b44e7586295bded35cddb5 |
+| SortieBoard | **none this job** |,  | id-e163a120914643a5904ce0d5bcdc1fa6 |
 
 Hosting note: JGS Archi Bridge rejects `AssignmentRelationship` between Node and ApplicationComponent. Compliant alternative applied: `RealizationRelationship` Node→ApplicationComponent plus nested containment on the Technology and Physical view.
 

@@ -13,10 +13,10 @@
 
 ## Post-approval specialist dispatch
 
-1. archi-motivation — completed
-2. archi-model-qa (light) — completed
-3. archi-layout — completed (overall good)
-4. archi-documentation — completed (draft)
+1. archi-motivation,  completed
+2. archi-model-qa (light),  completed
+3. archi-layout,  completed (overall good)
+4. archi-documentation,  completed (draft)
 
 Skipped: capability-strategy, business, application, technology-physical, implementation-migration, traceability.
 

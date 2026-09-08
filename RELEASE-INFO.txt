@@ -1,0 +1,4 @@
+Product: jgs-archi-skills-we
+Version: 0.1.0
+Built: 2026-09-08T00:00:00Z
+Tag: v0.1.0
