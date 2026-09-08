@@ -1,0 +1,915 @@
+{
+  "view_id": "id-7585e12756874cd1855d73253da55504",
+  "view_name": "Technology and Physical",
+  "viewpoint_used": "technology_usage",
+  "nodes": {
+    "Range floor node": {
+      "id": "id-38c34403663d47f89cb62a7240e16e5f",
+      "type": "Node",
+      "action": "created_new"
+    },
+    "On-prem app server": {
+      "id": "id-996182b6c7394a038accf601f3139a0a",
+      "type": "Node",
+      "action": "created_new"
+    },
+    "LinkGate node": {
+      "id": "id-0c90872c58974113baf4ef07d05bf59e",
+      "type": "Node",
+      "action": "created_new"
+    }
+  },
+  "facilities": {
+    "Hangar": {
+      "id": "id-54ebbe9850ae4485b5932078a0c8cc14",
+      "type": "Facility",
+      "action": "created_new"
+    },
+    "GCS van": {
+      "id": "id-7b2d4974798e4faeabed3599b8ae08f2",
+      "type": "Facility",
+      "action": "created_new"
+    },
+    "Comms cabin": {
+      "id": "id-622e47e2c1ae42438c8c5fe4b2929cff",
+      "type": "Facility",
+      "action": "created_new"
+    }
+  },
+  "equipment": {
+    "Datalink mast": {
+      "id": "id-024345e85bea4028bb2e35bf46be6752",
+      "type": "Equipment",
+      "action": "created_new"
+    },
+    "Launch equipment": {
+      "id": "id-f2e4e924c5ed4ff09eb64fffd09551f1",
+      "type": "Equipment",
+      "action": "created_new"
+    }
+  },
+  "applications_reused": {
+    "AirStack": {
+      "id": "id-4c7eefcd80b44e7586295bded35cddb5",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "GroundOS": {
+      "id": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "SortieBoard": {
+      "id": "id-e163a120914643a5904ce0d5bcdc1fa6",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "RangePlan": {
+      "id": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    },
+    "LinkGate": {
+      "id": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+      "type": "ApplicationComponent",
+      "action": "reused_job04"
+    }
+  },
+  "relationships": [
+    {
+      "id": "id-68b896e478c8419dacaac1373f2f2b26",
+      "type": "RealizationRelationship",
+      "source": "On-prem app server",
+      "target": "GroundOS",
+      "action": "created"
+    },
+    {
+      "id": "id-10a3dcbbf6d2496fac1256e761854851",
+      "type": "RealizationRelationship",
+      "source": "LinkGate node",
+      "target": "LinkGate",
+      "action": "created"
+    },
+    {
+      "id": "id-f451ca647fc7405f8fcc03724164f084",
+      "type": "AssignmentRelationship",
+      "source": "Range floor node",
+      "target": "Launch equipment",
+      "action": "created"
+    },
+    {
+      "id": "id-e169b9f06efd4128a955fa360449f5cb",
+      "type": "AssignmentRelationship",
+      "source": "Hangar",
+      "target": "Range floor node",
+      "action": "created"
+    },
+    {
+      "id": "id-5de585d0805045899c8ee4cb3f4ebda1",
+      "type": "AssignmentRelationship",
+      "source": "GCS van",
+      "target": "On-prem app server",
+      "action": "created"
+    },
+    {
+      "id": "id-39efb8cb9e554c4f814cee7aa2e029b9",
+      "type": "AssignmentRelationship",
+      "source": "Comms cabin",
+      "target": "LinkGate node",
+      "action": "created"
+    },
+    {
+      "id": "id-1c59ff1dc5b34dbf8dbd847b523078a9",
+      "type": "AssociationRelationship",
+      "source": "Datalink mast",
+      "target": "LinkGate node",
+      "action": "created"
+    },
+    {
+      "id": "id-b645383bdf924bb5acd43b825d4c5f73",
+      "type": "AssociationRelationship",
+      "source": "RangePlan must not swallow AirStack or GroundOS",
+      "target": "On-prem app server",
+      "action": "created"
+    },
+    {
+      "id": "id-3d0b11d9d4e040009b1aee0e6ea43204",
+      "type": "RealizationRelationship",
+      "source": "GroundOS",
+      "target": "Fly (capability)",
+      "action": "created"
+    },
+    {
+      "id": "id-c113148f28144edd8772c4809103097e",
+      "type": "RealizationRelationship",
+      "source": "LinkGate",
+      "target": "Clear (capability)",
+      "action": "created"
+    },
+    {
+      "id": "id-ebec741536e44609a30f52606f94d23c",
+      "type": "RealizationRelationship",
+      "source": "GroundOS",
+      "target": "Recover (capability)",
+      "action": "created"
+    }
+  ],
+  "note_id": "id-3751f896f107477393c1ecf5cb6734fa",
+  "registry": {
+    "node:range floor node": {
+      "element_id": "id-38c34403663d47f89cb62a7240e16e5f",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "node:on-prem app server": {
+      "element_id": "id-996182b6c7394a038accf601f3139a0a",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "node:linkgate node": {
+      "element_id": "id-0c90872c58974113baf4ef07d05bf59e",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "facility:hangar": {
+      "element_id": "id-54ebbe9850ae4485b5932078a0c8cc14",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "facility:gcs van": {
+      "element_id": "id-7b2d4974798e4faeabed3599b8ae08f2",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "facility:comms cabin": {
+      "element_id": "id-622e47e2c1ae42438c8c5fe4b2929cff",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "equipment:datalink mast": {
+      "element_id": "id-024345e85bea4028bb2e35bf46be6752",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "equipment:launch equipment": {
+      "element_id": "id-f2e4e924c5ed4ff09eb64fffd09551f1",
+      "decision": "created_new",
+      "notes": "job-05"
+    },
+    "applicationcomponent:airstack": {
+      "element_id": "id-4c7eefcd80b44e7586295bded35cddb5",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:groundos": {
+      "element_id": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:sortieboard": {
+      "element_id": "id-e163a120914643a5904ce0d5bcdc1fa6",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:rangeplan": {
+      "element_id": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    },
+    "applicationcomponent:linkgate": {
+      "element_id": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+      "decision": "reused_job04",
+      "notes": "job-05 host placement only"
+    }
+  },
+  "model_info": {
+    "name": "Hawker Range Systems Ltd",
+    "elementCount": 35,
+    "relationshipCount": 35,
+    "viewCount": 5,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessProcess": 4,
+      "BusinessRole": 4,
+      "ApplicationComponent": 5,
+      "Node": 3,
+      "Facility": 3,
+      "Equipment": 2,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 8,
+      "InfluenceRelationship": 2,
+      "RealizationRelationship": 6,
+      "AssignmentRelationship": 8,
+      "TriggeringRelationship": 3,
+      "ServingRelationship": 8
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Application": 5,
+      "Technology": 3,
+      "Physical": 5,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "qa": {
+    "work_package_count": 0,
+    "node_count": 3,
+    "facility_count": 3,
+    "equipment_count": 2,
+    "application_component_count": 5,
+    "assign_freeze_count": 4,
+    "rangeplan_airstack_groundos_distinct": true,
+    "rangeplan_airstack_not_on_range_floor_host": true,
+    "linkgate_no_launch_link": true,
+    "forbidden_names": [],
+    "evidence_first_line_ok": true,
+    "doc_not_name_only": true,
+    "view_name": "Technology and Physical",
+    "viewpoint_used": "technology_usage",
+    "node_names": [
+      "LinkGate node",
+      "On-prem app server",
+      "Range floor node"
+    ],
+    "facility_names": [
+      "Comms cabin",
+      "GCS van",
+      "Hangar"
+    ],
+    "equipment_names": [
+      "Datalink mast",
+      "Launch equipment"
+    ],
+    "app_names": [
+      "AirStack",
+      "GroundOS",
+      "LinkGate",
+      "RangePlan",
+      "SortieBoard"
+    ],
+    "apps": {
+      "AirStack": "id-4c7eefcd80b44e7586295bded35cddb5",
+      "GroundOS": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "SortieBoard": "id-e163a120914643a5904ce0d5bcdc1fa6",
+      "RangePlan": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "LinkGate": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9"
+    }
+  },
+  "pass_checks": {
+    "view_named_technology_and_physical": true,
+    "facility_or_equipment_assigned_to_node": true,
+    "rangeplan_airstack_groundos_separate": true,
+    "rangeplan_airstack_not_on_range_hosts": true,
+    "groundos_on_onprem": true,
+    "linkgate_on_linkgate_node": true,
+    "linkgate_no_launch_equipment_link": true,
+    "work_package_count_0": true,
+    "no_forbidden_systems": true,
+    "evidence_ok": true,
+    "doc_not_name_only": true,
+    "model_as_is": true,
+    "layout_ok": true,
+    "no_air_vehicle_structure": true,
+    "layout_excellent": true
+  },
+  "assess_layout": {
+    "viewId": "id-7585e12756874cd1855d73253da55504",
+    "elementCount": 11,
+    "connectionCount": 4,
+    "overlapCount": 0,
+    "containmentOverlaps": 3,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 51.0,
+    "alignmentScore": 90,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+      "overlaps": "pass",
+      "edgeCrossings": "pass",
+      "spacing": "pass",
+      "alignment": "pass",
+      "labelOverlaps": "pass",
+      "passThroughs": "pass",
+      "coincidentSegments": "pass",
+      "nonOrthogonalTerminals": "pass",
+      "nonOrthogonalInteriorSegments": "pass",
+      "connectionThroughNote": "pass",
+      "boundaryViolations": "pass",
+      "parentLabelObscured": "pass",
+      "offCanvas": "pass",
+      "labelTruncations": "pass",
+      "interiorTerminations": "pass",
+      "zigzags": "pass",
+      "connectionEdgeCoincidence": "pass",
+      "hubPortQuality": "pass",
+      "hubNeighbourCrowding": "pass",
+      "overall": "excellent",
+      "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+      "x": 20.0,
+      "y": 40.0,
+      "width": 1140.0,
+      "height": 470.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+      "3 containment overlaps detected (expected \u2014 ancestor-descendant overlaps from elements inside groups, not layout problems). No action needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapP10": 180.4,
+    "vAxisParallelGapNarrow25Count": 0,
+    "parallelConnectionGapDetail": {
+      "vAxis": {
+        "qualifyingSegmentCount": 13,
+        "mean": 302.7692307692308,
+        "min": 148.0,
+        "p10": 180.40000000000003,
+        "narrowGapCount15": 0,
+        "narrowGapCount25": 0,
+        "narrowGapCount40": 0
+      },
+      "hAxis": {
+        "qualifyingSegmentCount": 0,
+        "narrowGapCount15": 0,
+        "narrowGapCount25": 0,
+        "narrowGapCount40": 0
+      }
+    },
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+      "overlaps": "checked",
+      "containmentOverlaps": "checked",
+      "edgeCrossings": "checked",
+      "spacing": "checked",
+      "alignment": "checked",
+      "labelOverlaps": "checked",
+      "labelOnNote": "checked",
+      "labelOnGroup": "checked",
+      "labelTruncations": "checked",
+      "parentLabelObscured": "checked",
+      "boundaryViolations": "checked",
+      "offCanvas": "checked",
+      "connectionPassThroughs": "checked",
+      "coincidentSegments": "checked",
+      "nonOrthogonalTerminals": "checked",
+      "interiorTerminations": "checked",
+      "zigzags": "checked",
+      "edgeCoincidence": "checked",
+      "hubPortQuality": "checked",
+      "corridorUtilisation": "checked",
+      "corridorCentering": "not-checked",
+      "hubNeighbourCrowding": "checked",
+      "parallelConnectionGap": "checked",
+      "noteOverlap": "checked",
+      "noteClip": "checked",
+      "imageSiblingOverlap": "checked",
+      "connectionThroughNote": "checked",
+      "connectionGrazesVisual": "checked",
+      "redundantBendpoints": "checked",
+      "nonOrthogonalInteriorSegments": "checked",
+      "containerFillRecession": "checked",
+      "offFaceParallelTerminals": "checked",
+      "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+  },
+  "compliance": {
+    "findings": [
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-35f0a22b97954c5580aa2cbb88fb3684",
+          "id-1f24a5f8fd8846df99eccfc2157a1663",
+          "id-8b426a10197b48b4b0864f0b4445ec3e"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-8b426a10197b48b4b0864f0b4445ec3e').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-592259ddd4314163b65dc39eb9bc8c45",
+          "id-e163a120914643a5904ce0d5bcdc1fa6",
+          "id-8b426a10197b48b4b0864f0b4445ec3e"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-8b426a10197b48b4b0864f0b4445ec3e').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-a92d87c3d13c4055b3f0a1ca62adec28",
+          "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+          "id-c0d2f85265bb4414b03c5a7e69934983"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-c0d2f85265bb4414b03c5a7e69934983').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-92a6612843ba4b4594034a1a1a07e4ed",
+          "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+          "id-b866710ad3b448d3829e71df6397738f"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-b866710ad3b448d3829e71df6397738f').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-f766d382c6f549efa292c3711c2e97a9",
+          "id-4c7eefcd80b44e7586295bded35cddb5",
+          "id-b866710ad3b448d3829e71df6397738f"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-b866710ad3b448d3829e71df6397738f').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-23b4391780d54366ae3877e20ec024a4",
+          "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+          "id-43ccf54a35034dfe8b7846c141d8f6b5"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-43ccf54a35034dfe8b7846c141d8f6b5').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-68b896e478c8419dacaac1373f2f2b26",
+          "id-996182b6c7394a038accf601f3139a0a",
+          "id-a3eaf0c0d5b74284a190ac0c70c4830d"
+        ],
+        "problem": "Relationship endpoints Node -Realization-> ApplicationComponent are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Realization-> ApplicationComponent. Prefer a permitted pattern such as: Constraint -Influence-> ApplicationComponent; Artifact -Realization-> ApplicationComponent; Grouping -Aggregation-> ApplicationComponent. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "ApplicationComponent",
+        "relationship_type": "Realization"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-10a3dcbbf6d2496fac1256e761854851",
+          "id-0c90872c58974113baf4ef07d05bf59e",
+          "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9"
+        ],
+        "problem": "Relationship endpoints Node -Realization-> ApplicationComponent are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Realization-> ApplicationComponent. Prefer a permitted pattern such as: Constraint -Influence-> ApplicationComponent; Artifact -Realization-> ApplicationComponent; Grouping -Aggregation-> ApplicationComponent. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "ApplicationComponent",
+        "relationship_type": "Realization"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-f451ca647fc7405f8fcc03724164f084",
+          "id-38c34403663d47f89cb62a7240e16e5f",
+          "id-f2e4e924c5ed4ff09eb64fffd09551f1"
+        ],
+        "problem": "Relationship endpoints Node -Assignment-> Equipment are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Node -Assignment-> Equipment. Prefer a permitted pattern such as: Node -Assignment-> Device; Node -Assignment-> Artifact; Node -Assignment-> SystemSoftware. Confirm full legality via MCP archimate-relationships before create-relationship.",
+        "source_type": "Node",
+        "target_type": "Equipment",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-e169b9f06efd4128a955fa360449f5cb",
+          "id-54ebbe9850ae4485b5932078a0c8cc14",
+          "id-38c34403663d47f89cb62a7240e16e5f"
+        ],
+        "problem": "Relationship endpoints Facility -Assignment-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Facility -Assignment-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Facility",
+        "target_type": "Node",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-5de585d0805045899c8ee4cb3f4ebda1",
+          "id-7b2d4974798e4faeabed3599b8ae08f2",
+          "id-996182b6c7394a038accf601f3139a0a"
+        ],
+        "problem": "Relationship endpoints Facility -Assignment-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Facility -Assignment-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Facility",
+        "target_type": "Node",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-39efb8cb9e554c4f814cee7aa2e029b9",
+          "id-622e47e2c1ae42438c8c5fe4b2929cff",
+          "id-0c90872c58974113baf4ef07d05bf59e"
+        ],
+        "problem": "Relationship endpoints Facility -Assignment-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Facility -Assignment-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Facility",
+        "target_type": "Node",
+        "relationship_type": "Assignment"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-1c59ff1dc5b34dbf8dbd847b523078a9",
+          "id-024345e85bea4028bb2e35bf46be6752",
+          "id-0c90872c58974113baf4ef07d05bf59e"
+        ],
+        "problem": "Relationship endpoints Equipment -Association-> Node are not a permitted pattern.",
+        "proposed_alternative": "Illegal combo Equipment -Association-> Node for this offline fixture. Choose a permitted source/type/target triple from MCP archimate-relationships; do not silent-apply.",
+        "source_type": "Equipment",
+        "target_type": "Node",
+        "relationship_type": "Association"
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-b645383bdf924bb5acd43b825d4c5f73",
+          "id-ec762c52e806466fa6eded750caa15e0",
+          "id-996182b6c7394a038accf601f3139a0a"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (source='id-ec762c52e806466fa6eded750caa15e0').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-3d0b11d9d4e040009b1aee0e6ea43204",
+          "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+          "id-03db6547aef1422db55f7e1277e94923"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-03db6547aef1422db55f7e1277e94923').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-c113148f28144edd8772c4809103097e",
+          "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+          "id-97ebdecf31914a67bb2dbd87f3229ddb"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-97ebdecf31914a67bb2dbd87f3229ddb').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      },
+      {
+        "check_id": "relationship_endpoints_valid",
+        "object_refs": [
+          "id-ebec741536e44609a30f52606f94d23c",
+          "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+          "id-44a1e398965248e8a79831ea7cc78298"
+        ],
+        "problem": "Relationship endpoints not found in slice elements (target='id-44a1e398965248e8a79831ea7cc78298').",
+        "proposed_alternative": "Point source/target at existing element IDs in the model slice, or include the missing elements before relating."
+      }
+    ],
+    "ok": false
+  },
+  "docs_coverage": {
+    "findings": [
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "Range floor node (id-38c34403663d47f89cb62a7240e16e5f)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "On-prem app server (id-996182b6c7394a038accf601f3139a0a)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "LinkGate node (id-0c90872c58974113baf4ef07d05bf59e)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "Hangar (id-54ebbe9850ae4485b5932078a0c8cc14)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "GCS van (id-7b2d4974798e4faeabed3599b8ae08f2)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "Comms cabin (id-622e47e2c1ae42438c8c5fe4b2929cff)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "Datalink mast (id-024345e85bea4028bb2e35bf46be6752)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "Launch equipment (id-f2e4e924c5ed4ff09eb64fffd09551f1)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "AirStack (id-4c7eefcd80b44e7586295bded35cddb5)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "GroundOS (id-a3eaf0c0d5b74284a190ac0c70c4830d)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "SortieBoard (id-e163a120914643a5904ce0d5bcdc1fa6)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "RangePlan (id-1f24a5f8fd8846df99eccfc2157a1663)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_element",
+        "object_refs": [
+          "LinkGate (id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-35f0a22b97954c5580aa2cbb88fb3684)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-592259ddd4314163b65dc39eb9bc8c45)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-a92d87c3d13c4055b3f0a1ca62adec28)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-92a6612843ba4b4594034a1a1a07e4ed)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-f766d382c6f549efa292c3711c2e97a9)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-23b4391780d54366ae3877e20ec024a4)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-89f559f9f1f043f3a61172f01ab6e546)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-a97ea82ce8ba45c2b1c766d834a96aed)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-68b896e478c8419dacaac1373f2f2b26)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-10a3dcbbf6d2496fac1256e761854851)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-f451ca647fc7405f8fcc03724164f084)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-e169b9f06efd4128a955fa360449f5cb)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-5de585d0805045899c8ee4cb3f4ebda1)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-39efb8cb9e554c4f814cee7aa2e029b9)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-1c59ff1dc5b34dbf8dbd847b523078a9)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-b645383bdf924bb5acd43b825d4c5f73)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-3d0b11d9d4e040009b1aee0e6ea43204)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-c113148f28144edd8772c4809103097e)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      },
+      {
+        "check_id": "docs_missing_relationship",
+        "object_refs": [
+          "? (id-ebec741536e44609a30f52606f94d23c)"
+        ],
+        "problem": "documentation field is empty or absent",
+        "proposed_alternative": "Write 1-2 sentences: what it is, why it exists, or what decision it records"
+      }
+    ],
+    "ok": false
+  },
+  "trace_rel_ids": [
+    "id-b645383bdf924bb5acd43b825d4c5f73",
+    "id-3d0b11d9d4e040009b1aee0e6ea43204",
+    "id-c113148f28144edd8772c4809103097e",
+    "id-ebec741536e44609a30f52606f94d23c"
+  ],
+  "hosting_relationship_note": "Bridge rejects AssignmentRelationship Node\u2194ApplicationComponent. Hosting recorded as RealizationRelationship Node\u2192ApplicationComponent plus nested containment on the view.",
+  "export_png": "job-05-technology-and-physical.png"
+}

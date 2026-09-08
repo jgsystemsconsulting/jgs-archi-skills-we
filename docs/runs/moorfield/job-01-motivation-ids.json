@@ -1,0 +1,251 @@
+{
+  "view_id": "id-02bfe33f26d844a1a34a314a40a400c0",
+  "elements": {
+    "Range Manager": "id-f1cf33210db04f8d80c4d357b35eeede",
+    "Chief Instructor": "id-bc23506291674caf8f55964f0381568b",
+    "GCS Owner": "id-37db77111a96462299c6f4f7a06c2079",
+    "Planning Programme Manager": "id-5eee5b3ec1074f10a684417d23c4242b",
+    "Sortie Planner": "id-ff2c9308cb134f2e98350b6087097981",
+    "Integration Lead": "id-7a10b06f1bfa41e5b30885ee93d65d7c",
+    "Promised sortie times do not match what the range can fly": "id-407b7250961f4e029b285f64965e37cd",
+    "Instructors and the range share one sortie identity from tasking to live GCS": "id-d262b5beaf4a46a9bf3a03a1a7f6a319",
+    "Range Manager and Chief Instructor answer on-range-this-morning without SortieBoard": "id-00c2c5228d494559b21c5c10f8f53359",
+    "RangePlan must not swallow AirStack or GroundOS": "id-ec762c52e806466fa6eded750caa15e0"
+  },
+  "element_types": {
+    "Range Manager": "Stakeholder",
+    "Chief Instructor": "Stakeholder",
+    "GCS Owner": "Stakeholder",
+    "Planning Programme Manager": "Stakeholder",
+    "Sortie Planner": "Stakeholder",
+    "Integration Lead": "Stakeholder",
+    "Promised sortie times do not match what the range can fly": "Driver",
+    "Instructors and the range share one sortie identity from tasking to live GCS": "Goal",
+    "Range Manager and Chief Instructor answer on-range-this-morning without SortieBoard": "Outcome",
+    "RangePlan must not swallow AirStack or GroundOS": "Requirement"
+  },
+  "relationships": [
+    {
+      "id": "id-0ed26afd9dc6430bbb37fc5407953e5b",
+      "type": "AssociationRelationship",
+      "source": "id-f1cf33210db04f8d80c4d357b35eeede",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nRange Manager is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-bedec9d3a9da4831b4ad9421f0dbcea9",
+      "type": "AssociationRelationship",
+      "source": "id-bc23506291674caf8f55964f0381568b",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nChief Instructor is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-2662e1593e2042b28fc733813f72615a",
+      "type": "AssociationRelationship",
+      "source": "id-37db77111a96462299c6f4f7a06c2079",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nGCS Owner is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-cce70ab31ea143a38667063904b0160d",
+      "type": "AssociationRelationship",
+      "source": "id-5eee5b3ec1074f10a684417d23c4242b",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nPlanning Programme Manager is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-5ffbf6af779b4c748a837a508c17dbd7",
+      "type": "AssociationRelationship",
+      "source": "id-ff2c9308cb134f2e98350b6087097981",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nSortie Planner is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-d88be420fd5e4298a99c06f64033a495",
+      "type": "AssociationRelationship",
+      "source": "id-7a10b06f1bfa41e5b30885ee93d65d7c",
+      "target": "id-407b7250961f4e029b285f64965e37cd",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nIntegration Lead is concerned with the mismatch between promised and flyable sortie times at Moorfield Range."
+    },
+    {
+      "id": "id-399c8f100a054f4dac0ff089cc3f477d",
+      "type": "InfluenceRelationship",
+      "source": "id-407b7250961f4e029b285f64965e37cd",
+      "target": "id-d262b5beaf4a46a9bf3a03a1a7f6a319",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nThe mismatch drives the need for one shared sortie identity from tasking to live GCS."
+    },
+    {
+      "id": "id-03ec9a4d2ea240abbf44d77d1622016d",
+      "type": "RealizationRelationship",
+      "source": "id-ec762c52e806466fa6eded750caa15e0",
+      "target": "id-d262b5beaf4a46a9bf3a03a1a7f6a319",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nShared identity is achieved without collapsing RangePlan, AirStack, and GroundOS into one system."
+    },
+    {
+      "id": "id-815b5d3ce08c42b48927569b39c85469",
+      "type": "InfluenceRelationship",
+      "source": "id-d262b5beaf4a46a9bf3a03a1a7f6a319",
+      "target": "id-00c2c5228d494559b21c5c10f8f53359",
+      "documentation": "Evidence: stated - docs/moorfield-brief.md; job-01-view-plan.md\nShared sortie identity yields the morning on-range answer without SortieBoard."
+    }
+  ],
+  "assess": {
+    "viewId": "id-02bfe33f26d844a1a34a314a40a400c0",
+    "elementCount": 15,
+    "connectionCount": 9,
+    "overlapCount": 0,
+    "containmentOverlaps": 10,
+    "edgeCrossingCount": 5,
+    "crossingsPerConnection": 0.56,
+    "averageSpacing": 110.7,
+    "alignmentScore": 100,
+    "overallRating": "fair",
+    "ratingBreakdown": {
+      "overlaps": "pass",
+      "edgeCrossings": "good",
+      "spacing": "pass",
+      "alignment": "pass",
+      "labelOverlaps": "pass",
+      "passThroughs": "pass",
+      "coincidentSegments": "pass",
+      "nonOrthogonalTerminals": "fair",
+      "nonOrthogonalInteriorSegments": "fair",
+      "connectionThroughNote": "pass",
+      "boundaryViolations": "pass",
+      "parentLabelObscured": "pass",
+      "offCanvas": "pass",
+      "labelTruncations": "pass",
+      "interiorTerminations": "pass",
+      "zigzags": "pass",
+      "connectionEdgeCoincidence": "good",
+      "hubPortQuality": "pass",
+      "hubNeighbourCrowding": "pass",
+      "overall": "fair",
+      "overallExcludingAcceptedCosmetics": "fair"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": true,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 2,
+    "contentBounds": {
+      "x": 20.0,
+      "y": 20.0,
+      "width": 1442.0,
+      "height": 1226.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+      "2 connections have diagonal terminal segments \u2014 re-run auto-route-connections (or use mode='terminals-only' to preserve the routed body) to improve orthogonality",
+      "10 containment overlaps detected (expected \u2014 ancestor-descendant overlaps from elements inside groups, not layout problems). No action needed.",
+      "1 connection segments hug element edges within 3px \u2014 consider channel offset or increased element spacing"
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 1,
+    "edgeCoincidenceDescriptions": [
+      "Connection 'id-5cb7181540b84dd2909ed76a4f6f1a59' segment (524,650)\u2192(524,637) hugs element 'id-55e6e09f1ff0488aa8ca23d52e941b6b' edge"
+    ],
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "fair",
+    "corridorUtilisationScore": 0.46,
+    "vAxisParallelGapP10": 29.0,
+    "vAxisParallelGapNarrow25Count": 0,
+    "hubNeighbourClearanceMin": 179.0,
+    "coverage": {
+      "overlaps": "checked",
+      "containmentOverlaps": "checked",
+      "edgeCrossings": "checked",
+      "spacing": "checked",
+      "alignment": "checked",
+      "labelOverlaps": "checked",
+      "labelOnNote": "checked",
+      "labelOnGroup": "checked",
+      "labelTruncations": "checked",
+      "parentLabelObscured": "checked",
+      "boundaryViolations": "checked",
+      "offCanvas": "checked",
+      "connectionPassThroughs": "checked",
+      "coincidentSegments": "checked",
+      "nonOrthogonalTerminals": "checked",
+      "interiorTerminations": "checked",
+      "zigzags": "checked",
+      "edgeCoincidence": "checked",
+      "hubPortQuality": "checked",
+      "corridorUtilisation": "checked",
+      "corridorCentering": "not-checked",
+      "hubNeighbourCrowding": "checked",
+      "parallelConnectionGap": "checked",
+      "noteOverlap": "checked",
+      "noteClip": "checked",
+      "imageSiblingOverlap": "checked",
+      "connectionThroughNote": "checked",
+      "connectionGrazesVisual": "checked",
+      "redundantBendpoints": "checked",
+      "nonOrthogonalInteriorSegments": "checked",
+      "containerFillRecession": "checked",
+      "offFaceParallelTerminals": "checked",
+      "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 1,
+    "connectionRedundantBendpointDescriptions": [
+      "Connection 'id-265114912de2473695a24549b72293ab' id-8ea1e4c946534ad78dbad6deb680eaf8 \u2192 id-dea510996ead45a789ac02707f523fcc: redundant bendpoint at index 2 ((805,637) \u2192 (551,637) \u2192 (273,637))"
+    ],
+    "nonOrthogonalInteriorSegmentCount": 1,
+    "nonOrthogonalInteriorSegmentDescriptions": [
+      "Connection 'id-e66ea6e14e2648f28d34c154cd3a8abe' id-dea510996ead45a789ac02707f523fcc \u2192 id-0dc03a7167044cc889039a94a6172cd5: non-orthogonal interior segment at index 1 ((273,591) \u2192 (349,414))"
+    ],
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 1,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 1,
+    "coincidentFacePortDescriptions": [
+      "Element 'Promised sortie times do not match what the range can fly' has 2 connections on its RIGHT face collapsing to 1 distinct port (coincident: id-265114912de2473695a24549b72293ab, id-5cb7181540b84dd2909ed76a4f6f1a59)"
+    ]
+  },
+  "model_info": {
+    "name": "Hawker Range Systems Ltd",
+    "elementCount": 10,
+    "relationshipCount": 9,
+    "viewCount": 1,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 6,
+      "InfluenceRelationship": 2,
+      "RealizationRelationship": 1
+    },
+    "layerDistribution": {
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "export": {
+    "viewId": "id-02bfe33f26d844a1a34a314a40a400c0",
+    "viewName": "Motivation Overview",
+    "format": "png",
+    "mimeType": "image/png",
+    "width": 2181,
+    "height": 1857,
+    "filePath": "C:\\Users\\gower\\OneDrive\\Documents\\GitHub\\jgs-archi-skills-we\\docs\\runs\\moorfield\\id-02bfe33f26d844a1a34a314a40a400c0_1788816088453.png",
+    "renderTimeMs": 166
+  },
+  "requirement_id": "id-ec762c52e806466fa6eded750caa15e0",
+  "compliance_ok": true,
+  "docs_coverage_ok": true
+}

@@ -1,0 +1,291 @@
+{
+  "view_id": "id-782395c6d18347a9a24da626f81ee275",
+  "view_name": "Range Operations",
+  "viewpoint": "business_process_cooperation",
+  "processes": {
+    "Task": "id-8b426a10197b48b4b0864f0b4445ec3e",
+    "Clear": "id-c0d2f85265bb4414b03c5a7e69934983",
+    "Fly": "id-b866710ad3b448d3829e71df6397738f",
+    "Recover": "id-43ccf54a35034dfe8b7846c141d8f6b5"
+  },
+  "roles": {
+    "Range Manager": "id-20972da34bbb434ab4ffe45eed56b121",
+    "Chief Instructor": "id-d43bcfe1df2448359ea677c9b5135051",
+    "Sortie Planner": "id-9e06116e788e40239a3ad697c91a2d06",
+    "GCS Owner": "id-b25651dc1b5e44399395fbce5ba90087"
+  },
+  "stakeholders_reused": {
+    "Range Manager": "id-f1cf33210db04f8d80c4d357b35eeede",
+    "Chief Instructor": "id-bc23506291674caf8f55964f0381568b",
+    "GCS Owner": "id-37db77111a96462299c6f4f7a06c2079",
+    "Planning Programme Manager": "id-5eee5b3ec1074f10a684417d23c4242b",
+    "Sortie Planner": "id-ff2c9308cb134f2e98350b6087097981",
+    "Integration Lead": "id-7a10b06f1bfa41e5b30885ee93d65d7c"
+  },
+  "capabilities_registry_only": {
+    "Task": "id-637e89c75e944169983f389d7a572f98",
+    "Clear": "id-97ebdecf31914a67bb2dbd87f3229ddb",
+    "Fly": "id-03db6547aef1422db55f7e1277e94923",
+    "Recover": "id-44a1e398965248e8a79831ea7cc78298"
+  },
+  "on_canvas_roles": [
+    "Sortie Planner",
+    "Range Manager",
+    "GCS Owner",
+    "Chief Instructor"
+  ],
+  "off_canvas_stakeholders": [
+    "Planning Programme Manager",
+    "Integration Lead"
+  ],
+  "assignments": [
+    [
+      "Sortie Planner",
+      "Task"
+    ],
+    [
+      "Range Manager",
+      "Clear"
+    ],
+    [
+      "GCS Owner",
+      "Fly"
+    ],
+    [
+      "Chief Instructor",
+      "Recover"
+    ]
+  ],
+  "flows": [
+    [
+      "Task",
+      "Clear"
+    ],
+    [
+      "Clear",
+      "Fly"
+    ],
+    [
+      "Fly",
+      "Recover"
+    ]
+  ],
+  "relationships": [
+    {
+      "action": "created",
+      "type": "AssignmentRelationship",
+      "id": "id-9859c332fee245449a2e73c86679c868",
+      "source": "id-9e06116e788e40239a3ad697c91a2d06",
+      "target": "id-8b426a10197b48b4b0864f0b4445ec3e"
+    },
+    {
+      "action": "created",
+      "type": "AssignmentRelationship",
+      "id": "id-cb4300984071419c87c1a537c0148ab0",
+      "source": "id-20972da34bbb434ab4ffe45eed56b121",
+      "target": "id-c0d2f85265bb4414b03c5a7e69934983"
+    },
+    {
+      "action": "created",
+      "type": "AssignmentRelationship",
+      "id": "id-e4108767c6d9403eb038b4ad98f44673",
+      "source": "id-b25651dc1b5e44399395fbce5ba90087",
+      "target": "id-b866710ad3b448d3829e71df6397738f"
+    },
+    {
+      "action": "created",
+      "type": "AssignmentRelationship",
+      "id": "id-fb87b731bffb455198412a99e5b67f62",
+      "source": "id-d43bcfe1df2448359ea677c9b5135051",
+      "target": "id-43ccf54a35034dfe8b7846c141d8f6b5"
+    },
+    {
+      "action": "created",
+      "type": "TriggeringRelationship",
+      "id": "id-e695269512f9459d9f003d84ff7c5eec",
+      "source": "id-8b426a10197b48b4b0864f0b4445ec3e",
+      "target": "id-c0d2f85265bb4414b03c5a7e69934983"
+    },
+    {
+      "action": "created",
+      "type": "TriggeringRelationship",
+      "id": "id-b4680b8852914b9088c737e220bf140c",
+      "source": "id-c0d2f85265bb4414b03c5a7e69934983",
+      "target": "id-b866710ad3b448d3829e71df6397738f"
+    },
+    {
+      "action": "created",
+      "type": "TriggeringRelationship",
+      "id": "id-0bb0bba503c84905a1f0351f84806fac",
+      "source": "id-b866710ad3b448d3829e71df6397738f",
+      "target": "id-43ccf54a35034dfe8b7846c141d8f6b5"
+    }
+  ],
+  "created": [
+    "BusinessProcess:Task",
+    "BusinessProcess:Clear",
+    "BusinessProcess:Fly",
+    "BusinessProcess:Recover",
+    "BusinessRole:Range Manager",
+    "BusinessRole:Chief Instructor",
+    "BusinessRole:Sortie Planner",
+    "BusinessRole:GCS Owner"
+  ],
+  "reused": [],
+  "model_info": {
+    "name": "Hawker Range Systems Ltd",
+    "elementCount": 22,
+    "relationshipCount": 16,
+    "viewCount": 3,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessProcess": 4,
+      "BusinessRole": 4,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 6,
+      "InfluenceRelationship": 2,
+      "RealizationRelationship": 1,
+      "AssignmentRelationship": 4,
+      "TriggeringRelationship": 3
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "app_count": 0,
+  "node_count": 0,
+  "assess": {
+    "viewId": "id-782395c6d18347a9a24da626f81ee275",
+    "elementCount": 9,
+    "connectionCount": 7,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 50.0,
+    "alignmentScore": 87,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+      "overlaps": "pass",
+      "edgeCrossings": "pass",
+      "spacing": "pass",
+      "alignment": "pass",
+      "labelOverlaps": "pass",
+      "passThroughs": "pass",
+      "coincidentSegments": "pass",
+      "nonOrthogonalTerminals": "pass",
+      "nonOrthogonalInteriorSegments": "pass",
+      "connectionThroughNote": "pass",
+      "boundaryViolations": "pass",
+      "parentLabelObscured": "pass",
+      "offCanvas": "pass",
+      "labelTruncations": "pass",
+      "interiorTerminations": "pass",
+      "zigzags": "pass",
+      "connectionEdgeCoincidence": "pass",
+      "hubPortQuality": "pass",
+      "hubNeighbourCrowding": "pass",
+      "overall": "excellent",
+      "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+      "x": 12.0,
+      "y": 12.0,
+      "width": 520.0,
+      "height": 630.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+      "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapP10": 83.0,
+    "vAxisParallelGapNarrow25Count": 0,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+      "overlaps": "checked",
+      "containmentOverlaps": "checked",
+      "edgeCrossings": "checked",
+      "spacing": "checked",
+      "alignment": "checked",
+      "labelOverlaps": "checked",
+      "labelOnNote": "checked",
+      "labelOnGroup": "checked",
+      "labelTruncations": "checked",
+      "parentLabelObscured": "checked",
+      "boundaryViolations": "checked",
+      "offCanvas": "checked",
+      "connectionPassThroughs": "checked",
+      "coincidentSegments": "checked",
+      "nonOrthogonalTerminals": "checked",
+      "interiorTerminations": "checked",
+      "zigzags": "checked",
+      "edgeCoincidence": "checked",
+      "hubPortQuality": "checked",
+      "corridorUtilisation": "checked",
+      "corridorCentering": "not-checked",
+      "hubNeighbourCrowding": "checked",
+      "parallelConnectionGap": "checked",
+      "noteOverlap": "checked",
+      "noteClip": "checked",
+      "imageSiblingOverlap": "checked",
+      "connectionThroughNote": "checked",
+      "connectionGrazesVisual": "checked",
+      "redundantBendpoints": "checked",
+      "nonOrthogonalInteriorSegments": "checked",
+      "containerFillRecession": "checked",
+      "offFaceParallelTerminals": "checked",
+      "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+  },
+  "export": {
+    "viewId": "id-782395c6d18347a9a24da626f81ee275",
+    "viewName": "Range Operations",
+    "format": "png",
+    "mimeType": "image/png",
+    "width": 1060,
+    "height": 1280,
+    "filePath": "C:\\Users\\gower\\OneDrive\\Documents\\GitHub\\jgs-archi-skills-we\\docs\\runs\\moorfield\\id-782395c6d18347a9a24da626f81ee275_1788817318167.png",
+    "renderTimeMs": 59
+  },
+  "snapshot": "job-03-range-operations.png",
+  "compliance_ok": true,
+  "docs_coverage_ok": true,
+  "process_count": 4,
+  "role_count": 4
+}

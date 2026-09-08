@@ -1,0 +1,330 @@
+{
+  "view_id": "id-5ed7d076bfc449d78537f5468ed476fb",
+  "view_name": "Application Support",
+  "viewpoint": "application_cooperation",
+  "applications": {
+    "AirStack": "id-4c7eefcd80b44e7586295bded35cddb5",
+    "GroundOS": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+    "SortieBoard": "id-e163a120914643a5904ce0d5bcdc1fa6",
+    "RangePlan": "id-1f24a5f8fd8846df99eccfc2157a1663",
+    "LinkGate": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9"
+  },
+  "processes_reused": {
+    "Task": "id-8b426a10197b48b4b0864f0b4445ec3e",
+    "Clear": "id-c0d2f85265bb4414b03c5a7e69934983",
+    "Fly": "id-b866710ad3b448d3829e71df6397738f",
+    "Recover": "id-43ccf54a35034dfe8b7846c141d8f6b5"
+  },
+  "flows": [
+    [
+      "RangePlan",
+      "LinkGate",
+      "tasking handoff into the bridge"
+    ],
+    [
+      "LinkGate",
+      "GroundOS",
+      "bridged tasking into live control"
+    ]
+  ],
+  "servings": [
+    [
+      "RangePlan",
+      "Task",
+      "planning tool supports tasking"
+    ],
+    [
+      "SortieBoard",
+      "Task",
+      "as-is spreadsheet still used at tasking"
+    ],
+    [
+      "LinkGate",
+      "Clear",
+      "bridge supports clearance handoff into live"
+    ],
+    [
+      "GroundOS",
+      "Fly",
+      "GCS software owns live fly"
+    ],
+    [
+      "AirStack",
+      "Fly",
+      "airborne computer supports the live period"
+    ],
+    [
+      "GroundOS",
+      "Recover",
+      "live-control app still in scope at recover close"
+    ]
+  ],
+  "relationships": [
+    {
+      "action": "created",
+      "type": "FlowRelationship",
+      "id": "id-fc9488d51f3e4ff89052a4123fa05552",
+      "source": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "target": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9"
+    },
+    {
+      "action": "created",
+      "type": "FlowRelationship",
+      "id": "id-9f74634e81d248e38a34517a6fa93eaf",
+      "source": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+      "target": "id-a3eaf0c0d5b74284a190ac0c70c4830d"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-35f0a22b97954c5580aa2cbb88fb3684",
+      "source": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "target": "id-8b426a10197b48b4b0864f0b4445ec3e"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-592259ddd4314163b65dc39eb9bc8c45",
+      "source": "id-e163a120914643a5904ce0d5bcdc1fa6",
+      "target": "id-8b426a10197b48b4b0864f0b4445ec3e"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-a92d87c3d13c4055b3f0a1ca62adec28",
+      "source": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9",
+      "target": "id-c0d2f85265bb4414b03c5a7e69934983"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-92a6612843ba4b4594034a1a1a07e4ed",
+      "source": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "target": "id-b866710ad3b448d3829e71df6397738f"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-f766d382c6f549efa292c3711c2e97a9",
+      "source": "id-4c7eefcd80b44e7586295bded35cddb5",
+      "target": "id-b866710ad3b448d3829e71df6397738f"
+    },
+    {
+      "action": "created",
+      "type": "ServingRelationship",
+      "id": "id-23b4391780d54366ae3877e20ec024a4",
+      "source": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "target": "id-43ccf54a35034dfe8b7846c141d8f6b5"
+    }
+  ],
+  "created": [
+    "ApplicationComponent:AirStack",
+    "ApplicationComponent:GroundOS",
+    "ApplicationComponent:SortieBoard",
+    "ApplicationComponent:RangePlan",
+    "ApplicationComponent:LinkGate"
+  ],
+  "reused": [],
+  "model_info": {
+    "name": "Hawker Range Systems Ltd",
+    "elementCount": 27,
+    "relationshipCount": 24,
+    "viewCount": 4,
+    "specializationCount": 0,
+    "elementTypeDistribution": {
+      "Capability": 4,
+      "BusinessProcess": 4,
+      "BusinessRole": 4,
+      "ApplicationComponent": 5,
+      "Stakeholder": 6,
+      "Driver": 1,
+      "Goal": 1,
+      "Outcome": 1,
+      "Requirement": 1
+    },
+    "relationshipTypeDistribution": {
+      "AssociationRelationship": 6,
+      "InfluenceRelationship": 2,
+      "RealizationRelationship": 1,
+      "AssignmentRelationship": 4,
+      "TriggeringRelationship": 3,
+      "FlowRelationship": 2,
+      "ServingRelationship": 6
+    },
+    "layerDistribution": {
+      "Strategy": 4,
+      "Business": 8,
+      "Application": 5,
+      "Motivation": 10
+    },
+    "approvalMode": false
+  },
+  "app_count": 5,
+  "node_count": 0,
+  "equipment_count": 0,
+  "data_object_count": 0,
+  "assess": {
+    "viewId": "id-5ed7d076bfc449d78537f5468ed476fb",
+    "elementCount": 10,
+    "connectionCount": 11,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 1,
+    "crossingsPerConnection": 0.09,
+    "averageSpacing": 56.1,
+    "alignmentScore": 100,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+      "overlaps": "pass",
+      "edgeCrossings": "pass",
+      "spacing": "pass",
+      "alignment": "pass",
+      "labelOverlaps": "pass",
+      "passThroughs": "pass",
+      "coincidentSegments": "pass",
+      "nonOrthogonalTerminals": "pass",
+      "nonOrthogonalInteriorSegments": "pass",
+      "connectionThroughNote": "pass",
+      "boundaryViolations": "pass",
+      "parentLabelObscured": "pass",
+      "offCanvas": "pass",
+      "labelTruncations": "pass",
+      "interiorTerminations": "pass",
+      "zigzags": "pass",
+      "connectionEdgeCoincidence": "pass",
+      "hubPortQuality": "pass",
+      "hubNeighbourCrowding": "pass",
+      "overall": "excellent",
+      "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+      "x": 12.0,
+      "y": 12.0,
+      "width": 575.0,
+      "height": 681.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+      "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapP10": 77.2,
+    "vAxisParallelGapNarrow25Count": 2,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+      "overlaps": "checked",
+      "containmentOverlaps": "checked",
+      "edgeCrossings": "checked",
+      "spacing": "checked",
+      "alignment": "checked",
+      "labelOverlaps": "checked",
+      "labelOnNote": "checked",
+      "labelOnGroup": "checked",
+      "labelTruncations": "checked",
+      "parentLabelObscured": "checked",
+      "boundaryViolations": "checked",
+      "offCanvas": "checked",
+      "connectionPassThroughs": "checked",
+      "coincidentSegments": "checked",
+      "nonOrthogonalTerminals": "checked",
+      "interiorTerminations": "checked",
+      "zigzags": "checked",
+      "edgeCoincidence": "checked",
+      "hubPortQuality": "checked",
+      "corridorUtilisation": "checked",
+      "corridorCentering": "not-checked",
+      "hubNeighbourCrowding": "checked",
+      "parallelConnectionGap": "checked",
+      "noteOverlap": "checked",
+      "noteClip": "checked",
+      "imageSiblingOverlap": "checked",
+      "connectionThroughNote": "checked",
+      "connectionGrazesVisual": "checked",
+      "redundantBendpoints": "checked",
+      "nonOrthogonalInteriorSegments": "checked",
+      "containerFillRecession": "checked",
+      "offFaceParallelTerminals": "checked",
+      "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+  },
+  "export": {
+    "metadata": {
+      "viewId": "id-5ed7d076bfc449d78537f5468ed476fb",
+      "viewName": "Application Support",
+      "format": "png",
+      "mimeType": "image/png",
+      "width": 595,
+      "height": 701,
+      "renderTimeMs": 37
+    },
+    "modelVersion": "5744",
+    "nextSteps": [
+      "Use LLM vision to verify layout quality (overlaps, alignment, spacing)",
+      "Use get-view-contents to see element details and positions",
+      "Use export-view with scale 2.0 for higher resolution",
+      "Use export-view with inline false to save to file"
+    ],
+    "_meta": {
+      "durationMs": 37
+    }
+  },
+  "snapshot": "job-04-application-support.png",
+  "qa": {
+    "model": "Hawker Range Systems Ltd",
+    "elementCount": 27,
+    "relationshipCount": 24,
+    "viewCount": 4,
+    "ApplicationComponent": 5,
+    "Node": 0,
+    "Equipment": 0,
+    "WorkPackage": 0,
+    "DataObject": 0,
+    "apps": {
+      "AirStack": "id-4c7eefcd80b44e7586295bded35cddb5",
+      "GroundOS": "id-a3eaf0c0d5b74284a190ac0c70c4830d",
+      "SortieBoard": "id-e163a120914643a5904ce0d5bcdc1fa6",
+      "RangePlan": "id-1f24a5f8fd8846df99eccfc2157a1663",
+      "LinkGate": "id-23d0ad9fc6be4d2b93b3fabd9f6ca0c9"
+    },
+    "forbidden_names": [],
+    "evidence_ok": true,
+    "doc_not_name_only": true,
+    "process_reuse_ok": true,
+    "distinct_freeze_ok": true,
+    "views": {
+      "Motivation Overview": "id-02bfe33f26d844a1a34a314a40a400c0",
+      "Capability Map": "id-6967b8a5125d46e1b6ba0edbf9b9539b",
+      "Range Operations": "id-782395c6d18347a9a24da626f81ee275",
+      "Application Support": "id-5ed7d076bfc449d78537f5468ed476fb"
+    },
+    "application_support_id": "id-5ed7d076bfc449d78537f5468ed476fb",
+    "pass": true
+  },
+  "compliance_ok": false,
+  "docs_coverage_ok": false
+}

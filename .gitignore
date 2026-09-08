@@ -6,13 +6,24 @@ __pycache__/
 *.pyc
 
 # Agent scratch from live SOAM runs (keep view plans, specialist results, ids, named PNGs)
-docs/runs/*.py
-docs/runs/_*
-docs/runs/id-*.png
-docs/runs/*-slice.json
-docs/runs/*-assess-final.json
-docs/runs/*-view-contents*.json
-docs/runs/*-model-info.json
-docs/runs/*-intent.json
-docs/runs/*-export-raw.json
-docs/runs/*-normalized-intent.md
+docs/runs/**/*.py
+docs/runs/**/_*
+docs/runs/**/id-*.png
+docs/runs/**/*-slice.json
+docs/runs/**/*-assess-final.json
+docs/runs/**/*-assess.json
+docs/runs/**/*-view-contents*.json
+docs/runs/**/*-model-info.json
+docs/runs/**/*-intent.json
+docs/runs/**/*-intent-axes.json
+docs/runs/**/*-export.json
+docs/runs/**/*-export-raw.json
+docs/runs/**/*-normalized-intent.md
+docs/runs/**/*-transcript.jsonl
+docs/runs/**/*-transcript-*.jsonl
+docs/runs/**/*-usages.json
+docs/runs/**/*-compliance.json
+docs/runs/**/*-compliance-raw.txt
+docs/runs/**/*-docs-coverage.json
+docs/runs/**/*-qa.json
+docs/runs/**/*-disposition.md
