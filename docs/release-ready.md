@@ -18,8 +18,8 @@ proof, not as a replacement for a ten-second paste.
 ## Current state (2026-09-08)
 
 Private repository `jgsystemsconsulting/jgs-archi-skills-we`. Local
-`master` is three commits ahead of origin (Hatherley live run, Moorfield
-seed, Moorfield live run). Not pushed.
+`master` is four commits ahead of origin (Hatherley live run, Moorfield
+seed, Moorfield live run, this plan). Not pushed.
 
 | Surface | State |
 |---------|--------|
@@ -33,6 +33,80 @@ seed, Moorfield live run). Not pushed.
 
 Honesty line for any public page: two author-run frozen briefs exist in
 Archi. They are not client engagements. No speedup claim.
+
+## Release Repo Standard (same bar as jgs-archi-skills)
+
+Profile: **Base only** (`RR-B`). Open-source MIT. Standalone repo. Not a
+skills pack (`RR-S` N/A: no `skills/`, no installer, no host marketplace
+manifests) and not an MCP bridge (`RR-M` N/A).
+
+Auditor (`audit.py`, Base profile) on 2026-09-08: **9 FAIL, 2 WARN, 13 PASS**.
+The skills pack on the same tool: 2 FAIL (commit-identity history and
+diagram HTML em dashes), 23 PASS. WE must reach the same Base MUST set
+the skills pack already ships. Do not copy RR-S files (`install.py`,
+`SKILLS.md`, `.claude-plugin/`) into WE.
+
+### Auditor FAILs (MUST, blocking)
+
+| ID | Gap | Fix |
+|----|-----|-----|
+| RR-B-05 | README missing Usage and Support; missing licence-enquiry URL | Rewrite README with those H2s. Licence section must contain `https://labs.jgsystemsconsulting.com/licensing.html` as a raw https URL. |
+| RR-B-07 | no SECURITY.md | Copy skills-pack SECURITY.md, retarget advisory URL to this repo, rewrite Scope notes for model files and PNGs (no MCP tools in this repo). Advisory route, not email. |
+| RR-B-08 | no CHANGELOG.md | Add changelog. First released entry `0.1.0` after the public walk exists. Keep `## [Unreleased]`. |
+| RR-B-09 | no version | Single version `0.1.0` in CHANGELOG, RELEASE-INFO.txt, CITATION.cff, README badge. Bump together. |
+| RR-B-10 | no RELEASE-INFO.txt | `Product: jgs-archi-skills-we` / `Version: 0.1.0` / `Built: <UTC>` / `Tag: v0.1.0`. |
+| RR-B-15 | no gate script, no CI | `scripts/check_release.py` listing WE required files (legal set, README, CHANGELOG, RELEASE-INFO, CITATION, SECURITY, CONTRIBUTING, CoC, models, prompt READMEs). `.github/workflows/validate.yml` inlines the same checks and MUST NOT execute checked-out Python from this repo (same pattern as the skills pack). |
+| RR-B-28 | em dash in seven run reports | Strip U+2014 from those seven files (Hatherley job-01 orchestrator report; both examples' job-05 completion, orchestrator report, specialist result). Public README/how-to/landing: avoid-ai-writing + `prose_check.py`. |
+| RR-B-31 | no CITATION.cff | Org-authored CFF, version 0.1.0, `repository-code` this repo, MIT. |
+| RR-B-32 | no bug form, no chooser | `.github/ISSUE_TEMPLATE/bug_report.yml` + `config.yml` (`blank_issues_enabled: false`, security advisory contact, sibling link to jgs-archi-skills for pack defects). SHOULD: `skill_improvement.yml` renamed or an `example-improvement.yml`. |
+
+### Auditor WARNs
+
+- RR-B-24: no `docs/*.html` yet. Phase A companion page in the skills pack
+  (`docs/hatherley.html` using `site.css`) carries the mechanical taste
+  overlay. WE itself MAY stay markdown-only if Pages is the skills-pack
+  site. If WE enables GitHub Pages, it needs `docs/index.html` + shared
+  CSS and `landing_taste.py` zero hits.
+- RR-B-32 improvement form: add with the bug form.
+
+### OSS posture extras (RR-B-12 MUST when MIT)
+
+Copy and retarget from the skills pack: `CONTRIBUTING.md`,
+`CODE_OF_CONDUCT.md`, `.github/pull_request_template.md`. CONTRIBUTING
+setup commands become: open the named `.archimate`, optional replay of
+job 1, `python scripts/check_release.py`. No `install.py`.
+
+### N/A (do not cargo-cult from the skills pack)
+
+RR-S entire profile. RR-B-29 host marketplace manifests. RR-B-16
+agent-install prompt (this repo is not installed as skills). `SKILLS.md`,
+`install.py` / `.sh` / `.ps1`, `.claude-plugin/`, `.cursor-plugin/`,
+`.agents/plugins/`, `gemini-extension.json`.
+
+RR-B-29b / RR-M-07b directory submissions: N/A (not an agent plugin).
+
+### SHOULD after files exist (Phase A publish)
+
+- RR-B-18: tag `v0.1.0` when CHANGELOG has a released entry.
+- RR-B-21: GitHub About description as search snippet; topics include
+  `archimate`, `archi`, `soam`.
+- RR-B-22: GitHub Release notes include the licence-enquiry URL.
+- RR-B-23: branch protection on `master` after the repo is public
+  (solo-maintainer shape, same as the skills pack).
+- RR-B-20: landing either this repo's Pages or the skills-pack
+  companion page. Licence-enquiry URL on that HTML.
+- Re-run the auditor until FAIL count is 0. Then add the GitHub platform
+  flags once the repo is public.
+
+### Verify command (done means this is green)
+
+```text
+python ~/.zcode/skills/release-repo-standard/tools/audit.py --repo . --profile base
+python scripts/check_release.py
+```
+
+Exit 0 on both. MANUAL list still walked by a human (usage-doc depth,
+landing content, taste-skill if HTML exists).
 
 ## Quality bar (release, not "files exist")
 
@@ -196,10 +270,13 @@ publish the current PNGs without a human look.
 7. Skills-pack pointer + companion page with five figures and the
    refuse caption.
 8. `prose_check` and avoid-ai-writing on every new public page.
-9. Push WE `master` (three local commits) only after steps 5 to 8, or
-   push now as private backup and flip visibility after the README
-   rewrite. Do not flip public while README still says the jobs were
-   not run.
+9. Apply the Release Repo Standard Base file set (SECURITY, CHANGELOG,
+   RELEASE-INFO, CITATION, CONTRIBUTING, CoC, PR template, issue
+   forms, `scripts/check_release.py`, inline CI). Version `0.1.0`.
+   Strip em dashes from the seven run reports the auditor named.
+10. Re-run the Base-profile auditor until FAIL is 0.
+11. Push WE `master` as private backup if wanted. Flip public only after
+    README no longer says the jobs were not run, and after step 10.
 
 ## Skill and Bridge follow-ups (not a blocker for Phase A)
 
@@ -228,6 +305,8 @@ mutate. They are not required to publish a finished `.archimate`.
   green after the pointer edit.
 - WE `git status` clean on the files the public will see. Scratch
   (`docs/runs/**/*.py`, transcripts, slices) stays gitignored.
+- Base-profile `audit.py` FAIL count 0. `python scripts/check_release.py`
+  exit 0.
 
 ## Out of scope for this release
 
