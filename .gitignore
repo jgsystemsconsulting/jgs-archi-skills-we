@@ -27,3 +27,6 @@ docs/runs/**/*-compliance-raw.txt
 docs/runs/**/*-docs-coverage.json
 docs/runs/**/*-qa.json
 docs/runs/**/*-disposition.md
+
+# Maintainer-only release planning (kept on disk, not published)
+docs/release-ready.md
