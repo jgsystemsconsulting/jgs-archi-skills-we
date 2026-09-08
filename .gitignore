@@ -30,3 +30,5 @@ docs/runs/**/*-disposition.md
 
 # Maintainer-only release planning (kept on disk, not published)
 docs/release-ready.md
+
+.playwright-mcp/

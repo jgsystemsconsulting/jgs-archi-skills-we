@@ -3,6 +3,11 @@
 
 # How to run
 
+This checkout holds models and sequenced pastes. The skill pack is
+[jgs-archi-skills](https://github.com/jgsystemsconsulting/jgs-archi-skills).
+The plugin is [jgs-archi-mcp](https://github.com/jgsystemsconsulting/jgs-archi-mcp).
+Do not copy those into this repo.
+
 Two tracks. Looking at a finished model does not need an agent. Replaying a
 job does.
 

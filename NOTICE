@@ -15,5 +15,9 @@ own license:
 - jgs-archi-skills (https://github.com/jgsystemsconsulting/jgs-archi-skills),
   installed separately; not distributed with this repository.
 
-Third-party components are not distributed with this repository; they are
-installed from their upstream sources per the install instructions.
+Distributed with this repository:
+- Inter and JetBrains Mono webfonts (docs/fonts/), under the SIL Open Font
+  License 1.1; used by the landing page.
+
+Third-party runtime components are not distributed with this repository; they
+are installed from their upstream sources per the install instructions.

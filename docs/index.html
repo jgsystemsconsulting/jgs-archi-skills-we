@@ -1,0 +1,152 @@
+<!doctype html>
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills-we. See LICENSE. -->
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>jgs-archi-skills-we: SOAM worked examples in Archi</title>
+<meta name="description" content="Two author-run SOAM worked examples in Archi: a UK plate mill and a training UAS range. Open the models, walk the five views, or replay a paste-fenced job.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-archi-skills-we/">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="site.css">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-archi-skills-we/">
+<meta property="og:title" content="jgs-archi-skills-we: SOAM worked examples in Archi">
+<meta property="og:description" content="Two author-run SOAM worked examples in Archi: a UK plate mill and a training UAS range. Open the models, walk the five views, or replay a paste-fenced job.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jgs-archi-skills-we">
+<meta name="twitter:description" content="Two author-run SOAM worked examples in Archi: a UK plate mill and a training UAS range.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"jgs-archi-skills-we","applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","softwareVersion":"0.1.0","license":"https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/LICENSE","url":"https://jgsystemsconsulting.github.io/jgs-archi-skills-we/","codeRepository":"https://github.com/jgsystemsconsulting/jgs-archi-skills-we","author":{"@type":"Organization","name":"JG Systems Consulting Ltd"}}
+</script>
+</head>
+<body>
+
+<header class="masthead"><div class="wrap">
+  <span>CLASSIFICATION: <b>PUBLIC</b></span>
+  <span>LICENCE: <b>MIT</b></span>
+  <span>DOC-ID: <b>JGS-ARCHI-SKILLS-WE</b></span>
+  <span>REV <b>0.1.0</b></span>
+</div></header>
+
+<nav class="site" aria-label="Site"><div class="wrap">
+  <a href="#what">What it is</a>
+  <a href="#views">Views</a>
+  <a href="#range">Range</a>
+  <a href="#install">Install</a>
+  <a href="#replay">Replay</a>
+  <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we">Repository</a>
+</div></nav>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>jgs-archi-skills-we</h1>
+  <p>Worked examples for <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">jgs-archi-skills</a>. Two fictional SOAM runs live in Archi: a UK plate mill, and a training UAS range. Open the mill model. Archi stays the system of record.</p>
+  <p class="sub">These are author-run frozen briefs, not client engagements. No speedup claim.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#install">Open the model <span aria-hidden="true">&rarr;</span></a>
+    <a class="btn btn-ghost" href="#replay">Replay a job <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</div></div>
+
+<section id="what"><div class="wrap">
+  <div class="shead"><span class="label">&sect;01 &middot; What it is</span><h2>Finished models, not slideware</h2></div>
+  <p class="lead">Each example is a real <code>.archimate</code> file you open in Archi 5.7+. No agent is needed to look: the five named views per example are saved in the model. If you want to go further, you can replay a job from a paste fence and stop at the View Plan gate, where nothing mutates until you approve.</p>
+  <div class="grid g3">
+    <div class="cell"><span class="num">2</span><h3>Examples</h3><p>Hatherley Plate Ltd, a UK plate mill. Hawker Range Systems Ltd, a training UAS range. Same method, different nouns.</p></div>
+    <div class="cell"><span class="num">5</span><h3>Views each</h3><p>Motivation, capability, operations, application support, technology and physical. One freeze per model.</p></div>
+    <div class="cell"><span class="num">5</span><h3>Gated jobs</h3><p>Each run was driven by five sequenced pastes. Specialists stay orchestrator-dispatched. Nothing writes before the plan is approved.</p></div>
+  </div>
+</div></section>
+
+<section id="views"><div class="wrap">
+  <div class="shead"><span class="label">&sect;02 &middot; Views</span><h2>Hatherley Plate: five views, one freeze</h2></div>
+  <p class="lead">The freeze: OrderSight must not swallow MillOS, rolling equipment sits on the mill-floor node, and there are no work packages on the as-is picture. The exports below come straight from the run in this repository; captions are not a substitute for opening Archi.</p>
+  <table class="data">
+    <thead><tr><th>View</th><th>What to look at</th></tr></thead>
+    <tbody>
+      <tr><td><code>Motivation Overview</code></td><td>OrderSight must not swallow MillOS.</td></tr>
+      <tr><td><code>Capability Map</code></td><td>Promise, Order, Mill schedule, Collect.</td></tr>
+      <tr><td><code>Production Operations</code></td><td>Shop-floor chain. No applications on this view.</td></tr>
+      <tr><td><code>Application Support</code></td><td>MillOS, WorksERP, PromiseSheet, OrderSight, PlantGate stay distinct.</td></tr>
+      <tr><td><code>Technology and Physical</code></td><td>Rolling equipment assigned to the mill-floor node.</td></tr>
+    </tbody>
+  </table>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/job-01-motivation-overview.png" alt="Motivation Overview view: OrderSight must not swallow MillOS" style="width:100%;height:auto">
+    <figcaption>Motivation Overview. Constraint: OrderSight must not swallow MillOS.</figcaption>
+  </figure>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/job-02-capability-map.png" alt="Capability Map: Promise, Order, Mill schedule, Collect" style="width:100%;height:auto">
+    <figcaption>Capability Map. Promise, Order, Mill schedule, Collect.</figcaption>
+  </figure>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/job-03-production-operations.png" alt="Production Operations: shop-floor chain, no applications on this view" style="width:100%;height:auto">
+    <figcaption>Production Operations. Shop-floor chain. No applications on this view.</figcaption>
+  </figure>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/job-04-application-support.png" alt="Application Support: MillOS, WorksERP, PromiseSheet, OrderSight, PlantGate stay distinct" style="width:100%;height:auto">
+    <figcaption>Application Support. MillOS, WorksERP, PromiseSheet, OrderSight, PlantGate stay distinct.</figcaption>
+  </figure>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/job-05-technology-and-physical.png" alt="Technology and Physical: rolling equipment assigned to the mill-floor node" style="width:100%;height:auto">
+    <figcaption>Technology and Physical. Rolling equipment assigned to the mill-floor node.</figcaption>
+  </figure>
+</div></section>
+
+<section id="range"><div class="wrap">
+  <div class="shead"><span class="label">&sect;03 &middot; Range</span><h2>Moorfield Range: same method, aerospace nouns</h2></div>
+  <p class="lead">Hawker Range Systems Ltd runs a training UAS range. The model keeps the SysML boundary where it belongs: the air vehicle stays off this canvas, and the planning tool is not modelled as the range's product structure. Open <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/models/moorfield-range.archimate">models/moorfield-range.archimate</a> in Archi to walk its five views.</p>
+  <figure style="margin-top:1.5rem">
+    <img src="runs/moorfield/job-03-range-operations.png" alt="Moorfield Range Operations view: the training-range operations chain" style="width:100%;height:auto">
+    <figcaption>Range Operations. Freeze: RangePlan, AirStack, and GroundOS stay separate; launch equipment sits on the range-floor node.</figcaption>
+  </figure>
+</div></section>
+
+<section id="install"><div class="wrap">
+  <div class="shead"><span class="label">&sect;04 &middot; Install</span><h2>Open the model</h2></div>
+  <p class="lead">Looking at a finished model needs one tool: <a href="https://www.archimatetool.com/">Archi 5.7+</a>. Replaying a job needs the JGS Archi Bridge and the skill pack as well.</p>
+  <div class="sheet"><pre># Look at the models: clone and open
+git clone https://github.com/jgsystemsconsulting/jgs-archi-skills-we
+cd jgs-archi-skills-we
+# then open models/hatherley-plate.archimate in Archi 5.7+</pre></div>
+  <table class="data" style="margin-top:1.5rem">
+    <thead><tr><th>You want to</th><th>You need</th></tr></thead>
+    <tbody>
+      <tr><td>Open the five views</td><td><a href="https://www.archimatetool.com/">Archi 5.7+</a>. Open the working <code>.archimate</code>, not the <code>.seed</code> copy.</td></tr>
+      <tr><td>Replay a gated job</td><td>The <a href="https://github.com/jgsystemsconsulting/jgs-archi-mcp">JGS Archi Bridge</a> and the <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">skill pack</a>, installed and running.</td></tr>
+      <tr><td>Run the release gate</td><td>Python 3.10+ (standard library only): <code>python scripts/check_release.py</code>.</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section id="replay"><div class="wrap">
+  <div class="shead"><span class="label">&sect;05 &middot; Replay</span><h2>First run, five steps</h2></div>
+  <p class="lead">Replay drives the same gated flow the saved runs used. Full operator notes: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/docs/how-to-run.md">docs/how-to-run.md</a>.</p>
+  <div class="grid g2">
+    <div class="cell"><h3>1. Open the working model</h3><p>Open the named <code>.archimate</code> for the example you mean. Confirm the Bridge <code>get-model-info</code> name matches before anything else.</p></div>
+    <div class="cell"><h3>2. Open a diagram editor</h3><p>Even an empty view. Without one, the Bridge returns <code>MUTATION_FAILED</code> on the UI thread. If it still appears: stop the MCP server, start it again.</p></div>
+    <div class="cell"><h3>3. Paste one fence</h3><p>Copy a fenced block from <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/prompts/README.md">prompts/</a> (mill) or <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/prompts/moorfield/README.md">prompts/moorfield/</a> (range) into an agent that has the skill pack. One job at a time.</p></div>
+    <div class="cell"><h3>4. Judge the View Plan</h3><p>Approve, revise, or abort. Nothing is written until you say yes. A refused plan stays on that job; do not paste job N+1 until job N passed.</p></div>
+  </div>
+  <p class="lead" style="margin-top:1.5rem">After a passed job: File, Save in Archi, then commit the working <code>.archimate</code>. The Bridge has no save tool; closing without Save loses the run. If the agent invents WMS, TMS, a data lake, an ERP replacement, work packages, or an air-vehicle product structure: refuse it, log the row in <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we/blob/master/defects/log.md">defects/log.md</a>, and re-paste the same job.</p>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="tblock">
+    <div><span class="label">Product</span><b>jgs-archi-skills-we</b></div>
+    <div><span class="label">Rev</span><b>0.1.0</b></div>
+    <div><span class="label">Licence</span><b>MIT</b></div>
+    <div><span class="label">Repository</span><b><a href="https://github.com/jgsystemsconsulting/jgs-archi-skills-we">github.com/jgsystemsconsulting</a></b></div>
+    <div><span class="label">Canvas</span><b>Archi</b></div>
+    <div><span class="label">Owner</span><b>JG Systems Consulting Ltd</b></div>
+  </div>
+  <p class="foot-note">&copy; 2026 JG Systems Consulting Ltd. MIT Licence. See LICENSE. To request a commercial or academic licence for JGSC Labs products, or if you are unsure which licence you need, use <a href="https://labs.jgsystemsconsulting.com/licensing.html">labs.jgsystemsconsulting.com/licensing.html</a>. ArchiMate is a trademark of The Open Group.</p>
+</div></footer>
+
+</body>
+</html>

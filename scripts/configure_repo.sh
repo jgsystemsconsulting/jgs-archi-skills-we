@@ -7,7 +7,7 @@ set -euo pipefail
 OWNER="jgsystemsconsulting"
 REPO="jgs-archi-skills-we"
 DESCRIPTION="Worked examples for jgs-archi-skills: two fictional SOAM runs in Archi (a UK plate mill and a training UAS range), replayable job by job."
-HOMEPAGE=""
+HOMEPAGE="https://jgsystemsconsulting.github.io/jgs-archi-skills-we/"
 TOPICS=(archimate archi soam enterprise-architecture worked-examples reference-model)
 CI_CHECK="integrity"
 BRANCH="$(gh api "repos/$OWNER/$REPO" --jq .default_branch)"

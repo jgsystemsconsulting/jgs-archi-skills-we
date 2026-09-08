@@ -8,6 +8,8 @@ Single-source history for jgs-archi-skills-we. Tags are three-component semver
 
 ## [Unreleased]
 
+- README states the three-repo split: Bridge, skill pack, this evidence checkout.
+
 ## [0.1.0] - 2026-09-08
 
 First worked-example cut. Two fictional SOAM runs in Archi.

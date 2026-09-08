@@ -18,6 +18,16 @@ replay a job from a paste fence and stop at the View Plan gate.
 
 These are author-run frozen briefs, not client engagements. No speedup claim.
 
+## Three repositories
+
+| Repository | Job |
+|------|------|
+| [jgs-archi-mcp](https://github.com/jgsystemsconsulting/jgs-archi-mcp) | Archi plugin. MCP tools and ArchiMate resources. System of record stays Archi. |
+| [jgs-archi-skills](https://github.com/jgsystemsconsulting/jgs-archi-skills) | Method. Skills, install, papers, public mill-walk pictures. |
+| This repo | Evidence. Seed and working `.archimate` files, sequenced pastes, run artefacts. |
+
+Do not copy skills into this repo. Do not copy ArchiMate tables here. Do not copy models into the skill pack. Public mill pictures stay on the skills companion page. Replay still needs the Bridge running and the skill pack installed.
+
 ## Install
 
 You need Archi 5.7+ to open the models. To replay a job you also need the
