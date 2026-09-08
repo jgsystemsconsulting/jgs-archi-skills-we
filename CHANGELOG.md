@@ -9,6 +9,11 @@ Single-source history for jgs-archi-skills-we. Tags are three-component semver
 ## [Unreleased]
 
 - README states the three-repo split: Bridge, skill pack, this evidence checkout.
+- Repository flipped public. Landing page live at
+  https://jgsystemsconsulting.github.io/jgs-archi-skills-we/ with the five
+  Hatherley views, the Moorfield range, install, and the replay first-run.
+- Branch protection on `master`: pull request plus the `integrity` check.
+- Replay-loop diagram added to `docs/how-to-run.md`.
 
 ## [0.1.0] - 2026-09-08
 

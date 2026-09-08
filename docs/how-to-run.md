@@ -48,6 +48,25 @@ Needs the skill pack and a running JGS Archi Bridge
 Do not paste job N+1 until job N passed. A refused View Plan stays on that
 job.
 
+The replay loop, end to end:
+
+```mermaid
+flowchart TD
+    A["Open the working .archimate in Archi"] --> B{"get-model-info name matches?"}
+    B -- "no" --> A
+    B -- "yes" --> C["Open a diagram editor"]
+    C --> D["Paste the job N fence"]
+    D --> E["Specialists draft the View Plan"]
+    E --> F{"Approve, revise, or abort?"}
+    F -- "revise" --> E
+    F -- "abort" --> G["Nothing written. Stay on job N"]
+    F -- "approve" --> H["Bridge writes the elements"]
+    H --> I["File, Save in Archi"]
+    I --> J{"More jobs?"}
+    J -- "yes" --> D
+    J -- "no" --> K["Commit the working .archimate"]
+```
+
 ## Refuse
 
 If the agent invents WMS, TMS, a data lake, an ERP replacement, work
