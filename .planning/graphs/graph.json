@@ -9,7 +9,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L1",
       "id": "docs_runs_job01_layout_docs_py",
-      "community": 4,
+      "community": 3,
       "norm_label": "job01_layout_docs.py"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L13",
       "id": "job01_layout_docs_mcp",
-      "community": 4,
+      "community": 3,
       "norm_label": "mcp"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L14",
       "id": "job01_layout_docs_mcp_init",
-      "community": 4,
+      "community": 3,
       "norm_label": ".__init__()"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L19",
       "id": "job01_layout_docs_mcp_post",
-      "community": 4,
+      "community": 3,
       "norm_label": "._post()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L42",
       "id": "job01_layout_docs_mcp_request",
-      "community": 4,
+      "community": 3,
       "norm_label": ".request()"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L49",
       "id": "job01_layout_docs_mcp_notify",
-      "community": 4,
+      "community": 3,
       "norm_label": ".notify()"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L52",
       "id": "job01_layout_docs_mcp_call",
-      "community": 4,
+      "community": 3,
       "norm_label": ".call()"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L71",
       "id": "job01_layout_docs_pick_id",
-      "community": 4,
+      "community": 3,
       "norm_label": "pick_id()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "docs\\runs\\job01_layout_docs.py",
       "source_location": "L84",
       "id": "job01_layout_docs_main",
-      "community": 4,
+      "community": 3,
       "norm_label": "main()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L1",
       "id": "docs_runs_job01_mcp_motivation_py",
-      "community": 5,
+      "community": 4,
       "norm_label": "job01_mcp_motivation.py"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L13",
       "id": "job01_mcp_motivation_mcp",
-      "community": 5,
+      "community": 4,
       "norm_label": "mcp"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L14",
       "id": "job01_mcp_motivation_mcp_init",
-      "community": 5,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L19",
       "id": "job01_mcp_motivation_mcp_post",
-      "community": 5,
+      "community": 4,
       "norm_label": "._post()"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L42",
       "id": "job01_mcp_motivation_mcp_request",
-      "community": 5,
+      "community": 4,
       "norm_label": ".request()"
     },
     {
@@ -135,7 +135,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L49",
       "id": "job01_mcp_motivation_mcp_notify",
-      "community": 5,
+      "community": 4,
       "norm_label": ".notify()"
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L52",
       "id": "job01_mcp_motivation_mcp_call",
-      "community": 5,
+      "community": 4,
       "norm_label": ".call()"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L71",
       "id": "job01_mcp_motivation_pick_id",
-      "community": 5,
+      "community": 4,
       "norm_label": "pick_id()"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "docs\\runs\\job01_mcp_motivation.py",
       "source_location": "L84",
       "id": "job01_mcp_motivation_main",
-      "community": 5,
+      "community": 4,
       "norm_label": "main()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L1",
       "id": "docs_runs_job02_capability_map_py",
-      "community": 6,
+      "community": 5,
       "norm_label": "job02_capability_map.py"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L17",
       "id": "job02_capability_map_mcp",
-      "community": 6,
+      "community": 5,
       "norm_label": "mcp"
     },
     {
@@ -189,7 +189,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L18",
       "id": "job02_capability_map_mcp_init",
-      "community": 6,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L23",
       "id": "job02_capability_map_mcp_post",
-      "community": 6,
+      "community": 5,
       "norm_label": "._post()"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L46",
       "id": "job02_capability_map_mcp_request",
-      "community": 6,
+      "community": 5,
       "norm_label": ".request()"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L53",
       "id": "job02_capability_map_mcp_notify",
-      "community": 6,
+      "community": 5,
       "norm_label": ".notify()"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L56",
       "id": "job02_capability_map_mcp_call",
-      "community": 6,
+      "community": 5,
       "norm_label": ".call()"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L75",
       "id": "job02_capability_map_pick_id",
-      "community": 6,
+      "community": 5,
       "norm_label": "pick_id()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "docs\\runs\\job02_capability_map.py",
       "source_location": "L88",
       "id": "job02_capability_map_main",
-      "community": 6,
+      "community": 5,
       "norm_label": "main()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L1",
       "id": "docs_runs_job03_production_operations_py",
-      "community": 3,
+      "community": 2,
       "norm_label": "job03_production_operations.py"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L17",
       "id": "job03_production_operations_mcp",
-      "community": 3,
+      "community": 2,
       "norm_label": "mcp"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L18",
       "id": "job03_production_operations_mcp_init",
-      "community": 3,
+      "community": 2,
       "norm_label": ".__init__()"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L23",
       "id": "job03_production_operations_mcp_post",
-      "community": 3,
+      "community": 2,
       "norm_label": "._post()"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L48",
       "id": "job03_production_operations_mcp_request",
-      "community": 3,
+      "community": 2,
       "norm_label": ".request()"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L55",
       "id": "job03_production_operations_mcp_notify",
-      "community": 3,
+      "community": 2,
       "norm_label": ".notify()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L58",
       "id": "job03_production_operations_mcp_call",
-      "community": 3,
+      "community": 2,
       "norm_label": ".call()"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L77",
       "id": "job03_production_operations_pick_id",
-      "community": 3,
+      "community": 2,
       "norm_label": "pick_id()"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L90",
       "id": "job03_production_operations_as_list",
-      "community": 3,
+      "community": 2,
       "norm_label": "as_list()"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "docs\\runs\\job03_production_operations.py",
       "source_location": "L102",
       "id": "job03_production_operations_main",
-      "community": 3,
+      "community": 2,
       "norm_label": "main()"
     },
     {
@@ -440,9 +440,9 @@
       "file_type": "rationale",
       "source_file": "docs\\runs\\job04_application_support.py",
       "source_location": "L105",
-      "id": "job04_application_support_rationale_105",
       "community": 1,
-      "norm_label": "normalize mcp call return that may still wrap result."
+      "norm_label": "normalize mcp call return that may still wrap result.",
+      "id": "job04_application_support_rationale_105"
     },
     {
       "label": "job04_layout_fix.py",
@@ -450,7 +450,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L1",
       "id": "docs_runs_job04_layout_fix_py",
-      "community": 8,
+      "community": 7,
       "norm_label": "job04_layout_fix.py"
     },
     {
@@ -459,7 +459,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L15",
       "id": "job04_layout_fix_mcp",
-      "community": 8,
+      "community": 7,
       "norm_label": "mcp"
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L16",
       "id": "job04_layout_fix_mcp_init",
-      "community": 8,
+      "community": 7,
       "norm_label": ".__init__()"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L21",
       "id": "job04_layout_fix_mcp_post",
-      "community": 8,
+      "community": 7,
       "norm_label": "._post()"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L44",
       "id": "job04_layout_fix_mcp_request",
-      "community": 8,
+      "community": 7,
       "norm_label": ".request()"
     },
     {
@@ -495,7 +495,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L51",
       "id": "job04_layout_fix_mcp_notify",
-      "community": 8,
+      "community": 7,
       "norm_label": ".notify()"
     },
     {
@@ -504,7 +504,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L54",
       "id": "job04_layout_fix_mcp_call",
-      "community": 8,
+      "community": 7,
       "norm_label": ".call()"
     },
     {
@@ -513,7 +513,7 @@
       "source_file": "docs\\runs\\job04_layout_fix.py",
       "source_location": "L73",
       "id": "job04_layout_fix_main",
-      "community": 8,
+      "community": 7,
       "norm_label": "main()"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L1",
       "id": "docs_runs_job04_layout_fix2_py",
-      "community": 7,
+      "community": 6,
       "norm_label": "job04_layout_fix2.py"
     },
     {
@@ -531,7 +531,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L15",
       "id": "job04_layout_fix2_mcp",
-      "community": 7,
+      "community": 6,
       "norm_label": "mcp"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L16",
       "id": "job04_layout_fix2_mcp_init",
-      "community": 7,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L22",
       "id": "job04_layout_fix2_mcp_post",
-      "community": 7,
+      "community": 6,
       "norm_label": "._post()"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L45",
       "id": "job04_layout_fix2_mcp_request",
-      "community": 7,
+      "community": 6,
       "norm_label": ".request()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L53",
       "id": "job04_layout_fix2_mcp_notify",
-      "community": 7,
+      "community": 6,
       "norm_label": ".notify()"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L56",
       "id": "job04_layout_fix2_mcp_call_raw",
-      "community": 7,
+      "community": 6,
       "norm_label": ".call_raw()"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L60",
       "id": "job04_layout_fix2_mcp_call",
-      "community": 7,
+      "community": 6,
       "norm_label": ".call()"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "docs\\runs\\job04_layout_fix2.py",
       "source_location": "L93",
       "id": "job04_layout_fix2_main",
-      "community": 7,
+      "community": 6,
       "norm_label": "main()"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L1",
       "id": "docs_runs_job05_layout_fix_py",
-      "community": 9,
+      "community": 8,
       "norm_label": "job05_layout_fix.py"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L15",
       "id": "job05_layout_fix_mcp",
-      "community": 9,
+      "community": 8,
       "norm_label": "mcp"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L16",
       "id": "job05_layout_fix_mcp_init",
-      "community": 9,
+      "community": 8,
       "norm_label": ".__init__()"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L21",
       "id": "job05_layout_fix_mcp_post",
-      "community": 9,
+      "community": 8,
       "norm_label": "._post()"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L44",
       "id": "job05_layout_fix_mcp_request",
-      "community": 9,
+      "community": 8,
       "norm_label": ".request()"
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L51",
       "id": "job05_layout_fix_mcp_notify",
-      "community": 9,
+      "community": 8,
       "norm_label": ".notify()"
     },
     {
@@ -666,7 +666,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L54",
       "id": "job05_layout_fix_mcp_call",
-      "community": 9,
+      "community": 8,
       "norm_label": ".call()"
     },
     {
@@ -675,7 +675,7 @@
       "source_file": "docs\\runs\\job05_layout_fix.py",
       "source_location": "L79",
       "id": "job05_layout_fix_main",
-      "community": 9,
+      "community": 8,
       "norm_label": "main()"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "docs\\runs\\job05_technology_physical.py",
       "source_location": "L62",
       "id": "job05_technology_physical_mcp_call",
-      "community": 2,
+      "community": 9,
       "norm_label": ".call()"
     },
     {
@@ -747,7 +747,7 @@
       "source_file": "docs\\runs\\job05_technology_physical.py",
       "source_location": "L90",
       "id": "job05_technology_physical_pick_id",
-      "community": 11,
+      "community": 10,
       "norm_label": "pick_id()"
     },
     {
@@ -801,7 +801,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_build.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job01_build_py",
-      "community": 13,
+      "community": 10,
       "norm_label": "job01_build.py"
     },
     {
@@ -810,7 +810,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_build.py",
       "source_location": "L19",
       "id": "job01_build_main",
-      "community": 13,
+      "community": 10,
       "norm_label": "main()"
     },
     {
@@ -819,7 +819,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_compliance_fix.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job01_compliance_fix_py",
-      "community": 2,
+      "community": 12,
       "norm_label": "job01_compliance_fix.py"
     },
     {
@@ -828,7 +828,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_compliance_fix.py",
       "source_location": "L40",
       "id": "job01_compliance_fix_main",
-      "community": 2,
+      "community": 12,
       "norm_label": "main()"
     },
     {
@@ -837,7 +837,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_finish.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job01_finish_py",
-      "community": 2,
+      "community": 12,
       "norm_label": "job01_finish.py"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_finish.py",
       "source_location": "L27",
       "id": "job01_finish_main",
-      "community": 2,
+      "community": 12,
       "norm_label": "main()"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_fix_rels.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job01_fix_rels_py",
-      "community": 12,
+      "community": 10,
       "norm_label": "job01_fix_rels.py"
     },
     {
@@ -864,7 +864,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_fix_rels.py",
       "source_location": "L30",
       "id": "job01_fix_rels_main",
-      "community": 12,
+      "community": 10,
       "norm_label": "main()"
     },
     {
@@ -873,7 +873,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_place_layout.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job01_place_layout_py",
-      "community": 14,
+      "community": 10,
       "norm_label": "job01_place_layout.py"
     },
     {
@@ -882,7 +882,7 @@
       "source_file": "docs\\runs\\moorfield\\job01_place_layout.py",
       "source_location": "L42",
       "id": "job01_place_layout_main",
-      "community": 14,
+      "community": 10,
       "norm_label": "main()"
     },
     {
@@ -891,7 +891,7 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job02_build_py",
-      "community": 2,
+      "community": 13,
       "norm_label": "job02_build.py"
     },
     {
@@ -900,7 +900,7 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L59",
       "id": "job02_build_find_folder",
-      "community": 2,
+      "community": 13,
       "norm_label": "find_folder()"
     },
     {
@@ -909,7 +909,7 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L88",
       "id": "job02_build_search_exact",
-      "community": 2,
+      "community": 13,
       "norm_label": "search_exact()"
     },
     {
@@ -918,7 +918,7 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L104",
       "id": "job02_build_main",
-      "community": 2,
+      "community": 13,
       "norm_label": "main()"
     },
     {
@@ -927,7 +927,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job03_build_py",
-      "community": 11,
+      "community": 9,
       "norm_label": "job03_build.py"
     },
     {
@@ -936,7 +936,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L127",
       "id": "job03_build_find_folder",
-      "community": 11,
+      "community": 9,
       "norm_label": "find_folder()"
     },
     {
@@ -945,7 +945,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L156",
       "id": "job03_build_search_exact",
-      "community": 11,
+      "community": 9,
       "norm_label": "search_exact()"
     },
     {
@@ -954,7 +954,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L172",
       "id": "job03_build_ensure_element",
-      "community": 11,
+      "community": 9,
       "norm_label": "ensure_element()"
     },
     {
@@ -963,7 +963,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L204",
       "id": "job03_build_ensure_rel",
-      "community": 11,
+      "community": 9,
       "norm_label": "ensure_rel()"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L241",
       "id": "job03_build_main",
-      "community": 11,
+      "community": 9,
       "norm_label": "main()"
     },
     {
@@ -981,7 +981,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job04_build_py",
-      "community": 10,
+      "community": 11,
       "norm_label": "job04_build.py"
     },
     {
@@ -990,7 +990,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L90",
       "id": "job04_build_find_folder",
-      "community": 10,
+      "community": 11,
       "norm_label": "find_folder()"
     },
     {
@@ -999,7 +999,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L119",
       "id": "job04_build_search_exact",
-      "community": 10,
+      "community": 11,
       "norm_label": "search_exact()"
     },
     {
@@ -1008,7 +1008,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L135",
       "id": "job04_build_ensure_element",
-      "community": 10,
+      "community": 11,
       "norm_label": "ensure_element()"
     },
     {
@@ -1017,7 +1017,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L166",
       "id": "job04_build_ensure_rel",
-      "community": 10,
+      "community": 11,
       "norm_label": "ensure_rel()"
     },
     {
@@ -1026,7 +1026,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L200",
       "id": "job04_build_collect_placed",
-      "community": 10,
+      "community": 11,
       "norm_label": "collect_placed()"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L218",
       "id": "job04_build_main",
-      "community": 10,
+      "community": 11,
       "norm_label": "main()"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_finish.py",
       "source_location": "L1",
       "id": "docs_runs_moorfield_job04_finish_py",
-      "community": 2,
+      "community": 14,
       "norm_label": "job04_finish.py"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_file": "docs\\runs\\moorfield\\job04_finish.py",
       "source_location": "L26",
       "id": "job04_finish_main",
-      "community": 2,
+      "community": 14,
       "norm_label": "main()"
     },
     {
@@ -2805,8 +2805,8 @@
       "source_file": "docs\\runs\\_main_only.py",
       "source_location": "L3",
       "weight": 1.0,
-      "_src": "main_only_main",
-      "_tgt": "job05_technology_physical_mcp",
+      "_src": "job05_technology_physical_mcp",
+      "_tgt": "main_only_main",
       "source": "job05_technology_physical_mcp",
       "target": "main_only_main"
     },
@@ -2865,8 +2865,8 @@
       "source_file": "docs\\runs\\_main_only.py",
       "source_location": "L4",
       "weight": 1.0,
-      "_src": "main_only_main",
-      "_tgt": "job05_technology_physical_mcp_request",
+      "_src": "job05_technology_physical_mcp_request",
+      "_tgt": "main_only_main",
       "source": "job05_technology_physical_mcp_request",
       "target": "main_only_main"
     },
@@ -2889,8 +2889,8 @@
       "source_file": "docs\\runs\\_main_only.py",
       "source_location": "L5",
       "weight": 1.0,
-      "_src": "main_only_main",
-      "_tgt": "job05_technology_physical_mcp_notify",
+      "_src": "job05_technology_physical_mcp_notify",
+      "_tgt": "main_only_main",
       "source": "job05_technology_physical_mcp_notify",
       "target": "main_only_main"
     },
@@ -2913,8 +2913,8 @@
       "source_file": "docs\\runs\\_main_only.py",
       "source_location": "L6",
       "weight": 1.0,
-      "_src": "main_only_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "main_only_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "main_only_main"
     },
@@ -2925,8 +2925,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_build.py",
       "source_location": "L23",
       "weight": 1.0,
-      "_src": "job01_build_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job01_build_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job01_build_main"
     },
@@ -2937,8 +2937,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_compliance_fix.py",
       "source_location": "L43",
       "weight": 1.0,
-      "_src": "job01_compliance_fix_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job01_compliance_fix_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job01_compliance_fix_main"
     },
@@ -2949,8 +2949,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_finish.py",
       "source_location": "L30",
       "weight": 1.0,
-      "_src": "job01_finish_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job01_finish_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job01_finish_main"
     },
@@ -2961,8 +2961,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_fix_rels.py",
       "source_location": "L33",
       "weight": 1.0,
-      "_src": "job01_fix_rels_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job01_fix_rels_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job01_fix_rels_main"
     },
@@ -2973,8 +2973,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_place_layout.py",
       "source_location": "L45",
       "weight": 1.0,
-      "_src": "job01_place_layout_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job01_place_layout_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job01_place_layout_main"
     },
@@ -2985,8 +2985,8 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L60",
       "weight": 1.0,
-      "_src": "job02_build_find_folder",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job02_build_find_folder",
       "source": "job05_technology_physical_mcp_call",
       "target": "job02_build_find_folder"
     },
@@ -2997,8 +2997,8 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L92",
       "weight": 1.0,
-      "_src": "job02_build_search_exact",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job02_build_search_exact",
       "source": "job05_technology_physical_mcp_call",
       "target": "job02_build_search_exact"
     },
@@ -3009,8 +3009,8 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L107",
       "weight": 1.0,
-      "_src": "job02_build_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job02_build_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job02_build_main"
     },
@@ -3021,8 +3021,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L128",
       "weight": 1.0,
-      "_src": "job03_build_find_folder",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job03_build_find_folder",
       "source": "job05_technology_physical_mcp_call",
       "target": "job03_build_find_folder"
     },
@@ -3033,8 +3033,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L160",
       "weight": 1.0,
-      "_src": "job03_build_search_exact",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job03_build_search_exact",
       "source": "job05_technology_physical_mcp_call",
       "target": "job03_build_search_exact"
     },
@@ -3045,8 +3045,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L176",
       "weight": 1.0,
-      "_src": "job03_build_ensure_element",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job03_build_ensure_element",
       "source": "job05_technology_physical_mcp_call",
       "target": "job03_build_ensure_element"
     },
@@ -3057,8 +3057,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L207",
       "weight": 1.0,
-      "_src": "job03_build_ensure_rel",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job03_build_ensure_rel",
       "source": "job05_technology_physical_mcp_call",
       "target": "job03_build_ensure_rel"
     },
@@ -3069,8 +3069,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L244",
       "weight": 1.0,
-      "_src": "job03_build_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job03_build_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job03_build_main"
     },
@@ -3081,8 +3081,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L91",
       "weight": 1.0,
-      "_src": "job04_build_find_folder",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_build_find_folder",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_build_find_folder"
     },
@@ -3093,8 +3093,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L123",
       "weight": 1.0,
-      "_src": "job04_build_search_exact",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_build_search_exact",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_build_search_exact"
     },
@@ -3105,8 +3105,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L139",
       "weight": 1.0,
-      "_src": "job04_build_ensure_element",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_build_ensure_element",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_build_ensure_element"
     },
@@ -3117,8 +3117,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L168",
       "weight": 1.0,
-      "_src": "job04_build_ensure_rel",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_build_ensure_rel",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_build_ensure_rel"
     },
@@ -3129,8 +3129,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L221",
       "weight": 1.0,
-      "_src": "job04_build_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_build_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_build_main"
     },
@@ -3141,8 +3141,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_finish.py",
       "source_location": "L29",
       "weight": 1.0,
-      "_src": "job04_finish_main",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job04_finish_main",
       "source": "job05_technology_physical_mcp_call",
       "target": "job04_finish_main"
     },
@@ -3153,8 +3153,8 @@
       "source_file": "docs\\runs\\moorfield\\job05_technology_physical.py",
       "source_location": "L44",
       "weight": 1.0,
-      "_src": "job05_technology_physical_find_folder",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job05_technology_physical_find_folder",
       "source": "job05_technology_physical_mcp_call",
       "target": "job05_technology_physical_find_folder"
     },
@@ -3165,8 +3165,8 @@
       "source_file": "docs\\runs\\moorfield\\job05_technology_physical.py",
       "source_location": "L75",
       "weight": 1.0,
-      "_src": "job05_technology_physical_search_exact",
-      "_tgt": "job05_technology_physical_mcp_call",
+      "_src": "job05_technology_physical_mcp_call",
+      "_tgt": "job05_technology_physical_search_exact",
       "source": "job05_technology_physical_mcp_call",
       "target": "job05_technology_physical_search_exact"
     },
@@ -3189,8 +3189,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_build.py",
       "source_location": "L152",
       "weight": 1.0,
-      "_src": "job01_build_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job01_build_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job01_build_main"
     },
@@ -3201,8 +3201,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_fix_rels.py",
       "source_location": "L71",
       "weight": 1.0,
-      "_src": "job01_fix_rels_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job01_fix_rels_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job01_fix_rels_main"
     },
@@ -3213,8 +3213,8 @@
       "source_file": "docs\\runs\\moorfield\\job01_place_layout.py",
       "source_location": "L155",
       "weight": 1.0,
-      "_src": "job01_place_layout_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job01_place_layout_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job01_place_layout_main"
     },
@@ -3225,8 +3225,8 @@
       "source_file": "docs\\runs\\moorfield\\job02_build.py",
       "source_location": "L143",
       "weight": 1.0,
-      "_src": "job02_build_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job02_build_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job02_build_main"
     },
@@ -3237,8 +3237,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L197",
       "weight": 1.0,
-      "_src": "job03_build_ensure_element",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job03_build_ensure_element",
       "source": "job05_technology_physical_pick_id",
       "target": "job03_build_ensure_element"
     },
@@ -3249,8 +3249,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L234",
       "weight": 1.0,
-      "_src": "job03_build_ensure_rel",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job03_build_ensure_rel",
       "source": "job05_technology_physical_pick_id",
       "target": "job03_build_ensure_rel"
     },
@@ -3261,8 +3261,8 @@
       "source_file": "docs\\runs\\moorfield\\job03_build.py",
       "source_location": "L325",
       "weight": 1.0,
-      "_src": "job03_build_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job03_build_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job03_build_main"
     },
@@ -3273,8 +3273,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L159",
       "weight": 1.0,
-      "_src": "job04_build_ensure_element",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job04_build_ensure_element",
       "source": "job05_technology_physical_pick_id",
       "target": "job04_build_ensure_element"
     },
@@ -3285,8 +3285,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L193",
       "weight": 1.0,
-      "_src": "job04_build_ensure_rel",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job04_build_ensure_rel",
       "source": "job05_technology_physical_pick_id",
       "target": "job04_build_ensure_rel"
     },
@@ -3297,8 +3297,8 @@
       "source_file": "docs\\runs\\moorfield\\job04_build.py",
       "source_location": "L293",
       "weight": 1.0,
-      "_src": "job04_build_main",
-      "_tgt": "job05_technology_physical_pick_id",
+      "_src": "job05_technology_physical_pick_id",
+      "_tgt": "job04_build_main",
       "source": "job05_technology_physical_pick_id",
       "target": "job04_build_main"
     },
