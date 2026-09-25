@@ -20,6 +20,7 @@ jobs:
         run: |
           python3 - <<'PY'
           import pathlib, sys
+          # Mirror: scripts/check_release.py REQUIRED. Edit both.
           required = [
               "LICENSE", "COPYRIGHT", "NOTICE", "README.md", "CHANGELOG.md",
               "RELEASE-INFO.txt", "CITATION.cff", "SECURITY.md",
@@ -28,6 +29,18 @@ jobs:
               "models/hatherley-plate.archimate", "models/hatherley-plate.seed.archimate",
               "models/moorfield-range.archimate", "models/moorfield-range.seed.archimate",
               "prompts/README.md", "prompts/moorfield/README.md",
+              "docs/index.html", "docs/site.css",
+              "docs/runs/job-01-motivation-overview.png",
+              "docs/runs/job-02-capability-map.png",
+              "docs/runs/job-03-production-operations.png",
+              "docs/runs/job-04-application-support.png",
+              "docs/runs/job-05-technology-and-physical.png",
+              "prompts/01-motivation.md", "prompts/02-capability.md",
+              "prompts/03-operations.md", "prompts/04-application.md",
+              "prompts/05-technology-closeout.md",
+              "prompts/moorfield/01-motivation.md", "prompts/moorfield/02-capability.md",
+              "prompts/moorfield/03-operations.md", "prompts/moorfield/04-application.md",
+              "prompts/moorfield/05-technology-closeout.md",
           ]
           missing = [f for f in required if not pathlib.Path(f).is_file()]
           if missing:
@@ -65,8 +78,11 @@ jobs:
           for f in tracked:
               if f.startswith(".github/"):
                   continue
+              # Mirror: scripts/check_release.py FORBIDDEN_CONTENT suffix tuple. Edit both.
               if not f.endswith((".py", ".md", ".txt", ".yml", ".yaml",
-                                 ".json", ".cff", ".html")):
+                                 ".json", ".cff", ".html", ".archimate")):
+                  continue
+              if not pathlib.Path(f).is_file():
                   continue
               text = pathlib.Path(f).read_text(encoding="utf-8", errors="ignore")
               if rx_key.search(text) or rx_conf.search(text):
@@ -88,6 +104,8 @@ jobs:
           missing = []
           for f in tracked:
               if not f.endswith(".py"):
+                  continue
+              if not pathlib.Path(f).is_file():
                   continue
               head = pathlib.Path(f).read_text(encoding="utf-8", errors="ignore")[:600]
               if sentinel not in head or "SPDX-License-Identifier" not in head:
@@ -142,4 +160,26 @@ jobs:
               print("::error::version mismatch across sources")
               sys.exit(1)
           print("OK: all versions agree at " + uniq.pop() + ".")
+          PY
+
+      - name: Site version check
+        run: |
+          python3 - <<'PY'
+          # Twins scripts/check_release.py check_site_version() (pattern from jgs-lit-memory site_page()).
+          import pathlib, re, sys
+          ri = pathlib.Path("RELEASE-INFO.txt").read_text(encoding="utf-8")
+          m = re.search(r"^Version:\s*(\d+\.\d+\.\d+)", ri, re.M)
+          expected = m.group(1) if m else None
+          t = pathlib.Path("docs/index.html").read_text(encoding="utf-8")
+          pats = [r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"',
+                  r"REV <b>(\d+\.\d+\.\d+)</b>",
+                  r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>']
+          found = [re.search(p, t) for p in pats]
+          vals = [mm.group(1) if mm else None for mm in found]
+          print({"RELEASE-INFO": expected, "index.html softwareVersion": vals[0],
+                 "index.html masthead REV": vals[1], "index.html footer Rev": vals[2]})
+          if expected is None or any(v != expected for v in vals):
+              print("::error::site page version mismatch")
+              sys.exit(1)
+          print("OK: site page versions agree at " + expected + ".")
           PY
