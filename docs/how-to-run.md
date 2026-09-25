@@ -76,5 +76,34 @@ planning tool as the mill MES / GCS / airborne computer: refuse, log
 
 ## Reset
 
-Copy the matching `.seed.archimate` over the working file and reopen the
-model in Archi.
+A reset copies the empty seed over the working model. Every job is gone
+afterwards; replay restarts at job 01.
+
+1. Close Archi, or at least close the model (right-click it in the Models
+   tree, Close Model). Do not save the failed run.
+2. From the repo root, copy the matching seed over the working file.
+
+   Mill:
+
+   ```bash
+   cp models/hatherley-plate.seed.archimate models/hatherley-plate.archimate
+   ```
+
+   Range:
+
+   ```bash
+   cp models/moorfield-range.seed.archimate models/moorfield-range.archimate
+   ```
+
+   PowerShell: `Copy-Item <seed> <working> -Force` with the same two paths.
+3. Open the working file (`models/hatherley-plate.archimate` or
+   `models/moorfield-range.archimate`), not the seed.
+4. Confirm the Bridge `get-model-info` name before the first paste:
+   **Hatherley Plate Ltd** for the mill, **Hawker Range Systems Ltd** for the
+   range.
+5. Replay from job 01 under Replay a job.
+
+Windows locks an `.archimate` file that Archi has open, and the copy then
+fails. That is why step 1 closes Archi or the model first.
+
+To undo a reset before committing: `git restore` the working file.
