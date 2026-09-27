@@ -41,3 +41,5 @@ graphify-out/
 
 # graphify knowledge graph kept local-only (public repo)
 .planning/
+.superpowers/
+docs/superpowers/
